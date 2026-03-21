@@ -4,6 +4,7 @@
 .next/
 out/
 node_modules/
+next-env.d.ts
 
 # Env
 .env*.local
