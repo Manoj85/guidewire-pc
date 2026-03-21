@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
+const CONTENT_ROOT = path.join(process.cwd(), 'content')
 const CONTENT_DIRS = ['jd', 'qa', 'resume', 'research'] as const
 export type FolderName = (typeof CONTENT_DIRS)[number]
 
@@ -13,11 +14,10 @@ export interface FileEntry {
 export type FileTree = Record<FolderName, FileEntry[]>
 
 export function getFileTree(): FileTree {
-  const root = process.cwd()
   const tree = {} as FileTree
 
   for (const dir of CONTENT_DIRS) {
-    const dirPath = path.join(root, dir)
+    const dirPath = path.join(CONTENT_ROOT, dir)
     if (!fs.existsSync(dirPath)) {
       tree[dir] = []
       continue
@@ -36,9 +36,8 @@ export function getFileTree(): FileTree {
 }
 
 function safePath(filePath: string): string {
-  const root = process.cwd()
-  const full = path.resolve(root, filePath)
-  const rel = path.relative(root, full)
+  const full = path.resolve(CONTENT_ROOT, filePath)
+  const rel = path.relative(CONTENT_ROOT, full)
   if (rel.startsWith('..') || path.isAbsolute(rel)) throw new Error('Access denied')
   const topDir = rel.split(path.sep)[0]
   if (!CONTENT_DIRS.includes(topDir as FolderName)) throw new Error('Access denied')
