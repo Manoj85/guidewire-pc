@@ -1,8 +1,12 @@
 'use client'
 
+import { useState, useMemo } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
+import { rehypeGlossary } from '@/lib/rehype-glossary'
+import GlossaryModal from '@/components/GlossaryModal'
+import glossaryData from '@/content/glossary.json'
 
 interface Props {
   filePath: string | null
@@ -33,17 +37,55 @@ function breadcrumb(filePath: string) {
   }
 }
 
-const mdComponents = {
-  // Open links in new tab
-  a: ({ href, children, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
-    <a href={href} target="_blank" rel="noopener noreferrer" {...props}>{children}</a>
-  ),
-}
-
 export default function FileViewer({
   filePath, content, loading, isEditing, editContent,
   onEditContentChange, onEdit, onSave, onCancel, saving, canEdit,
 }: Props) {
+  const [modalTerm, setModalTerm] = useState<string | null>(null)
+
+  // Build rehype plugin with glossary data (stable reference)
+  const rehypeGlossaryPlugin = useMemo(() => rehypeGlossary(glossaryData), [])
+
+  // Custom components: intercept glossary-term spans
+  const mdComponents = useMemo(() => ({
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    span: ({ children, ...props }: any) => {
+      const term = props['data-glossary-term']
+      if (term && glossaryData[term as keyof typeof glossaryData]) {
+        return (
+          <span
+            className="glossary-term"
+            onClick={() => setModalTerm(term)}
+            title={`Click for definition: ${term}`}
+          >
+            {children}
+            <sup className="glossary-icon">i</sup>
+          </span>
+        )
+      }
+      return <span {...props}>{children}</span>
+    },
+    // Open all links in new tab
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    a: ({ href, children }: any) => (
+      <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
+    ),
+  }), [])
+
+  const rehypePlugins = useMemo(
+    () => [rehypeHighlight, rehypeGlossaryPlugin] as any,
+    [rehypeGlossaryPlugin],
+  )
+
+  const MdContent = ({ source }: { source: string }) => (
+    <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
+      rehypePlugins={rehypePlugins}
+      components={mdComponents}
+    >
+      {source}
+    </ReactMarkdown>
+  )
 
   if (!filePath) {
     return (
@@ -70,14 +112,13 @@ export default function FileViewer({
           <span className="text-slate-300">/</span>
           <span className="text-slate-800 font-medium truncate">{file}</span>
         </nav>
-
         <div className="flex items-center gap-2 ml-4 flex-shrink-0">
           {isEditing ? (
             <>
               <button
                 onClick={onCancel}
-                className="px-3 py-1.5 text-sm text-slate-600 hover:text-slate-900 rounded-md
-                           hover:bg-slate-100 transition-colors"
+                className="px-3 py-1.5 text-sm text-slate-600 hover:text-slate-900
+                           rounded-md hover:bg-slate-100 transition-colors"
               >
                 Cancel
               </button>
@@ -114,12 +155,11 @@ export default function FileViewer({
           <div className="text-slate-400 text-sm animate-pulse">Loading…</div>
         </div>
       ) : isEditing ? (
-        /* Split-pane editor */
         <div className="flex-1 flex overflow-hidden">
           {/* Left: raw markdown */}
           <div className="flex-1 flex flex-col border-r border-slate-200 min-w-0">
-            <div className="px-4 py-2 bg-slate-50 border-b border-slate-200 text-xs text-slate-500
-                            font-semibold uppercase tracking-wider flex-shrink-0">
+            <div className="px-4 py-2 bg-slate-50 border-b border-slate-200 text-xs
+                            text-slate-500 font-semibold uppercase tracking-wider flex-shrink-0">
               Markdown
             </div>
             <textarea
@@ -130,42 +170,35 @@ export default function FileViewer({
               spellCheck={false}
             />
           </div>
-
           {/* Right: preview */}
           <div className="flex-1 flex flex-col overflow-hidden min-w-0">
-            <div className="px-4 py-2 bg-slate-50 border-b border-slate-200 text-xs text-slate-500
-                            font-semibold uppercase tracking-wider flex-shrink-0">
+            <div className="px-4 py-2 bg-slate-50 border-b border-slate-200 text-xs
+                            text-slate-500 font-semibold uppercase tracking-wider flex-shrink-0">
               Preview
             </div>
             <div className="flex-1 overflow-y-auto px-8 py-6">
               <div className="prose prose-slate max-w-none">
-                <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
-                  rehypePlugins={[rehypeHighlight]}
-                  components={mdComponents}
-                >
-                  {editContent}
-                </ReactMarkdown>
+                <MdContent source={editContent} />
               </div>
             </div>
           </div>
         </div>
       ) : (
-        /* View mode */
         <div className="flex-1 overflow-y-auto">
           <div className="max-w-4xl mx-auto px-8 py-8">
             <div className="prose prose-slate max-w-none">
-              <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
-                rehypePlugins={[rehypeHighlight]}
-                components={mdComponents}
-              >
-                {content}
-              </ReactMarkdown>
+              <MdContent source={content} />
             </div>
           </div>
         </div>
       )}
+
+      {/* Glossary modal */}
+      <GlossaryModal
+        term={modalTerm}
+        definition={modalTerm ? (glossaryData[modalTerm as keyof typeof glossaryData] ?? null) : null}
+        onClose={() => setModalTerm(null)}
+      />
     </div>
   )
 }

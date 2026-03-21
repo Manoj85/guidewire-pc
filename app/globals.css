@@ -34,6 +34,12 @@ aside ::-webkit-scrollbar-thumb:hover {
   background: #475569;
 }
 
+/* ── Prose: remove Tailwind Typography's auto-added decorative quotes on blockquotes ── */
+.prose blockquote p:first-of-type::before,
+.prose blockquote p:last-of-type::after {
+  content: none;
+}
+
 /* Prose overrides for tables */
 .prose table {
   display: block;
@@ -46,4 +52,33 @@ aside ::-webkit-scrollbar-thumb:hover {
   background: #f6f8fa;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
+}
+
+/* ── Glossary terms ── */
+.glossary-term {
+  cursor: pointer;
+  border-bottom: 1px dotted #93c5fd;
+  transition: border-color 0.15s, color 0.15s;
+  color: inherit;
+}
+.glossary-term:hover {
+  border-bottom-color: #3b82f6;
+  color: #1d4ed8;
+}
+.glossary-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 13px;
+  height: 13px;
+  background: #dbeafe;
+  color: #2563eb;
+  border-radius: 50%;
+  font-size: 8px;
+  font-weight: 700;
+  font-style: normal;
+  margin-left: 2px;
+  vertical-align: super;
+  line-height: 1;
+  cursor: pointer;
 }
