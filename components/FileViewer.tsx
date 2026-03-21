@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import remarkBreaks from 'remark-breaks'
 import rehypeHighlight from 'rehype-highlight'
 import { rehypeGlossary } from '@/lib/rehype-glossary'
 import GlossaryModal from '@/components/GlossaryModal'
@@ -78,7 +79,7 @@ export default function FileViewer({
 
   const MdContent = ({ source }: { source: string }) => (
     <ReactMarkdown
-      remarkPlugins={[remarkGfm]}
+      remarkPlugins={[remarkGfm, remarkBreaks]}
       rehypePlugins={rehypePlugins}
       components={mdComponents}
     >
