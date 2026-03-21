@@ -30,3 +30,8 @@ research/    # General Guidewire / P&C insurance research
 
 - All responses and research are saved as `.md` files in the appropriate folder.
 - Commit after every addition with a descriptive message.
+
+## Claude Instructions
+
+- **Commit after every change** — after creating or modifying any file, always create a git commit with a descriptive message before responding to the next request.
+- Keep this CLAUDE.md file updated whenever new instructions are given.
