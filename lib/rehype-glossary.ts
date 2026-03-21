@@ -42,6 +42,7 @@ function processText(text: string, pattern: RegExp): (Text | Element)[] | null {
 
 // Recursive walker — safe to mutate children[] as we go
 function walkChildren(node: Root | Element, pattern: RegExp): void {
+  if (!node.children) return
   const children = node.children as RootContent[]
   let i = 0
 
