@@ -43,9 +43,6 @@ export default function FileViewer({
 }: Props) {
   const [modalTerm, setModalTerm] = useState<string | null>(null)
 
-  // Build rehype plugin with glossary data (stable reference)
-  const rehypeGlossaryPlugin = useMemo(() => rehypeGlossary(glossaryData), [])
-
   // Custom components: intercept glossary-term spans
   const mdComponents = useMemo(() => ({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -72,9 +69,11 @@ export default function FileViewer({
     ),
   }), [])
 
+  // Pass [rehypeGlossary, glossaryData] so unified calls rehypeGlossary(glossaryData)
+  // itself and receives the transformer — not the pre-called result
   const rehypePlugins = useMemo(
-    () => [rehypeHighlight, rehypeGlossaryPlugin] as any,
-    [rehypeGlossaryPlugin],
+    () => [rehypeHighlight, [rehypeGlossary, glossaryData]] as any,
+    [],
   )
 
   const MdContent = ({ source }: { source: string }) => (
