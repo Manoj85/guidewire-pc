@@ -1,8 +1,8 @@
 # Resume Notes: ValueMomentum AVP Client Services
 
 ## Status
-- HR call completed (Mar 2026)
-- Next: Interview with leadership team (scheduling in progress)
+- HR call completed (Mar 2026) ✓
+- HR cleared — next: Hiring Manager / Leadership team interview (Mar 2026, scheduling in progress)
 - HR questions asked:
   1. What other tools have you used other than Guidewire?
   2. What other domains other than P&C?
