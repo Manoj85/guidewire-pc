@@ -130,6 +130,62 @@ Own this territory confidently. Most delivery-focused candidates go soft here �
 
 ---
 
+## Q7: Walk me through how you have managed a deal where the client pushed back hard on your pricing.
+
+**What they're really asking:** Negotiation maturity. Can you defend a price without collapsing, or do you discount reflexively?
+
+**How to answer:**
+
+> "Price pushback is almost always a proxy for something else — risk aversion, internal budget pressure, or a feeling that the scope isn't well enough defined to justify the number. My first move is to understand which one.
+>
+> I ask one question: 'Is the concern about the total number, or about confidence in what you're getting for it?' That separates a pure price negotiation from a value clarity conversation — and they're very different.
+>
+> If it's the total number — I explore what their budget reality is and reverse-engineer a scope that fits it. That might mean phasing the work differently, adjusting the onshore/offshore mix, or narrowing scope to a higher-priority subset. I never discount the price without adjusting what's in the price.
+>
+> If it's value clarity — I go deeper on the estimate. I walk them through my bottom-up decomposition: here's the effort by workstream, here's why each is estimated as it is, here's what we've seen in similar programs. Transparency builds confidence. A carrier who can see your math is more likely to trust your number.
+>
+> On the Canal Insurance commercial lines implementation, the CFO challenged our integration estimate as 30% higher than a competitor's. Rather than discounting, I brought in our integration lead for a 90-minute working session with their IT architect. We walked through our discovery findings — their legacy rating system had six undocumented outbound feeds that the competitor hadn't accounted for. By the end of that session, the CFO asked the competitor to revise their estimate. We won the deal at our original price."
+
+---
+
+## Q8: How do you track and recover margin on a fixed-price engagement that's running over budget?
+
+**What they're really asking:** Project financial management under pressure. Can you manage a loss-making engagement without abandoning quality?
+
+**How to answer:**
+
+> "Margin recovery on a fixed-price engagement is one of the hardest disciplines in professional services, because you can't bill for the extra hours — you have to earn margin back through efficiency.
+>
+> My recovery playbook has three levers:
+>
+> **Lever 1: Stop the bleeding first.** Diagnose what's causing overrun — scope that wasn't priced, technical complexity underestimated, or team productivity below plan. You can't fix what you haven't diagnosed.
+>
+> **Lever 2: Scope triage.** Go through the remaining backlog with the client using MoSCoW. Almost always there are 'Could have' items in scope that were priced at full effort. Push them to Phase 2 — often the client agrees because they also want go-live. Every story point deferred is margin recovered.
+>
+> **Lever 3: Team model adjustment.** Onshore resources cost 3–4x offshore. If I can shift work that was planned for onshore resources to offshore without affecting quality, the margin improves quickly. Not every task can shift — client-facing, architecture decisions, and complex problem-solving need to stay onshore. But execution-level development and regression testing often can.
+>
+> On the Alfa Insurance PolicyCenter implementation, we hit a data migration complexity issue at month 4 that put us 15% over our cost baseline. I ran this playbook: deferred 8 stories to Phase 2 (with client agreement), shifted the regression test suite to offshore with a documented test approach, and renegotiated one enhancement to a change order with carrier sign-off. We closed the engagement within 5% of target margin."
+
+---
+
+## Q9: How do you think about pricing GenAI or AI-augmented delivery differently from traditional project delivery?
+
+**What they're really asking:** Forward-looking commercial thinking. Are you keeping up with how AI is changing the economics of consulting?
+
+**How to answer:**
+
+> "GenAI changes the delivery economics in a way that creates a commercial tension I think about carefully.
+>
+> If AI tools increase developer productivity by 20–30% — and I've seen this on Gosu development with AI coding assistants — that means we're delivering faster with fewer hours. In a T&M model, that directly reduces our revenue. In a fixed-price model, it improves our margin. So the commercial structure matters.
+>
+> My approach: I'm moving AI-augmented delivery toward outcome-based pricing where possible, rather than pure time-and-materials. If I can commit to a delivery outcome — X stories delivered per sprint, or a go-live within Y weeks — the client doesn't care how many hours it takes. The value is the outcome, not the effort.
+>
+> For the GenAI POC engagements I ran at EY, I priced them as fixed-fee outcome-based: 'A working proof of concept in 12 weeks, on your own data, ready to demo to your board.' Not 'X hours of AI engineering.' That framing is easier to get approved and better reflects the value we're delivering.
+>
+> The honest tension: the industry hasn't settled on how to price AI-augmented delivery, and there will be carrier procurement teams who push back on the shift. My position is: the client's interest is outcomes, not headcount. When I can demonstrate better outcomes at lower total cost, that's a conversation I'm comfortable having."
+
+---
+
 ## COMMERCIAL VOCABULARY — USE THESE TERMS NATURALLY
 
 | Term | Context |
