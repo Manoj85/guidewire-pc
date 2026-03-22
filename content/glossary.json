@@ -115,5 +115,23 @@
   "submission": "In underwriting, the package of information submitted by an agent or broker to a carrier requesting a commercial insurance quote — includes application, loss history, and financials.",
   "lean": "A management philosophy focused on eliminating waste, maximizing value delivery, and continuous improvement. Principles like value stream mapping are applied in delivery optimization.",
   "value stream": "The end-to-end sequence of activities required to deliver value to a customer — from initial request through production deployment. Used in lean delivery to identify and eliminate waste.",
-  "IP reuse": "The practice of applying previously built accelerators, frameworks, and components across multiple client engagements to reduce effort and improve delivery consistency."
+  "IP reuse": "The practice of applying previously built accelerators, frameworks, and components across multiple client engagements to reduce effort and improve delivery consistency.",
+
+  "hard market": "A P&C insurance market cycle characterized by rising premium rates, stricter underwriting standards, and reduced capacity. Carriers raise prices and tighten coverage in response to high loss ratios or reduced reinsurance availability. Drives urgency for faster system modernization to enable rapid rate filing.",
+  "soft market": "A P&C insurance market cycle with falling premium rates, relaxed underwriting, and abundant capacity. Carriers compete aggressively on price, compressing margins. Opposite of hard market.",
+  "surplus lines": "Insurance placed with non-admitted (unlicensed) carriers for risks that standard (admitted) insurers won't cover — such as unusual or high-risk exposures. Subject to different regulatory requirements than admitted insurance.",
+  "admitted carrier": "An insurance company licensed and regulated by a state's Department of Insurance (DOI). Must file and get approval for rates and forms. Subject to state guaranty fund protection.",
+  "non-admitted carrier": "An insurance company not licensed in a given state but permitted to write surplus lines business. More regulatory flexibility on rates and forms but no state guaranty fund protection for policyholders.",
+  "loss development": "The process by which claim reserves grow over time as more information becomes available about the ultimate cost of a claim. Actuaries use loss development factors to estimate IBNR and ultimate loss amounts.",
+  "underwriting profit": "Profit generated from core insurance operations (premiums collected minus losses and expenses paid), distinct from investment income. Measured by combined ratio — below 100% means underwriting profit.",
+  "MGA": "Managing General Agent — an intermediary that has underwriting authority delegated by an insurance carrier. MGAs bind coverage, set rates, and manage claims on behalf of the carrier. Often first-time Guidewire clients implementing greenfield.",
+  "CAT": "Catastrophe — a large-scale insured loss event (hurricane, earthquake, wildfire) that affects many policyholders simultaneously. CAT exposure drives reserve volatility and is a key factor in carrier reinsurance purchasing.",
+  "rate filing": "The process of submitting proposed insurance premium rate changes to a state DOI for approval. States vary in how quickly they approve filings. Speed to file new rates is a key competitive advantage in a hard market.",
+  "loss ratio": "A key P&C profitability metric: (Losses Paid + Loss Adjustment Expenses) / Premiums Earned. A loss ratio above 100% means claims exceed premium collected. Combined with expense ratio to get combined ratio.",
+  "expense ratio": "Insurance company expenses (underwriting, administrative, agent commissions) divided by net premiums earned. Combined with loss ratio to calculate combined ratio.",
+  "realization": "In professional services, the percentage of billed hours actually collected as revenue after write-offs and adjustments. A realization below 100% means some billed hours were discounted or written off.",
+  "QBR": "Quarterly Business Review — a structured meeting between client and vendor to assess delivery performance, surface issues, and align on the roadmap for the next quarter. A key account health management tool.",
+  "onshore": "Delivery resources located in the same country as the client — typically the US for North American engagements. Higher billing rates, better client proximity. Used for senior, client-facing, and architecture roles.",
+  "offshore": "Delivery resources located in lower-cost countries (India, Eastern Europe) to reduce blended rate. Used for execution-level development, testing, and support. Typically 3–4x lower cost than onshore equivalents.",
+  "nearshore": "Delivery resources in geographically close, lower-cost countries (e.g., Latin America for US clients). Time zone alignment is better than offshore, with moderate cost savings."
 }
