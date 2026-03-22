@@ -21,16 +21,55 @@
 
 ## LEADERSHIP (Know who you might meet)
 
-| Name | Title |
-|---|---|
-| GM Raju "Raj" Samanthapudi | Founder & Executive Chairman |
-| Kalyan "KK" Kodali | CEO & Co-Founder |
-| Abhijeet Jhaveri | President, Customers & Markets |
-| Swarup Ghosh | Chief Operating Officer (formerly Chief Delivery Officer) |
-| Gopi Krishna "GK" Gade | CTO & Co-Founder |
-| Uma Gogineni | Chief People Officer & President, Technology Solution Centers |
-| Viswanath "Vishy" Maddali | EVP, Head of Distribution |
-| Siva Pillai | EVP & Client Partner |
+### C-Suite & EVP
+
+| Name | Title | Notes |
+|---|---|---|
+| GM Raju "Raj" Samanthapudi | Founder & Executive Chairman | |
+| Kalyan "KK" Kodali | CEO & Co-Founder | |
+| Abhijeet Jhaveri | President, Customers & Markets | |
+| Swarup Ghosh | Chief Operating Officer | Formerly Chief Delivery Officer |
+| Gopi Krishna "GK" Gade | CTO & Co-Founder | |
+| Uma Gogineni | Chief People Officer & President, Technology Solution Centers | |
+| Viswanath "Vishy" Maddali | EVP, Head of P&C Distribution | CPCU, AIC, AIDA credentials |
+| Siva Pillai | EVP & Client Partner | |
+| Joe King | Chief Marketing Officer | |
+
+### Senior Vice Presidents (SVP)
+
+| Name | Title | Notes |
+|---|---|---|
+| Raghavendra "Raghu" Aithal | SVP, Head of P&C Claims | Leads AI claims automation and agentic systems for claims |
+| Kott "Siva" Sivakumar | SVP, Head of Enterprise IT | CPCU designation |
+| Wayne Rodrigues | SVP, Market Success – North America | Customer engagement, North America |
+| Naren Sivakumar | SVP, Customer Success | |
+| Vijay Mahendrakar | SVP, Head of Insurance Solutions – UK & Europe | Led UK market entry (Nov 2024); AI-enabled submission triage |
+| Pankaj Kumar | SVP, Head of Platforms, Applications & Infrastructure | |
+| Neil Dias | SVP, Head of Advanced Analytics Technology Solutions | |
+| Nitin Wankhede | SVP, Enterprise Operations & Talent Acquisition | |
+| Surya "Sunny" Mandapati | SVP, Business Development | |
+| Rajesh Nambiar | SVP, Financial Services | |
+| Mayank Gour | SVP | |
+
+### Vice Presidents (VP)
+
+| Name | Title | Notes |
+|---|---|---|
+| Alok Dhagat | VP, Delivery | Piscataway, NJ — likely in delivery leadership chain |
+| Avdhut "AV" Nadkarni | VP, Client Partner, Insurance | Insurance sector client partnerships |
+| Jeyasekaran Ethiraj | VP | Joined October 2024 |
+
+### Associate Vice Presidents (AVP)
+
+| Name | Title | Notes |
+|---|---|---|
+| V. S. Prasad Guntupalli | AVP, Head of Engineering – Core Platforms | Leads Guidewire practice engineering; ex-EY (2014–2019) — ISB Executive MBA |
+| Sudeep Karnavat | AVP, Head of Engineering – Data & BI | Data and business intelligence engineering |
+| Swapnil Vijay Bhargavva | AVP, Regional Head – Canada | Canada regional operations |
+
+> **Interview insight:** V. S. Prasad Guntupalli (AVP, Core Platforms) is a former EY colleague — he was at EY from 2014–2019. This is a direct peer-level contact who understands the EY background and the Guidewire practice. Worth acknowledging the EY connection if his name comes up.
+
+> **Key contacts for your role:** Alok Dhagat (VP Delivery) and Avdhut Nadkarni (VP Client Partner) are likely in your direct reporting chain or close to it. Raghu Aithal (SVP Claims) and Wayne Rodrigues (SVP Market Success NA) are likely key stakeholders for the client services function.
 
 ---
 
