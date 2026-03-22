@@ -291,6 +291,96 @@ Use 2–3 of these, tailored to the flow of the conversation:
 
 ---
 
+## SECTION 8: REAL-TIME SCENARIO QUESTIONS
+
+### Q18: "Walk me through a specific technical decision you made on a Guidewire program that had a significant downstream impact."
+
+**How to answer:**
+> "On the CompSource Mutual ClaimCenter implementation — workers compensation — we had a key architectural decision early on: whether to implement the payment disbursement integration as a direct database connection to their legacy payment processor or as an API layer through MuleSoft.
+>
+> The technical team favored direct DB integration — faster to build, no middleware cost. I pushed for MuleSoft. My reasoning: CompSource had two other modernization programs planned. If we built a direct DB connector, every new system would need its own custom connector to the same payment processor. With MuleSoft, the connector is built once and reused.
+>
+> The initial cost was $180K more and 6 weeks longer. Eighteen months later, when Canal Insurance — another one of my clients — needed the same payment processor integration, we reused the MuleSoft framework. Their integration cost was 60% lower and took 3 weeks instead of 10.
+>
+> The lesson I took from that: every architectural decision on a delivery program has a compounding effect. The right decision optimizes for the portfolio, not just the current project."
+
+---
+
+### Q19: "Give me a real example of a time your team missed a sprint commitment. What did you do?"
+
+**How to answer (STAR):**
+> "**Situation:** On the Alfa Insurance PolicyCenter implementation, Sprint 7 — we committed to completing the endorsement workflow configuration and the billing integration stub. End of sprint, the endorsement workflow was done but the billing stub was only 60% complete.
+>
+> **Task:** I needed to understand the root cause, re-plan without cascading the delay, and be transparent with the carrier's IT lead.
+>
+> **Action:** Root cause was clear within 24 hours — a dependency on the carrier's billing team to provide API specs that hadn't arrived. The developer had not escalated when the specs were 3 days late.
+>
+> I did three things. First, I established an explicit dependency tracking board — every external dependency had a due date, an owner, and an escalation trigger. If a dependency was 24 hours late, it automatically escalated to me. Second, I had a direct conversation with the developer about escalation norms — waiting and hoping is not acceptable, surfacing early is. Third, I called the carrier IT lead the same day the sprint closed, explained what happened and why, and showed him the revised plan — we absorbed the 3-day slip within the next sprint by parallelizing two lower-priority items.
+>
+> **Result:** We didn't miss the overall milestone. The carrier IT lead told me afterward that the way I handled it — proactively, with a clear fix — was more confidence-building than if we'd hit the sprint perfectly."
+
+---
+
+### Q20: "Describe a real situation where you had to push back on a carrier's requirement. How did you do it without damaging the relationship?"
+
+**How to answer:**
+> "On the Nationwide personal auto program, late in the implementation, the business team asked us to add a complex endorsement rating rule that would require significant Gosu customization — about 3 weeks of work — and would have pushed our go-live date by at least 2 weeks.
+>
+> The business owner framed it as 'critical.' When I dug into why, the actual requirement was a very specific edge case affecting fewer than 2% of their endorsement volume.
+>
+> I didn't say no. I reframed the conversation. I showed the business owner the data: here's the volume impact, here's the cost in time and Gosu footprint, here's the upgrade risk this creates. Then I offered an alternative: configure a manual override workflow in PolicyCenter that handles the 2% edge case with a human review step — build time 3 days, no Gosu, no go-live impact. Phase 2 can automate it once we're live.
+>
+> She agreed immediately. The key was having the conversation in person, leading with data, and having a real alternative ready. Pushback without an alternative is just obstruction. Pushback with a better path forward is advisory."
+
+---
+
+### Q21: "Tell me about a time you had to rebuild trust with a client after something went wrong."
+
+**How to answer (STAR):**
+> "**Situation:** On the CompSource Mutual ClaimCenter program, we had a production incident 3 weeks post-go-live. A data migration script we had run as part of go-live had a subtle error that caused approximately 400 historical claims records to display incorrect reserve amounts in the ClaimCenter dashboard. The data itself was correct in the source system — it was a display mapping error — but the CFO saw it during a financial review and escalated immediately.
+>
+> **Task:** Rebuild trust with the CFO and CIO within 48 hours, fix the issue cleanly, and ensure it never happened again.
+>
+> **Action:** I was on-site within 4 hours of the alert. First action was to establish facts — is this a display error or a data integrity issue? My team confirmed within 2 hours: display mapping only, no impact on actual reserve calculations or financials. I communicated that finding directly to the CFO with a one-page technical explanation he could share with his audit team.
+>
+> Fix was deployed within 24 hours. Root cause analysis completed and presented to the CIO within 48 hours — here's what happened, here's what we missed in QA, here are the three process changes we're implementing so it can't happen again.
+>
+> **Result:** The CIO told me the response was exactly what a carrier should expect from a strategic partner. CompSource renewed our AMS contract 6 months later and added scope."
+
+---
+
+### Q22: "How do you run a project health assessment when you inherit a troubled program?"
+
+**How to answer:**
+> "I've inherited troubled programs twice at EY and the assessment approach is the same both times.
+>
+> Week 1 — facts only. I review: backlog health (is the velocity sufficient to hit the milestone?), defect trends (are we resolving faster than we're finding?), integration status (what's live, what's stubbed, what's unstarted?), team capacity (who's overloaded, who's underutilized?), and stakeholder sentiment (what are the carrier's IT and business leads actually feeling?).
+>
+> Week 2 — diagnosis. I separate symptoms from root causes. A high defect rate is a symptom. The root cause might be a testing coverage gap, a requirement ambiguity, or a developer who is out of their depth on a specific module.
+>
+> Week 2 also — I find a quick win. Something I can fix or improve visibly within the first 10 days. On the Alfa Insurance program I inherited mid-flight, the quick win was canceling a daily status call that everyone hated and replacing it with a 10-minute async update. It sounds small but it immediately signaled to the team that things were going to run differently.
+>
+> Week 3 — plan and align. I produce a one-page health assessment document for the carrier's leadership: here's where we are, here's what I'm changing, here's my confidence level on the milestone. I present it in person, answer every question, and get explicit alignment before I execute.
+>
+> The worst thing you can do when inheriting a troubled program is start making changes before you've done the diagnosis. You'll fix the wrong things and damage the team's confidence in the new leadership."
+
+---
+
+### Q23: "Give me an example of a time you used data to change a client's direction."
+
+**How to answer:**
+> "On the Canal Insurance commercial lines program, the carrier's CTO wanted to build a custom-coded rating engine outside of Guidewire — he felt Guidewire's native rating was too constrained for their complex commercial property rating model.
+>
+> My instinct was that this was a mistake — a custom rating engine means two systems to maintain, two sets of tests, and a permanent integration dependency. But instinct is not enough with a technical executive who has strong opinions.
+>
+> I ran a 2-week analysis. I took their 5 most complex commercial property rating scenarios and configured them in Guidewire's product model, working with a senior Guidewire rating SME on my team. Result: 4 of 5 scenarios were fully configurable in Guidewire without any Gosu. The 5th required 2 Gosu methods — about 40 hours of work.
+>
+> I presented this with a side-by-side: custom rating engine — estimated 6-month build, permanent maintenance cost, integration test suite required for every Guidewire upgrade. Guidewire native — 6 weeks of configuration, upgrade-safe for 4 of 5 scenarios, 2 Gosu methods documented and contained.
+>
+> The CTO reversed his position. We built in Guidewire. The rating configuration work became one of the strongest parts of the implementation — and it's one of the accelerators we've reused on subsequent commercial lines programs."
+
+---
+
 ## QUICK REFERENCE: CLIENTS BY LINE OF BUSINESS
 
 | Client | Lines | Systems |
