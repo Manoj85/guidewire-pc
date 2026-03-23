@@ -784,3 +784,39 @@ Choks is a delivery professional who has seen everything. He respects substance,
 > **Why it matters for VM's carrier clients:**
 >
 > Carriers running Guidewire Cloud face mandatory upgrade cycles. Every upgrade needs regression. TestAI turns that from a manual 3–4 week effort into a largely automated cycle. For a carrier on a Managed Services engagement, that's a direct reduction in support cost and a faster path to upgrade completion. It's a strong value-add that I'd look to deploy as an accelerator on VM's delivery programs.
+
+---
+
+**Q40. Are you involved in any Guidewire community or events?**
+
+> "Yes — I am active in the Guidewire ecosystem both through events and through the EY PartnerConnect relationship.
+>
+> On the events side, I am part of the PPEDS program and I am supporting the EY leadership team by contributing materials for Guidewire community engagements and sessions. That keeps me connected to what Guidewire is prioritizing at the partner level — roadmap direction, cloud platform evolution, and ecosystem developments.
+>
+> In terms of the broader Guidewire event calendar, the ones I track closely:
+>
+> - **Guidewire Connections** — the flagship annual conference, 3,000+ customers and partners, held every October/November. This is where Guidewire announces its major product direction, cloud roadmap, and partner award recognitions. It's the most important event to follow for anyone in this ecosystem.
+> - **Guidewire DEVSummit** — the annual developer conference, primarily in Bengaluru, focused on technical tracks, Guidewire platform updates, and practitioner learning. Most relevant for our delivery teams and architects.
+> - **Guidewire Insurance Forum (GIF)** — smaller executive-format gatherings for senior insurance leaders. These run regionally — North America, Europe, APAC — and are focused on strategic transformation rather than technical content.
+> - **Guidewire Marketplace Summit** — partner and technology showcase events, expanding globally in 2026. Relevant for understanding what the broader Guidewire ecosystem is building around the platform.
+> - **ACE Certification and Training** — Guidewire runs structured training and certification tracks through Guidewire Education. I have been involved in building Guidewire certification programs for my delivery teams and tracking the certification pathway changes as Guidewire evolves toward cloud-ready tracks.
+>
+> I also follow the Guidewire Community portal and PartnerConnect announcements — Guidewire made all e-learning free for PartnerConnect partners in October 2025, which directly benefits VM's delivery teams."
+
+---
+
+### GUIDEWIRE EVENTS REFERENCE
+
+*(Quick reference — know these cold if events come up in conversation)*
+
+| Event | What it is | When |
+|---|---|---|
+| **Guidewire Connections** | Flagship annual conference — product roadmap, partner awards, 3,000+ attendees | Oct/Nov annually (Las Vegas 2025) |
+| **Guidewire DEVSummit** | Developer/technical conference — 1,500+ practitioners | May annually (Bengaluru) |
+| **Guidewire Insurance Forum (GIF)** | Executive leadership forums — regional editions | Multiple times/year (NA, Europe, APAC) |
+| **Guidewire Marketplace Summit** | Partner technology showcase — expanding globally 2026 | Multiple dates/year |
+| **InsurPitch / Insurtech Vanguards** | Insurtech startup pitch competition — 59+ startups | London (June), Toronto (Sep) |
+| **Guidewire ACE Certification** | Partner and consultant certification program | Ongoing via Guidewire Education |
+| **PartnerConnect Program** | Main partner ecosystem — 190+ partners, 23,000+ trained consultants, 250+ specializations | Ongoing |
+
+> **Your involvement:** Active in PPEDS; contributing materials to EY leadership team for Guidewire engagements; track Connections and DEVSummit for product direction and ecosystem developments.
