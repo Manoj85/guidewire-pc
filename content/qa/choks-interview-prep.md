@@ -32,6 +32,26 @@
 
 ---
 
+## VM LANGUAGE — USE THIS IN YOUR ANSWERS
+
+ValueMomentum organizes its delivery model in three terms. Use these naturally — it signals you understand how VM thinks:
+
+| VM Term | Means | Use instead of |
+|---|---|---|
+| **Build** | New / greenfield implementation | "new project", "greenfield", "new implementation" |
+| **Grow** | Transformation / modernization / upgrade | "transformation program", "modernization", "upgrade engagement" |
+| **Run** | Managed Services / ongoing support | "AMS", "post go-live support", "support contract" |
+
+**How to use it naturally in answers:**
+- *"I've led all three — Build, Grow, and Run engagements across my carrier portfolio."*
+- *"The Nationwide program was a Build. Once we went live, we transitioned into Run."*
+- *"The Alfa Insurance turnaround was effectively a Grow — a modernization program that had stalled mid-flight."*
+- *"At VM the portfolio mix across Build, Grow, and Run is what I'd want to understand in the first 30 days."*
+
+> **Why this matters:** When you use VM's own language, Choks hears someone who has already made the mental shift from EY to VM. Don't overdo it — 2–3 natural uses across the interview is enough.
+
+---
+
 ## OPENING — USE YOUR REFERRAL
 
 Start by mentioning your mutual contact within the first 2 minutes:
@@ -193,7 +213,7 @@ Pick 2, based on conversation flow:
 
 2. **"How does ValueMomentum's delivery model differ from what I'd be used to at EY — what's the adjustment you see most new leaders need to make?"**
 
-3. **"What's the current mix of the delivery portfolio — greenfield implementations, upgrades, cloud migrations, Managed Services? And how is that shifting?"**
+3. **"What's the current mix of the delivery portfolio across Build, Grow, and Run — and how is that shifting over the next two years?"**
 
 4. **"You've been in Guidewire delivery for a long time. What's the hardest part of managing carrier relationships at this level that most people underestimate?"**
 *(This one shows respect for his experience and invites him to share — good closing move with a detail-oriented interviewer)*
@@ -354,11 +374,13 @@ Choks is a delivery professional who has seen everything. He respects substance,
 
 **Q12. What is your understanding of ValueMomentum's core service offerings and how would you position them to clients?**
 
-> "VM's core is P&C insurance technology services across four areas: implementation and transformation (Guidewire, Duck Creek, EIS, Majesco), application managed services, digital and data engineering, and AI/analytics through iFoundry.
+> "VM operates across three delivery modes — Build, Grow, and Run — and I think that's exactly the right way to frame it to a carrier CIO.
 >
-> How I'd position it: VM is not an IT services firm that also does insurance — you are a P&C-first technology partner with 25 years and 75+ carrier relationships. That specificity is the differentiator. When I'm talking to a carrier CIO, I'd frame it as: 'VM's entire IP, accelerator library, and talent pool is built for P&C. When you hire VM, every person on your team has insurance in their DNA, not just the project lead.'
+> Build is new implementation: Guidewire, Duck Creek, EIS, Majesco — taking a carrier from legacy or paper to a modern core platform. Grow is transformation and modernization: upgrading an existing Guidewire environment, migrating on-prem to Guidewire Cloud, or expanding from one suite to all three. Run is Managed Services: owning the carrier's production system, SLA governance, proactive support, and continuous improvement post go-live.
 >
-> For Guidewire specifically: six active specializations including Cloud Platform — that's the message for carriers moving off on-prem. VM is certified for where the market is going."
+> What makes VM's position strong is that they can do all three with the same team and the same institutional knowledge of the carrier's environment. A Big 4 firm typically hands off between delivery and support. VM owns the full lifecycle.
+>
+> How I'd position it to a carrier CIO: 'VM is a P&C-first technology partner — 25 years, 75+ carriers. Whether you're standing up a new system, transforming what you have, or running what's live, the same insurance-native team stays with you. Your implementation knowledge doesn't walk out the door at go-live.'"
 
 ---
 
