@@ -590,15 +590,15 @@ Choks is a delivery professional who has seen everything. He respects substance,
 
 ### SECTION G: VALUEMOMENTUM-SPECIFIC
 
-**Q29. Why ValueMomentum over other IT services firms?**
+**Q29. Why ValueMomentum — and why now?**
 
-> "I've competed against ValueMomentum on deals at EY. I've seen your delivery quality and your carrier references. I know what pure-play P&C specialization looks like from the outside.
+> "Two parts to that.
 >
-> The difference between VM and a Big 4 or large SI is not just the pitch — it's the culture. At EY, insurance is one vertical among dozens. The IP is adapted. The talent rotates. The institutional knowledge competes with 30 other industries for investment.
+> **Why VM:** I've competed against ValueMomentum on deals at EY for several years. I've sat on the other side of the table watching your teams win — and I paid attention to why. It wasn't price. It was depth. The domain knowledge VM brings to a carrier engagement is different from what a Big 4 or large SI delivers. At EY, insurance is one vertical among 30. The IP is adapted from generic frameworks, talent rotates across industries, and institutional knowledge about a carrier competes with 29 other sectors for internal investment. At VM, every person in this firm is thinking about P&C problems every day. The accelerators, the carrier relationships, the delivery playbooks — all of it built around one domain over 25 years. I've been genuinely impressed by that. That kind of specialization compounds in ways a generalist firm simply cannot replicate.
 >
-> At ValueMomentum, every person in this firm is thinking about P&C problems every day. The accelerators, the carrier relationships, the team culture — it's all built around one domain. That specialization compounds over 25 years into something a generalist firm simply can't replicate.
+> **Why now:** The market is at an inflection point. Carriers are accelerating off on-prem Guidewire onto Guidewire Cloud — that's a multi-year Build and Grow wave. At the same time, AI is moving from POC to production in P&C workflows, and carriers don't have the internal capability to do it themselves. They need a partner who understands both the Guidewire core and the AI layer. That combination — Guidewire depth plus production AI experience — is exactly what I've built over the last few years at EY.
 >
-> I want to operate at that level of depth. Not broader. Deeper."
+> I want to bring that to a firm where P&C is the whole business, not one vertical. This is the right role at the right firm at the right moment in the market."
 
 ---
 
@@ -740,3 +740,29 @@ Choks is a delivery professional who has seen everything. He respects substance,
 > **Result:** At CompSource, we moved from informal conversation to a funded AI pilot in 90 days — within the existing Managed Services contract, using a change order rather than a new procurement. The VP of Claims had a business case approved by the CIO within 6 weeks of our first conversation because we had answers to every objection before his leadership team raised them.
 >
 > **For existing vs. new projects:** On an existing Guidewire program, the entry point is always a use case that's already in the delivery scope — claims intake, document generation, Managed Services monitoring. No new budget conversation needed. On a new engagement, I'd run AI readiness as part of the discovery phase — assess data, identify the highest-ROI use case, and include an AI workstream in the proposal from the start. The worst time to introduce AI is as an afterthought after the core system is live.
+
+---
+
+**Q38. What are the easy AI wins you'd go after first in a carrier engagement — Build, Grow, or Run?**
+
+> "The best AI wins are the ones that use data the carrier already has, don't touch regulatory decision-making, and show ROI in under 60 days. Here's what I'd go after by engagement type:
+>
+> **In a Run (Managed Services) engagement — easiest entry point:**
+>
+> *ClaimCenter notes summarization.* Adjusters write long free-text notes in ClaimCenter. A simple LLM summarization layer surfaces the key facts — coverage, liability, reserve rationale — in 3 bullet points. No new data pipeline, no regulatory risk, no integration complexity. A claims handler reviews 10 claims in the time it used to take to review 4. Build time: 3–4 weeks. This is the lowest-friction AI win I know of in P&C.
+>
+> *Run anomaly detection.* On a Managed Services engagement, we already have access to Guidewire application logs. An LLM-assisted pattern detection model flags anomalies — memory spikes, slow query patterns, failed integration calls — 24–48 hours before they become P1 incidents. This shifts the Run team from reactive to predictive. No carrier data governance issue because it's log data, not policyholder data.
+>
+> **In a Grow (transformation) engagement:**
+>
+> *Upgrade impact analysis.* When a carrier upgrades Guidewire, the biggest risk is undocumented Gosu customizations that break. I run an LLM-assisted code scan across their Gosu library — the model classifies each customization by upgrade risk level (high/medium/low) and flags which ones need re-testing. Cuts upgrade QA scoping time by 40–50%. The carrier sees immediate value in the discovery phase before the upgrade even starts.
+>
+> *Legacy data migration quality.* During a Grow engagement, carriers migrate years of policy and claims data. LLM-assisted data profiling detects anomalies in source data — duplicate records, inconsistent coding, missing mandatory fields — before they land in Guidewire. Saves weeks of post-migration defect fixing.
+>
+> **In a Build (new implementation) engagement:**
+>
+> *Submission triage for commercial lines.* Underwriters receive commercial submissions as unstructured emails and PDFs. An LLM extraction layer pulls the key risk data — coverage requested, property details, loss history — and pre-populates the PolicyCenter application. Underwriter decision time drops significantly. No regulatory issue because the underwriter still makes the decision — AI just removes the data entry step.
+>
+> *Requirements traceability.* On a Build, I use LLM-assisted mapping between business requirements and Guidewire configuration items. The model flags gaps — requirements with no corresponding configuration — before SIT. Catches scope holes in week 4 instead of week 14.
+>
+> **The common thread across all three:** these wins use existing data, stay on the right side of DOI explainability requirements, and show measurable ROI within a single sprint cycle. That's how you build carrier confidence for the bigger AI investments — Phase 2, Phase 3 — that follow."
