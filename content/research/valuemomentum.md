@@ -66,6 +66,7 @@
 | V. S. Prasad Guntupalli | AVP, Head of Engineering – Core Platforms | Leads Guidewire practice engineering; ex-EY (2014–2019) — ISB Executive MBA |
 | Sudeep Karnavat | AVP, Head of Engineering – Data & BI | Data and business intelligence engineering |
 | Swapnil Vijay Bhargavva | AVP, Regional Head – Canada | Canada regional operations |
+| Choks Kandaswamy | AVP, Delivery | Clarksburg, MD — background in insurance tech delivery; prior: Westfield Insurance, CSAA Insurance Group, Liberty, WinWire |
 
 > **Interview insight:** V. S. Prasad Guntupalli (AVP, Core Platforms) is a former EY colleague — he was at EY from 2014–2019. This is a direct peer-level contact who understands the EY background and the Guidewire practice. Worth acknowledging the EY connection if his name comes up.
 
