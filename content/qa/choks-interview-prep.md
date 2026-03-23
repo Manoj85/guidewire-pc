@@ -791,7 +791,7 @@ Choks is a delivery professional who has seen everything. He respects substance,
 
 > "Yes — I am active in the Guidewire ecosystem both through events and through the EY PartnerConnect relationship.
 >
-> On the events side, I am part of the PPEDS program and I am supporting the EY leadership team by contributing materials for Guidewire community engagements and sessions. That keeps me connected to what Guidewire is prioritizing at the partner level — roadmap direction, cloud platform evolution, and ecosystem developments.
+> At EY, the Guidewire Connections events are primarily attended at the PPEDS level — Partners, Principals, and Executive Directors. I am supporting that group by contributing materials and content for EY's Guidewire-related sessions and leadership engagements. That keeps me connected to what Guidewire is prioritizing at the partner level — roadmap direction, cloud platform evolution, and ecosystem developments.
 >
 > In terms of the broader Guidewire event calendar, the ones I track closely:
 >
@@ -819,4 +819,4 @@ Choks is a delivery professional who has seen everything. He respects substance,
 | **Guidewire ACE Certification** | Partner and consultant certification program | Ongoing via Guidewire Education |
 | **PartnerConnect Program** | Main partner ecosystem — 190+ partners, 23,000+ trained consultants, 250+ specializations | Ongoing |
 
-> **Your involvement:** Active in PPEDS; contributing materials to EY leadership team for Guidewire engagements; track Connections and DEVSummit for product direction and ecosystem developments.
+> **Your involvement:** At EY, Guidewire Connections is attended at PPEDS level (Partners, Principals, Executive Directors). You support that group by contributing materials and content. You track Connections and DEVSummit for product direction and ecosystem developments.
