@@ -746,3 +746,39 @@ Choks is a delivery professional who has seen everything. He respects substance,
 > *Requirements traceability.* I use LLM-assisted mapping between business requirements and Guidewire configuration items. The model flags gaps — requirements with no corresponding configuration — before SIT. Catches scope holes in week 4 instead of week 14.
 >
 > **The common thread:** all of these use existing data, stay on the right side of DOI explainability requirements, and show measurable ROI within a single sprint cycle. That's how you build carrier confidence for the larger AI investments that follow."
+
+---
+
+**Q39. Tell me more about TestAI — what is it, what problem does it solve, and what are the benefits?**
+
+*(Use this if you mention TestAI or Quality Engineering during the conversation and Choks asks you to elaborate.)*
+
+> **The Problem:**
+>
+> In any Guidewire implementation, test case creation is one of the biggest delivery bottlenecks. QA teams spend 30–40% of their time writing test cases manually — reading user stories in JIRA or Azure DevOps, interpreting supporting documents, translating business requirements into test scenarios. This work is repetitive, inconsistent across testers, and prone to coverage gaps. On a Guidewire upgrade, the regression suite alone can run into hundreds of test cases — all manual. That's slow, expensive, and error-prone.
+>
+> **My Solution — TestAI:**
+>
+> I did consulting work in Quality Engineering where we built TestAI — an end-to-end automated test lifecycle solution leveraging GenAI adoption.
+>
+> **How it works:**
+>
+> *Input:* TestAI connects to the carrier's existing Application Lifecycle Management tools — JIRA and Azure DevOps — and ingests the user stories, acceptance criteria, and supporting documents (BRDs, functional specs, process flows).
+>
+> *AI layer:* A GenAI model reads the requirements and generates an optimal set of test cases — not just happy path, but edge cases, negative scenarios, and boundary conditions that manual testers routinely miss. The model is trained to understand Guidewire-specific workflows — policy transactions, billing cycles, claim adjudication — so the test cases are insurance-domain-aware, not generic.
+>
+> *Execution:* The generated test cases are converted into automated test scripts and executed using Playwright — a modern, cross-browser automation framework that handles Guidewire's PCF-based UI and portal interfaces reliably.
+>
+> *Output:* Test results are generated through ExtentReports — structured, visual HTML reports with pass/fail breakdowns, screenshots on failure, and traceability back to the original requirement in JIRA or Azure DevOps.
+>
+> **The Benefits:**
+>
+> - **Speed:** Test case generation time drops by 60–70%. What used to take a QA analyst 2 weeks to write manually is generated in hours.
+> - **Coverage:** The AI finds edge cases humans miss — particularly important in Guidewire where rating logic, workflow rules, and integration scenarios interact in complex ways.
+> - **Consistency:** Every tester gets the same quality output. No dependency on the most experienced QA person to write the best test cases.
+> - **Traceability:** Every test case links back to a requirement. When a defect is raised, you know exactly which story it came from and whether it was tested.
+> - **Regression acceleration:** On Guidewire upgrades, where regression suites are large and upgrade timelines are tight, TestAI regenerates and re-executes the full regression suite automatically — cutting regression cycle time significantly.
+>
+> **Why it matters for VM's carrier clients:**
+>
+> Carriers running Guidewire Cloud face mandatory upgrade cycles. Every upgrade needs regression. TestAI turns that from a manual 3–4 week effort into a largely automated cycle. For a carrier on a Managed Services engagement, that's a direct reduction in support cost and a faster path to upgrade completion. It's a strong value-add that I'd look to deploy as an accelerator on VM's delivery programs.
