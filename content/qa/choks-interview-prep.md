@@ -820,3 +820,90 @@ Choks is a delivery professional who has seen everything. He respects substance,
 | **PartnerConnect Program** | Main partner ecosystem — 190+ partners, 23,000+ trained consultants, 250+ specializations | Ongoing |
 
 > **Your involvement:** At EY, Guidewire Connections is attended at PPEDS level (Partners, Principals, Executive Directors). You support that group by contributing materials and content. You track Connections and DEVSummit for product direction and ecosystem developments.
+
+---
+
+**Q41. Tell me about EY IPR360 — what is it, what problem does it solve, and what was your role?**
+
+*(Use if you mention EY's Guidewire Marketplace solutions or policy transformation accelerators)*
+
+> **My role:** I am part of the EY team that built and is taking EY IPR360 to market, and I am also serving as an AI advisor on this solution.
+>
+> **The Problem:**
+>
+> When a carrier embarks on a policy transformation engagement — moving onto Guidewire PolicyCenter — one of the first and hardest challenges is rationalizing their existing product portfolio. Most carriers have products spread across multiple legacy PAS systems, outdated documentation, regulatory filings that are years old, and a shrinking pool of legacy SMEs who actually understand what the products do. Product managers can't accurately represent all features of their portfolio. The only option historically was to task legacy SMEs to manually sift through old code and documents — slow, expensive, and error-prone.
+>
+> **The Solution — EY Insurance Product Rationalizer 360 (EY IPR360):**
+>
+> EY IPR360 is an award-winning AI-powered solution accelerator that helps carriers rapidly extract, review, and rationalize their insurance product portfolio — directly from policy documentation. Released November 2024 on the Guidewire Marketplace. Deployed on Guidewire Cloud Platform, works with PolicyCenter.
+>
+> **How it works — three phases:**
+>
+> *Phase 1 — Extraction:* The AI reads the carrier's policy-related documents — Policy Decks, Renewal Letters, Quote letters, Cancellation notices — and reverse-engineers the product portfolio. For each product it extracts: Product Names, Clause Categories, Clauses, Clause Terms, Forms, and Jurisdictions. The extracted products are transformed into APD-compatible XML templates and mind maps — ready for immediate import into Guidewire APD.
+>
+> *Phase 2 — Review:* Product managers use the GenAI-powered chatbot to review KPIs, compare features of reverse-engineered products side-by-side, and explore clause details — limits, deductibles, forms, exclusions. This phase pinpoints redundancies and optimization opportunities across the portfolio without any manual analysis.
+>
+> *Phase 3 — Rationalization:* Using prebuilt rationalization rules and a workbench, product managers run simulations — which products to consolidate, retire, or carry forward. The AI chatbot assists throughout, surfacing insights from the extraction phase to guide decisions.
+>
+> **Key benefits:**
+> - **40% reduction** in overall product rationalization time and effort
+> - Unlocks early transformation value — carriers start modeling future products from existing ones before the full Guidewire implementation begins
+> - Generated APD templates are 100% APD-compatible — zero rework on import
+> - Efficient use of legacy SME time — AI does the heavy lifting, SMEs validate
+> - Cloud Ready, SaaS deployment model
+> - Integration ready — fits into the broader Guidewire transformation program
+>
+> **Why it matters for VM's carrier clients:**
+>
+> VM runs Guidewire PolicyCenter implementations. Product rationalization is consistently one of the most time-consuming phases in those programs. EY IPR360 compresses that phase by 40%. If VM were to leverage this accelerator, carriers on a transformation engagement would reach their Guidewire product model faster, with more confidence, and at lower cost. That's a direct competitive differentiator in how VM scopes and prices its PolicyCenter implementations.
+
+---
+
+**Q42. What is Guidewire APD — and how does it work inside PolicyCenter?**
+
+*(Know this cold — EY IPR360 is built on APD, and it will come up if you mention either)*
+
+> **What APD is:**
+>
+> APD stands for Advanced Product Designer. It is Guidewire's cloud-native, visual product design tool that sits inside PolicyCenter. APD allows business analysts and product managers to design, simulate, and deploy insurance products — without manually writing product model XML or Gosu code. Before APD existed, all product model configuration required developers to hand-craft XML files and code in Guidewire Studio. APD replaces that with a visual designer that auto-generates the artifacts.
+>
+> **What it does:**
+>
+> APD drives the product model layer of PolicyCenter — everything that defines an insurance product: lines of business, risk objects, coverages, conditions, exclusions, underwriting fields, limits, deductibles, jurisdiction variants, and billing structures.
+>
+> **How it works — three phases:**
+>
+> *Conceptualize:* The product is designed visually — typically starting from an XMind mind map (a tree diagram: product → line → risk object → coverage → clause term). Guidewire provides 100+ GO Product mind map templates on the Marketplace for standard lines of business. EY IPR360 feeds directly into this phase — it generates the mind maps and APD XML templates from the carrier's existing policy documents.
+>
+> *Visualize:* The product is simulated inside PolicyCenter before any code is finalized. Stakeholders — underwriters, product managers, business owners — walk through policy transactions and validate coverages and fields. Catches requirement gaps early, before development begins.
+>
+> *Finalize (Code Generation):* APD auto-generates all PolicyCenter artifacts — product model XML, PCF UI screens, entities, typelists, REST APIs, app events. The generated code is the developer's baseline. Developers then add Gosu code on top for rating logic, workflow rules, and integrations.
+>
+> **APD in a Guidewire implementation project:**
+>
+> | Phase | APD's role |
+> |---|---|
+> | Discovery | Mind maps used as requirements artifacts — structured LOB conversations |
+> | Product Design (Sprint 0) | BSAs build and visualize the product; replaces document-heavy requirements |
+> | Development sprints | APD-generated baseline eliminates blank-slate build |
+> | UAT/SIT | Early stakeholder validation via visualized product |
+> | Go-Live | Finalized products deployed through Lifecycle Manager |
+>
+> **Why APD matters for delivery:**
+>
+> APD saves 30–40% of product configuration development time. It eliminates transcription errors between requirements documents and code. It keeps business stakeholders engaged in the design — not just developers. And because EY IPR360 generates 100% APD-compatible output, carriers using IPR360 enter the APD phase with a reverse-engineered product model already in hand — accelerating the entire PolicyCenter transformation timeline.
+
+---
+
+### EY GUIDEWIRE MARKETPLACE PRODUCTS — REFERENCE
+
+*(EY has ~13 products on the Guidewire Marketplace. Key ones to know:)*
+
+| Product | What it does |
+|---|---|
+| **EY IPR360** (Insurance Product Rationalizer 360) | AI-powered product portfolio rationalization — reverse engineers products from policy docs into APD templates. Released Nov 2024. |
+| **EY CDA Snowflake Connector** | Makes Guidewire Cloud Data Access (CDA) dataset available in Snowflake — near-real-time change data capture, accelerated pipeline deployment |
+| **EY & Databricks Insurance Insights Platform** | Combines EY insurance expertise with Databricks data lakehouse on top of Guidewire data |
+| **EY PolicyCenter LOB Accelerators** | Pre-built PolicyCenter configurations for specific lines of business — Inland Marine, Professional Liability, Personal Cyber, Large Farm, and others |
+
+> **Your position:** I am part of the EY Guidewire practice that builds and maintains these marketplace offerings. EY has 2,100+ Guidewire-certified professionals and 550+ EY-built integrations and accelerators — the Marketplace listings are the tip of that IP iceberg. As AI Advisor for the QE practice (TestAI) and part of the IPR360 team, I am directly involved in two of these offerings.
