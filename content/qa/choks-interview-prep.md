@@ -603,6 +603,23 @@ Choks is a delivery professional who has seen everything. He respects substance,
 
 ---
 
+**Q33. How did you structure the financials on your engagements?**
+
+> "I managed engagement financials at three levels: contract structure, monthly P&L tracking, and commercial levers.
+>
+> **Contract structure:** Most of my EY engagements ran on a Time & Materials model with milestone-based billing gates — we billed against delivery milestones (architecture sign-off, SIT completion, UAT sign-off, go-live) rather than purely on hours. This gave the carrier predictability and gave us a clean revenue recognition event. AMS engagements were fixed-price monthly retainers with a defined scope of support — SLA tiers, included hours per month, and an overage rate card for anything beyond.
+>
+> **Monthly P&L tracking:** I ran a monthly financial review on every engagement — planned vs. actual hours by role, utilization rate, margin vs. budget, and WIP (work in progress) balance. I tracked four numbers every month: revenue recognized, cost incurred, margin percentage, and budget remaining. If margin was compressing, I wanted to know in month 2, not month 10.
+>
+> **Commercial levers I managed:**
+> - **Onshore/offshore mix** — the primary margin lever. A typical Guidewire implementation I ran was 30% onshore, 70% offshore. If scope grew without a change order, I'd adjust the mix to protect margin before escalating.
+> - **Change order discipline** — every out-of-scope request went through a formal change order with hours, rate, and total cost. I tracked cumulative change order value monthly. On the Nationwide engagement, change orders added ~$1.1M to the original contract over 18 months — all formally approved.
+> - **Role mix optimization** — using senior engineers only on architecture and complex Gosu, mid-level on configuration, junior on testing and documentation. Right person, right rate, right task.
+>
+> **How I reported it internally:** Monthly one-page financial summary to the engagement partner — revenue, cost, margin, forecast to complete, change order log, and any risks to the financial plan. No surprises at quarter-end."
+
+---
+
 **Q32. How would you handle onboarding a new client while managing your existing portfolio?**
 
 > "Two things that make this work: a strong delivery bench and a clear onboarding playbook.
