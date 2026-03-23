@@ -206,12 +206,22 @@ Pick 2, based on conversation flow:
 |---|---|
 | Team size | 50+ (Nationwide program) |
 | Portfolio size | $10M+ |
+| Largest single engagement | ~$8.5M (Nationwide) |
 | Gosu footprint reduction | 40% |
-| GenAI efficiency gain | 50% |
+| GenAI FNOL efficiency gain | 50% |
+| TestAI test case generation speed | 60–70% faster |
+| EY IPR360 product rationalization reduction | 40% |
+| Upgrade QA scoping reduction (AI-assisted) | 40–50% |
+| APD product config time savings | 30–40% |
+| EY Guidewire certified professionals | 2,100+ |
+| EY integrations and accelerators | 550+ |
+| ACE certification program (EY) | 12 engineers in 18 months |
 | Alfa turnaround time | 5 months to go-live |
 | Scope moved to Phase 2 (Alfa) | 30% of requirements |
 | CompSource incident response | on-site in 4 hours, fix in 24 hours |
+| CompSource follow-on engagement | $2M data modernization |
 | Canal MuleSoft cost saving | 60% lower integration cost on reuse |
+| Nationwide change orders | ~$1.1M over 18 months |
 | Nationwide rating rule edge case | <2% of endorsement volume |
 
 ---
@@ -382,7 +392,7 @@ Choks is a delivery professional who has seen everything. He respects substance,
 >
 > Primary sources: I follow Guidewire's product roadmap announcements, Gartner and Celent insurance technology reports, and industry publications like Insurance Journal and Digital Insurance. The Everest Group PEAK Matrix and ISG Provider Lens reports give me a competitive landscape view annually.
 >
-> Peer network: I stay in contact with CIOs and CTOs from my past carrier clients. Those conversations are more valuable than any analyst report because they tell me what's actually happening in production, not what's trending in a whitepaper.
+> Peer network: I stay in contact with CIOs and CTOs from my carrier clients. Those conversations are more valuable than any analyst report because they tell me what's actually happening in production, not what's trending in a whitepaper.
 >
 > Hands-on work: The GenAI POCs I've been running at EY are the most current thing I can point to. Real AI implementations in insurance workflows — not sandbox experiments. That practical exposure keeps my thinking grounded in what actually works vs. what sounds good on a slide."
 
@@ -576,7 +586,7 @@ Choks is a delivery professional who has seen everything. He respects substance,
 >
 > **Why VM:** I've competed against ValueMomentum on deals at EY for several years. I've sat on the other side of the table watching your teams win — and I paid attention to why. It wasn't price. It was depth. The domain knowledge VM brings to a carrier engagement is different from what a Big 4 or large SI delivers. At EY, insurance is one vertical among 30. The IP is adapted from generic frameworks, talent rotates across industries, and institutional knowledge about a carrier competes with 29 other sectors for internal investment. At VM, every person in this firm is thinking about P&C problems every day. The accelerators, the carrier relationships, the delivery playbooks — all of it built around one domain over 25 years. I've been genuinely impressed by that. That kind of specialization compounds in ways a generalist firm simply cannot replicate.
 >
-> **Why now:** The market is at an inflection point. Carriers are accelerating off on-prem Guidewire onto Guidewire Cloud — that's a multi-year Build and Grow wave. At the same time, AI is moving from POC to production in P&C workflows, and carriers don't have the internal capability to do it themselves. They need a partner who understands both the Guidewire core and the AI layer. That combination — Guidewire depth plus production AI experience — is exactly what I've built over the last few years at EY.
+> **Why now:** The market is at an inflection point. Carriers are accelerating off on-prem Guidewire onto Guidewire Cloud — that's a multi-year wave of new implementations, cloud migrations, and transformation programs. At the same time, AI is moving from POC to production in P&C workflows, and carriers don't have the internal capability to do it themselves. They need a partner who understands both the Guidewire core and the AI layer. That combination — Guidewire depth plus production AI experience — is exactly what I've built over the last few years at EY.
 >
 > I want to bring that to a firm where P&C is the whole business, not one vertical. This is the right role at the right firm at the right moment in the market."
 
@@ -907,3 +917,40 @@ Choks is a delivery professional who has seen everything. He respects substance,
 | **EY PolicyCenter LOB Accelerators** | Pre-built PolicyCenter configurations for specific lines of business — Inland Marine, Professional Liability, Personal Cyber, Large Farm, and others |
 
 > **Your position:** I am part of the EY Guidewire practice that builds and maintains these marketplace offerings. EY has 2,100+ Guidewire-certified professionals and 550+ EY-built integrations and accelerators — the Marketplace listings are the tip of that IP iceberg. As AI Advisor for the QE practice (TestAI) and part of the IPR360 team, I am directly involved in two of these offerings.
+
+---
+
+### PRACTICAL QUESTIONS — BE READY
+
+**"What is your notice period / when can you join?"**
+
+> "My standard notice period at EY is [X weeks]. I am prepared to honor that fully — I want to transition responsibly and not leave my current engagements exposed. If there is urgency on VM's side, I am open to a conversation about parallel transition planning. What does the timeline look like from your end?"
+
+*(Fill in your actual notice period. Typical EY Senior Manager notice is 4 weeks. Frame it as responsible, not as a delay.)*
+
+---
+
+**"What are your salary expectations?"**
+
+> "I've done my research on the role and I understand the range is competitive for an AVP-level delivery leader in the P&C space. I am currently at [X] at EY including base and bonus. I am open to a conversation that reflects the scope and responsibility of this role — and I'm not going to walk away over a number if this is the right fit."
+
+*(The JD range is $261,250–$281,250. Your EY comp is your anchor. Don't give a specific number first — let them move. If pressed, say the upper end of their range is appropriate given your experience.)*
+
+---
+
+### GUIDEWIRE CLOUD — KNOW THIS IF IT COMES UP
+
+Choks is a Delivery Officer at a firm with Guidewire Cloud Platform specialization. Cloud will come up.
+
+| Topic | What to know |
+|---|---|
+| **Guidewire Cloud Platform (GWCP)** | SaaS delivery model — Guidewire manages the infrastructure, upgrades, and availability. Carriers get a certified, managed environment. |
+| **Mandatory upgrade cadence** | Guidewire Cloud requires carriers to stay current — typically 2 major releases per year. No more skipping versions like on-prem. This is a significant operational change for carriers. |
+| **Cloud certification** | Before a carrier goes live on GWCP, the implementation must pass Guidewire's cloud certification — checks for non-compliant Gosu customizations, API usage, performance standards. Heavy customization = certification risk. |
+| **Jutro UI framework** | Guidewire's modern front-end framework for cloud. Replaces PCF (legacy). New implementations on cloud use Jutro. Upgrade migrations must plan for PCF → Jutro transition. |
+| **Cloud Data Access (CDA)** | Guidewire's mechanism for giving carriers access to their own data in the cloud — via a data lake feed. EY has a Snowflake connector for CDA (EY CDA Snowflake Connector on Marketplace). |
+| **Integration Framework / App Events** | Guidewire Cloud's integration model — event-driven, API-first. Replaces older messaging integrations. Partners must build integrations using Guidewire's published APIs and App Events. |
+| **APD on Cloud** | APD is the required product design tool on Guidewire Cloud Platform — no more hand-coded product model XML. Mandatory for cloud implementations. |
+| **Lifecycle Manager** | Guidewire's CI/CD pipeline tool for cloud — git-based, manages deployments from dev to production. Delivery teams use it instead of manual deployment scripts. |
+
+> **Your cloud angle:** "I am actively working on cloud migration engagements at EY. The shift from on-prem to Guidewire Cloud changes the delivery model fundamentally — mandatory upgrades, APD-only product design, Jutro for UI, Integration Framework for APIs. The carriers who planned for this from the start have smooth migrations. The ones who treated cloud as just 'hosting' get surprised in certification. My cloud migration experience and the 40% Gosu footprint reduction work directly address that certification risk."
