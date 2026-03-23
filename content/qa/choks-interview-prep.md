@@ -1,6 +1,7 @@
 # Interview Prep: Choks Kandaswamy — ValueMomentum Delivery Officer
 
 **Role:** AVP, Client Services — ValueMomentum
+**Answer format preference: STAR (Situation → Task → Action → Result) for all behavioral and situational questions.**
 **Interview Panel:**
 - **Choks Kandaswamy** (Delivery Officer) — your primary interviewer
 - **Naren Sivakumar** (COO) — CC'd on invite
@@ -629,3 +630,67 @@ Choks is a delivery professional who has seen everything. He respects substance,
 > - **Role mix optimization** — using senior engineers only on architecture and complex Gosu, mid-level on configuration, junior on testing and documentation. Right person, right rate, right task.
 >
 > **How I reported it internally:** Monthly one-page financial summary to the engagement partner — revenue, cost, margin, forecast to complete, change order log, and any risks to the financial plan. No surprises at quarter-end."
+
+---
+
+**Q34. How have you managed resource attrition on a delivery program?**
+
+> **Situation:** Mid-way through the Nationwide PolicyCenter/BillingCenter implementation — a 50-person program — two of my senior Guidewire developers resigned within the same 4-week window. Both were on the critical path: one owned the product model configuration for personal auto, the other owned the MuleSoft integration layer. Combined, they carried roughly 30% of the remaining delivery risk. Replacing experienced Guidewire resources in the open market takes 6–8 weeks minimum. We didn't have 6–8 weeks.
+>
+> **Task:** Maintain delivery continuity, protect the go-live milestone, and prevent the carrier from losing confidence — all without telling them we were in a resource crisis before I had a plan to show them.
+>
+> **Action:** I took four moves in parallel within 48 hours.
+>
+> First, knowledge transfer blitz — before either developer's last day, I locked them in a structured handoff. Daily 2-hour sessions for their remaining notice period: documented every in-progress item, every undocumented design decision, every known risk in their workstream. I personally sat in on both to ensure nothing was lost in translation.
+>
+> Second, internal bench activation — I went to EY's resource pool and identified two mid-level Guidewire engineers who were between assignments. Neither was a direct replacement, but both had relevant base knowledge. I paired each one with a senior architect on my team for a 2-week shadowing period before they took full ownership.
+>
+> Third, scope triage — I reviewed the backlog and pulled forward lower-complexity items that didn't depend on the departing developers. Kept the team's velocity visible and protected sprint commitments during the transition window.
+>
+> Fourth, proactive client communication — once I had the plan in place (not before), I told the carrier's IT lead directly: two team changes, here's the transition plan, here's my confidence level on the milestone, here are the specific items I'm watching. No surprises, no deflection.
+>
+> **Result:** We absorbed the attrition with zero impact to the go-live date. One of the two backfill engineers grew significantly through the experience and became a permanent lead on the AMS engagement that followed. The carrier never lost confidence — the IT lead later told me the transparency in how I handled it was what kept the relationship strong.
+
+---
+
+**Q35. When there is a delivery escalation, how do you work the resolution?**
+
+> **Situation:** Three weeks after go-live on the CompSource Mutual ClaimCenter implementation, a data migration display error surfaced — 400 historical claims records showing incorrect reserve amounts in the ClaimCenter dashboard. The carrier's CFO saw it during a financial review and escalated directly to the board before our team was even aware. By the time I was notified, the carrier's CIO was fielding board-level questions about data integrity on a system we had just launched.
+>
+> **Task:** Resolve the technical issue, restore executive confidence, and do it fast enough that the incident didn't define the relationship — all without full clarity yet on the scope or root cause.
+>
+> **Action:** My escalation resolution follows a fixed sequence: contain, diagnose, communicate, fix, prevent.
+>
+> *Contain:* I was on-site within 4 hours. First question: is this a data integrity issue or a display issue? Until that's answered, I don't speculate. I assembled the data migration lead and the ClaimCenter architect in a war room.
+>
+> *Diagnose:* Within 2 hours we confirmed — display mapping error only. The underlying reserve data was correct in the source system and in the Guidewire data model. No financial impact.
+>
+> *Communicate:* I went directly to the CFO — not through the CIO, directly to the person who escalated to the board. I brought a one-page technical summary: what happened, what it is not (not a data integrity issue), what we are doing, and when it will be fixed. He needed something he could put in front of the board that day. I gave it to him.
+>
+> *Fix:* Patch deployed to production in 24 hours. Full regression test on all migrated data display fields completed same day.
+>
+> *Prevent:* Root cause analysis delivered to the CIO in 48 hours — three specific process changes: (1) expand QA test cases to include display layer validation for all migrated data, (2) add financial display verification to the post-migration smoke test checklist, (3) require CIO sign-off on migration validation before go-live is declared complete.
+>
+> **Result:** The CFO told the board it was resolved before their next meeting. The CIO renewed our AMS contract 6 months later and added scope. His words: "Most vendors would have deflected or minimized. You took ownership and fixed it." The incident made the relationship stronger, not weaker.
+
+---
+
+**Q36. Tell me about your AI and GenAI capabilities — and how you would bring that to ValueMomentum's carrier clients.**
+
+> **Situation:** At EY in 2024, one of our P&C carrier clients — a mid-size commercial lines insurer — was processing FNOL claims manually. Adjusters were spending 4–5 hours per claim extracting data from unstructured sources: PDFs, scanned handwritten forms, and email threads. With claim volume growing 18% year-over-year, the carrier's VP of Claims told us: "We either hire 40 more adjusters or we find a smarter way." Their IT team had no AI capability internally.
+>
+> **Task:** Design and validate an AI-powered claims intake solution that integrated with their existing Guidewire ClaimCenter environment, could be production-ready (not just a POC), and gave the claims team a measurable efficiency gain without removing human judgment from the process.
+>
+> **Action:** I led the solution design and delivery across three workstreams.
+>
+> *Architecture:* Built a RAG (Retrieval-Augmented Generation) pipeline — Azure OpenAI as the LLM, LangChain for orchestration, FAISS as the vector store for document retrieval. Input: any FNOL document type (PDF, email, image). Output: structured JSON with extracted claim fields, confidence scores, and flagged ambiguities — fed directly into ClaimCenter via REST API.
+>
+> *Human-in-the-loop design:* Every extraction included a confidence score. High-confidence fields auto-populated in ClaimCenter. Low-confidence fields were flagged for adjuster review. The adjuster's role shifted from data entry to validation and judgment — which is where their expertise belongs.
+>
+> *Adoption enablement:* I ran a structured change management program alongside the technical build — adjuster training, a feedback loop so the model improved on carrier-specific document formats, and a 30-day parallel run where AI output was compared against manual processing before the team fully transitioned. This is where most AI projects fail — the technology works but the people don't adopt it.
+>
+> **Result:** In a 6-month pilot on historical FNOL data, we measured a 50% reduction in manual data entry time per claim. Adjuster satisfaction was high — they described it as "finally doing the actual job instead of typing." The carrier approved production deployment and is now in Phase 2: extending the same RAG architecture to underwriting submission triage.
+>
+> **How I'd bring this to ValueMomentum carrier clients:**
+>
+> VM has iFoundry and an AI-first positioning post the September 2025 rebrand. What I'd add is production delivery experience — not whiteboard AI, not vendor demos, but a proven pattern for taking a P&C carrier from zero AI capability to production deployment inside 6 months. The three P&C use cases I'd prioritize immediately: claims intake automation (my proven playbook), underwriting submission triage (active at my current client), and AMS predictive alerting (pattern detection on Guidewire production logs before issues become P1s). These are concrete, budgetable, and directly connected to carrier business outcomes — reduced loss adjustment expense, faster submission decisions, and lower AMS reactive cost. That's how you sell AI to a P&C carrier: in dollars, not in technology."
