@@ -96,7 +96,7 @@ Choks will read your resume and pick specific bullets. Anticipate these:
 >
 > Go-live day: I'm on-site or in a war room virtually from the start of the migration window. I run a 30-minute check-in every hour with team leads. The first 4 hours after cutover are the highest-risk window — that's when any data migration issues or integration failures surface.
 >
-> Post-go-live: I institute a 'hypercare' period — 2 weeks of elevated support with daily defect triage with the carrier. Nothing transitions to standard AMS until the carrier's IT lead formally signs off on hypercare completion."
+> Post-go-live: I institute a 'hypercare' period — 2 weeks of elevated support with daily defect triage with the carrier. Nothing transitions to standard Managed Services until the carrier's IT lead formally signs off on hypercare completion."
 
 ---
 
@@ -179,7 +179,7 @@ Choks will read your resume and pick specific bullets. Anticipate these:
 
 After the referral mention:
 
-> "I'm a Senior Manager at EY with 17 years in P&C insurance technology — specifically Guidewire transformations across PolicyCenter, BillingCenter, and ClaimCenter. I've led delivery teams of 50+, managed programs from architecture through go-live and into AMS, and worked with carriers across personal lines, commercial lines, and workers compensation.
+> "I'm a Senior Manager at EY with 17 years in P&C insurance technology — specifically Guidewire transformations across PolicyCenter, BillingCenter, and ClaimCenter. I've led delivery teams of 50+, managed programs from architecture through go-live and into Managed Services, and worked with carriers across personal lines, commercial lines, and workers compensation.
 >
 > I've competed against ValueMomentum on deals at EY. I know what you do and how you do it. I'm here because I want to be on this side of the table — at a firm where P&C insurance is the whole business."
 
@@ -193,7 +193,7 @@ Pick 2, based on conversation flow:
 
 2. **"How does ValueMomentum's delivery model differ from what I'd be used to at EY — what's the adjustment you see most new leaders need to make?"**
 
-3. **"What's the current mix of the delivery portfolio — greenfield implementations, upgrades, cloud migrations, AMS? And how is that shifting?"**
+3. **"What's the current mix of the delivery portfolio — greenfield implementations, upgrades, cloud migrations, Managed Services? And how is that shifting?"**
 
 4. **"You've been in Guidewire delivery for a long time. What's the hardest part of managing carrier relationships at this level that most people underestimate?"**
 *(This one shows respect for his experience and invites him to share — good closing move with a detail-oriented interviewer)*
@@ -298,7 +298,7 @@ Choks is a delivery professional who has seen everything. He respects substance,
 >
 > Fix deployed in 24 hours. Root cause analysis delivered to the CIO in 48 hours — here's what happened, here's what we missed in QA, here are the three process changes to ensure it never happens again.
 >
-> The relationship recovered completely. The CIO renewed our AMS contract 6 months later and expanded scope. His feedback: the response was exactly what a strategic partner should look like."
+> The relationship recovered completely. The CIO renewed our Managed Services contract 6 months later and expanded scope. His feedback: the response was exactly what a strategic partner should look like."
 
 ---
 
@@ -338,7 +338,7 @@ Choks is a delivery professional who has seen everything. He respects substance,
 
 > "I track four categories: delivery health, relationship health, commercial health, and team health.
 >
-> Delivery health: on-time milestone rate, open P1/P2 defect count, SLA attainment in AMS, sprint velocity vs. commitment.
+> Delivery health: on-time milestone rate, open P1/P2 defect count, SLA attainment in Managed Services, sprint velocity vs. commitment.
 >
 > Relationship health: NPS or equivalent — I run informal pulse checks with the IT lead and business sponsor quarterly. I also track escalation frequency — if a client is escalating to my leadership, that's a yellow flag.
 >
@@ -412,7 +412,7 @@ Choks is a delivery professional who has seen everything. He respects substance,
 >
 > What I did: on-site in 4 hours, root cause confirmed in 2 hours, communicated to CFO with a technical summary in 3 hours, fix in production in 24 hours, full RCA to CIO in 48 hours with three process changes: (1) expand QA test cases to include display validation for all migrated data, (2) add a post-migration smoke test checklist that includes financial display verification, (3) require CIO sign-off on migration validation before declaring go-live complete.
 >
-> The outcome: relationship was stronger after the escalation than before it. The carrier renewed AMS and expanded scope."
+> The outcome: relationship was stronger after the escalation than before it. The carrier renewed Managed Services and expanded scope."
 
 ---
 
@@ -512,7 +512,7 @@ Choks is a delivery professional who has seen everything. He respects substance,
 >
 > That was a moment that could have ended the relationship. Instead, by responding in 4 hours, fixing in 24, and providing a complete RCA in 48 — with specific process changes to prevent recurrence — I turned the incident into a demonstration of what a real partner looks like.
 >
-> The CIO's words afterward: 'Most vendors would have deflected or minimized. You took ownership and fixed it.' He became our strongest reference carrier. Renewed AMS, expanded scope, and personally introduced us to two other carriers in his network."
+> The CIO's words afterward: 'Most vendors would have deflected or minimized. You took ownership and fixed it.' He became our strongest reference carrier. Renewed Managed Services, expanded scope, and personally introduced us to two other carriers in his network."
 
 ---
 
@@ -620,7 +620,7 @@ Choks is a delivery professional who has seen everything. He respects substance,
 
 > "I managed engagement financials at three levels: contract structure, monthly P&L tracking, and commercial levers.
 >
-> **Contract structure:** Most of my EY engagements ran on a Time & Materials model with milestone-based billing gates — we billed against delivery milestones (architecture sign-off, SIT completion, UAT sign-off, go-live) rather than purely on hours. This gave the carrier predictability and gave us a clean revenue recognition event. AMS engagements were fixed-price monthly retainers with a defined scope of support — SLA tiers, included hours per month, and an overage rate card for anything beyond.
+> **Contract structure:** Most of my EY engagements ran on a Time & Materials model with milestone-based billing gates — we billed against delivery milestones (architecture sign-off, SIT completion, UAT sign-off, go-live) rather than purely on hours. This gave the carrier predictability and gave us a clean revenue recognition event. Managed Services engagements were fixed-price monthly retainers with a defined scope of support — SLA tiers, included hours per month, and an overage rate card for anything beyond.
 >
 > **Monthly P&L tracking:** I ran a monthly financial review on every engagement — planned vs. actual hours by role, utilization rate, margin vs. budget, and WIP (work in progress) balance. I tracked four numbers every month: revenue recognized, cost incurred, margin percentage, and budget remaining. If margin was compressing, I wanted to know in month 2, not month 10.
 >
@@ -649,7 +649,7 @@ Choks is a delivery professional who has seen everything. He respects substance,
 >
 > Fourth, proactive client communication — once I had the plan in place (not before), I told the carrier's IT lead directly: two team changes, here's the transition plan, here's my confidence level on the milestone, here are the specific items I'm watching. No surprises, no deflection.
 >
-> **Result:** We absorbed the attrition with zero impact to the go-live date. One of the two backfill engineers grew significantly through the experience and became a permanent lead on the AMS engagement that followed. The carrier never lost confidence — the IT lead later told me the transparency in how I handled it was what kept the relationship strong.
+> **Result:** We absorbed the attrition with zero impact to the go-live date. One of the two backfill engineers grew significantly through the experience and became a permanent lead on the Managed Services engagement that followed. The carrier never lost confidence — the IT lead later told me the transparency in how I handled it was what kept the relationship strong.
 
 ---
 
@@ -671,7 +671,7 @@ Choks is a delivery professional who has seen everything. He respects substance,
 >
 > *Prevent:* Root cause analysis delivered to the CIO in 48 hours — three specific process changes: (1) expand QA test cases to include display layer validation for all migrated data, (2) add financial display verification to the post-migration smoke test checklist, (3) require CIO sign-off on migration validation before go-live is declared complete.
 >
-> **Result:** The CFO told the board it was resolved before their next meeting. The CIO renewed our AMS contract 6 months later and added scope. His words: "Most vendors would have deflected or minimized. You took ownership and fixed it." The incident made the relationship stronger, not weaker.
+> **Result:** The CFO told the board it was resolved before their next meeting. The CIO renewed our Managed Services contract 6 months later and added scope. His words: "Most vendors would have deflected or minimized. You took ownership and fixed it." The incident made the relationship stronger, not weaker.
 
 ---
 
@@ -693,13 +693,13 @@ Choks is a delivery professional who has seen everything. He respects substance,
 >
 > **How I'd bring this to ValueMomentum carrier clients:**
 >
-> VM has iFoundry and an AI-first positioning post the September 2025 rebrand. What I'd add is production delivery experience — not whiteboard AI, not vendor demos, but a proven pattern for taking a P&C carrier from zero AI capability to production deployment inside 6 months. The three P&C use cases I'd prioritize immediately: claims intake automation (my proven playbook), underwriting submission triage (active at my current client), and AMS predictive alerting (pattern detection on Guidewire production logs before issues become P1s). These are concrete, budgetable, and directly connected to carrier business outcomes — reduced loss adjustment expense, faster submission decisions, and lower AMS reactive cost. That's how you sell AI to a P&C carrier: in dollars, not in technology."
+> VM has iFoundry and an AI-first positioning post the September 2025 rebrand. What I'd add is production delivery experience — not whiteboard AI, not vendor demos, but a proven pattern for taking a P&C carrier from zero AI capability to production deployment inside 6 months. The three P&C use cases I'd prioritize immediately: claims intake automation (my proven playbook), underwriting submission triage (active at my current client), and Managed Services predictive alerting (pattern detection on Guidewire production logs before issues become P1s). These are concrete, budgetable, and directly connected to carrier business outcomes — reduced loss adjustment expense, faster submission decisions, and lower Managed Services reactive cost. That's how you sell AI to a P&C carrier: in dollars, not in technology."
 
 ---
 
 **Q37. What are the common problems carriers face adopting AI — and how do you help them navigate it, whether on an existing program or a new one?**
 
-> **Situation:** During the AMS phase of the CompSource Mutual ClaimCenter engagement, the carrier's VP of Claims approached me informally — he had heard about AI in claims processing from a competitor and wanted to explore it. But when I asked what they'd tried, he said: "We had a vendor demo 6 months ago, our CIO liked it, but nothing ever moved forward." That's a pattern I've seen repeatedly. Carriers are interested in AI, but they get stuck. The technology doesn't fail — the conditions for adoption do.
+> **Situation:** During the Managed Services phase of the CompSource Mutual ClaimCenter engagement, the carrier's VP of Claims approached me informally — he had heard about AI in claims processing from a competitor and wanted to explore it. But when I asked what they'd tried, he said: "We had a vendor demo 6 months ago, our CIO liked it, but nothing ever moved forward." That's a pattern I've seen repeatedly. Carriers are interested in AI, but they get stuck. The technology doesn't fail — the conditions for adoption do.
 >
 > **Task:** Diagnose why their previous AI exploration stalled, identify a viable entry point within their current program context, and help them build a path from curiosity to production — without requiring a separate multi-million dollar initiative to get started.
 >
@@ -715,6 +715,6 @@ Choks is a delivery professional who has seen everything. He respects substance,
 >
 > *5. No internal AI ownership.* Carriers don't have data science teams. When the vendor leaves, the AI solution becomes a black box nobody can maintain. My approach: I build a "carrier AI runbook" as part of every engagement — how the model works in plain language, how to monitor output quality, how to retrain on new data, who to call when it breaks. The goal is to leave the carrier capable of owning it, not dependent on us forever.
 >
-> **Result:** At CompSource, we moved from informal conversation to a funded AI pilot in 90 days — within the existing AMS contract, using a change order rather than a new procurement. The VP of Claims had a business case approved by the CIO within 6 weeks of our first conversation because we had answers to every objection before his leadership team raised them.
+> **Result:** At CompSource, we moved from informal conversation to a funded AI pilot in 90 days — within the existing Managed Services contract, using a change order rather than a new procurement. The VP of Claims had a business case approved by the CIO within 6 weeks of our first conversation because we had answers to every objection before his leadership team raised them.
 >
-> **For existing vs. new projects:** On an existing Guidewire program, the entry point is always a use case that's already in the delivery scope — claims intake, document generation, AMS monitoring. No new budget conversation needed. On a new engagement, I'd run AI readiness as part of the discovery phase — assess data, identify the highest-ROI use case, and include an AI workstream in the proposal from the start. The worst time to introduce AI is as an afterthought after the core system is live.
+> **For existing vs. new projects:** On an existing Guidewire program, the entry point is always a use case that's already in the delivery scope — claims intake, document generation, Managed Services monitoring. No new budget conversation needed. On a new engagement, I'd run AI readiness as part of the discovery phase — assess data, identify the highest-ROI use case, and include an AI workstream in the proposal from the start. The worst time to introduce AI is as an afterthought after the core system is live.

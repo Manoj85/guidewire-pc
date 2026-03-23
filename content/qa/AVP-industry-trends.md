@@ -17,7 +17,7 @@
 
 ---
 
-## Q2: How do you see GenAI changing the Guidewire implementation and AMS business?
+## Q2: How do you see GenAI changing the Guidewire implementation and Managed Services business?
 
 **How to answer:**
 > "GenAI will change both sides of the business, but in different ways and on different timelines.
@@ -26,7 +26,7 @@
 >
 > The second implementation impact is requirements and test generation. We're now using LLM-based tools to analyze legacy business rules documentation — old Word documents, spreadsheets, undocumented stored procedures — and generate structured Guidewire requirements and test cases from them. At Alfa Insurance, we had a particularly messy legacy rating manual that would have taken a BA 8 weeks to convert. We did it in 3 weeks with a RAG pipeline on top of the documents.
 >
-> **On the AMS side:** GenAI enables predictive support. Instead of waiting for a P1 incident, we're now running log analysis models that detect patterns of performance degradation before they become outages. I piloted this on the Nationwide AMS engagement — we caught two memory leak patterns in the BillingCenter integration layer 48 hours before they would have caused a production issue.
+> **On the Managed Services side:** GenAI enables predictive support. Instead of waiting for a P1 incident, we're now running log analysis models that detect patterns of performance degradation before they become outages. I piloted this on the Nationwide Managed Services engagement — we caught two memory leak patterns in the BillingCenter integration layer 48 hours before they would have caused a production issue.
 >
 > The honest caveat: GenAI amplifies what's already there. If your data is clean, your processes are structured, your team knows the domain — GenAI makes you significantly faster. If those foundations aren't in place, GenAI just produces bad output faster."
 
@@ -69,7 +69,7 @@
 >
 > **Guidewire becoming more prescriptive.** Guidewire's cloud certification program and their emphasis on 'vanilla' implementations is narrowing the space for differentiated delivery methodology. The firms that win will differentiate on carrier knowledge, industry accelerators, and team quality — not on proprietary delivery frameworks. VM's pure-play model is an advantage here.
 >
-> **GenAI as a delivery differentiator.** The firms that embed GenAI into their delivery tooling — requirements processing, test generation, code assistance, AMS analytics — will deliver 20–30% faster at better quality within 2 years. This is not hypothetical. I've seen early versions of this work at EY. The firms that invest in GenAI-augmented delivery now will have a structural cost and speed advantage within 18 months.
+> **GenAI as a delivery differentiator.** The firms that embed GenAI into their delivery tooling — requirements processing, test generation, code assistance, Managed Services analytics — will deliver 20–30% faster at better quality within 2 years. This is not hypothetical. I've seen early versions of this work at EY. The firms that invest in GenAI-augmented delivery now will have a structural cost and speed advantage within 18 months.
 >
 > My honest view: VM has the right positioning. Pure-play, deep carrier relationships, growing AI practice. The risk is getting out-scaled by firms that combine VM's insurance depth with enterprise-level delivery infrastructure. The answer to that risk is exactly what an AVP role does — build the capability and client base aggressively while the window is open."
 

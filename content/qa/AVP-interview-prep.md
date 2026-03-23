@@ -128,13 +128,13 @@
 ### Q8: Tell me about your experience managing SLAs in application managed services.
 
 **How to answer:**
-> "Post go-live AMS is where delivery leadership is actually harder than implementation, because you're now on the hook 24/7 for a production system that a carrier depends on.
+> "Post go-live Managed Services is where delivery leadership is actually harder than implementation, because you're now on the hook 24/7 for a production system that a carrier depends on.
 >
-> My AMS model starts with a well-defined SLA framework at the start — P1/P2/P3/P4 severity tiers, response times, resolution times, and escalation paths. For Guidewire managed services, my typical P1 SLA is 4-hour response, same-business-day resolution for production-impacting defects.
+> My Managed Services model starts with a well-defined SLA framework at the start — P1/P2/P3/P4 severity tiers, response times, resolution times, and escalation paths. For Guidewire managed services, my typical P1 SLA is 4-hour response, same-business-day resolution for production-impacting defects.
 >
 > I monitor SLA performance via a weekly scorecard shared with the carrier — green/yellow/red by category. If we go yellow on any SLA, I require a root cause analysis and corrective action within 72 hours. I don't wait for the carrier to ask.
 >
-> I also run proactive health checks — quarterly Guidewire upgrade assessments, performance benchmarking, and security patching — so we're not just reactive. This turns AMS into a value-add relationship rather than a support contract."
+> I also run proactive health checks — quarterly Guidewire upgrade assessments, performance benchmarking, and security patching — so we're not just reactive. This turns Managed Services into a value-add relationship rather than a support contract."
 
 ---
 
@@ -224,7 +224,7 @@
 >
 > **2. Underwriting assistance:** LLM-based summarization of submission documents for commercial lines underwriters, surfacing relevant risk factors and prior loss history. This reduces underwriter decision time without replacing the underwriter.
 >
-> **3. AMS and support:** AI-driven log analysis for Guidewire production environments — pattern detection for performance degradation before it becomes a P1. This shifts AMS from reactive to predictive.
+> **3. Managed Services and support:** AI-driven log analysis for Guidewire production environments — pattern detection for performance degradation before it becomes a P1. This shifts Managed Services from reactive to predictive.
 >
 > The caveat I always give carriers: GenAI is a productivity multiplier, not a transformation strategy. The core system — Guidewire — still needs to be configured, maintained, and upgraded correctly. AI sits on top of a solid foundation, not in place of one."
 
@@ -283,7 +283,7 @@ Use 2–3 of these, tailored to the flow of the conversation:
 
 2. "How does ValueMomentum differentiate its Guidewire delivery model from the larger SIs? What's the secret to your carrier relationships lasting 10–15 years?"
 
-3. "What's the current mix of greenfield implementations vs. upgrades vs. AMS in the delivery portfolio, and how is that shifting over the next 2 years?"
+3. "What's the current mix of greenfield implementations vs. upgrades vs. Managed Services in the delivery portfolio, and how is that shifting over the next 2 years?"
 
 4. "How does ValueMomentum approach the move to Guidewire Cloud for existing on-prem customers? What's the biggest challenge you're seeing?"
 
@@ -345,7 +345,7 @@ Use 2–3 of these, tailored to the flow of the conversation:
 >
 > Fix was deployed within 24 hours. Root cause analysis completed and presented to the CIO within 48 hours — here's what happened, here's what we missed in QA, here are the three process changes we're implementing so it can't happen again.
 >
-> **Result:** The CIO told me the response was exactly what a carrier should expect from a strategic partner. CompSource renewed our AMS contract 6 months later and added scope."
+> **Result:** The CIO told me the response was exactly what a carrier should expect from a strategic partner. CompSource renewed our Managed Services contract 6 months later and added scope."
 
 ---
 
@@ -395,7 +395,7 @@ Use 2–3 of these, tailored to the flow of the conversation:
 ## KEY DIFFERENTIATORS TO REPEAT THROUGHOUT THE INTERVIEW
 
 1. **Depth in all three Guidewire suites** — PolicyCenter, BillingCenter, ClaimCenter — not just one
-2. **Full lifecycle ownership** — architecture through AMS, not just implementation
+2. **Full lifecycle ownership** — architecture through Managed Services, not just implementation
 3. **Client-facing delivery leadership** — SLA governance, executive relationships, commercial viability
 4. **GenAI in insurance workflows** — active, production-level experience, not just theory
 5. **Global delivery model** — offshore/onshore teams at scale

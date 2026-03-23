@@ -28,23 +28,23 @@ Every answer in this section should connect delivery excellence → trust → co
 
 ---
 
-## Q2: What is your approach to transitioning a project delivery engagement into a long-term managed services or AMS relationship?
+## Q2: What is your approach to transitioning a project delivery engagement into a long-term managed services or Managed Services relationship?
 
 **What they're really asking:** Can you convert a one-time implementation into recurring revenue? This is how VM builds long-term carrier relationships.
 
 **How to answer:**
 
-> "I start the AMS conversation at kickoff, not at go-live. The reason: if you wait until go-live to propose managed services, it looks like a last-minute upsell. If you frame it from day one as 'here's how we support you after launch,' it becomes part of the delivery narrative.
+> "I start the Managed Services conversation at kickoff, not at go-live. The reason: if you wait until go-live to propose managed services, it looks like a last-minute upsell. If you frame it from day one as 'here's how we support you after launch,' it becomes part of the delivery narrative.
 >
 > My transition playbook has three parts:
 >
-> **1. Build AMS artifacts during implementation.** Runbooks, support playbooks, incident response procedures — I require these to be authored by the delivery team during the project. By go-live, the AMS team has a complete operating manual, not a knowledge transfer crisis.
+> **1. Build Managed Services artifacts during implementation.** Runbooks, support playbooks, incident response procedures — I require these to be authored by the delivery team during the project. By go-live, the Managed Services team has a complete operating manual, not a knowledge transfer crisis.
 >
-> **2. Introduce the AMS lead to the client before go-live.** The client should know the person who will own their support relationship. I do a formal AMS introduction 60 days before go-live, structured as a capability briefing — here's our team, here's our SLA model, here's how incidents get handled.
+> **2. Introduce the Managed Services lead to the client before go-live.** The client should know the person who will own their support relationship. I do a formal Managed Services introduction 60 days before go-live, structured as a capability briefing — here's our team, here's our SLA model, here's how incidents get handled.
 >
-> **3. Propose a 90-day hypercare period.** This is a bridge between project delivery and steady-state AMS. It's lower-risk for the carrier to say yes to 90 days of enhanced support than to a 3-year contract. Once you're in hypercare and delivering well, the multi-year AMS contract is a formality.
+> **3. Propose a 90-day hypercare period.** This is a bridge between project delivery and steady-state Managed Services. It's lower-risk for the carrier to say yes to 90 days of enhanced support than to a 3-year contract. Once you're in hypercare and delivering well, the multi-year Managed Services contract is a formality.
 >
-> Using this model, I've converted three out of three implementation engagements into AMS relationships. AMS is also the stickiest revenue in this business — carriers rarely change their managed services provider mid-contract."
+> Using this model, I've converted three out of three implementation engagements into Managed Services relationships. Managed Services is also the stickiest revenue in this business — carriers rarely change their managed services provider mid-contract."
 
 ---
 
@@ -140,23 +140,23 @@ Every answer in this section should connect delivery excellence → trust → co
 
 ---
 
-## Q8: A competitor approaches one of your best clients and offers to undercut your AMS pricing by 20%. How do you defend the account?
+## Q8: A competitor approaches one of your best clients and offers to undercut your Managed Services pricing by 20%. How do you defend the account?
 
 **What they're really asking:** Commercial maturity and competitive intelligence. Can you win on value, not just price?
 
 **How to answer:**
 
-> "Twenty percent on AMS pricing is a real number — carriers pay attention to it. My first move is not to match the price. It's to reframe the decision.
+> "Twenty percent on Managed Services pricing is a real number — carriers pay attention to it. My first move is not to match the price. It's to reframe the decision.
 >
 > I request a meeting with the carrier's decision-maker — not the procurement team, the business or IT leader who uses our service. I come in with three things:
 >
-> **1. Transition cost analysis.** I quantify what it actually costs to switch AMS providers: knowledge transfer, system documentation, ramp time for a new team, risk of incidents during transition. For a complex Guidewire environment, transition risk alone is typically 6–12 months of whatever they'd save on price. I present that number honestly.
+> **1. Transition cost analysis.** I quantify what it actually costs to switch Managed Services providers: knowledge transfer, system documentation, ramp time for a new team, risk of incidents during transition. For a complex Guidewire environment, transition risk alone is typically 6–12 months of whatever they'd save on price. I present that number honestly.
 >
 > **2. Our delivery record.** I pull 12 months of SLA performance data — incident resolution times, P1 response rates, uptime metrics, enhancement delivery velocity. If we've been performing, that data speaks louder than a competitor's promise.
 >
 > **3. A forward-looking offer.** Rather than matching their price immediately, I propose a performance-based pricing adjustment: if we hit agreed KPIs for 2 consecutive quarters, the rate decreases by X%. That shows confidence in our own performance and gives the carrier a path to savings without switching risk.
 >
-> On the Nationwide AMS engagement, a competitor undercut us during a contract renewal. I ran this exact play — the transition cost analysis was the decisive factor. The carrier's CIO said: 'I'm not paying a 20% premium to stay, but I'm also not accepting 6 months of disruption to save it.' We structured a hybrid deal that met them in the middle. We kept the account."
+> On the Nationwide Managed Services engagement, a competitor undercut us during a contract renewal. I ran this exact play — the transition cost analysis was the decisive factor. The carrier's CIO said: 'I'm not paying a 20% premium to stay, but I'm also not accepting 6 months of disruption to save it.' We structured a hybrid deal that met them in the middle. We kept the account."
 
 ---
 
@@ -164,6 +164,6 @@ Every answer in this section should connect delivery excellence → trust → co
 
 - "I treat every delivery as an audition for the next engagement."
 - "The best pipeline is your current client base."
-- "AMS is the stickiest revenue — carriers don't swap managed services providers casually."
+- "Managed Services is the stickiest revenue — carriers don't swap managed services providers casually."
 - "I only pitch what I'd buy if I were the carrier."
 - "My QBR agenda starts with their problems, not our capabilities."

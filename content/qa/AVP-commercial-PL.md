@@ -18,7 +18,7 @@ Own this territory confidently. Most delivery-focused candidates go soft here �
 
 **How to answer:**
 
-> "Yes — at EY I've had direct P&L accountability on my engagement portfolio. At the Senior Manager level, I own the commercial relationship: from deal estimation through delivery margin management and AMS renewal.
+> "Yes — at EY I've had direct P&L accountability on my engagement portfolio. At the Senior Manager level, I own the commercial relationship: from deal estimation through delivery margin management and Managed Services renewal.
 >
 > My P&L levers are:
 >
@@ -88,7 +88,7 @@ Own this territory confidently. Most delivery-focused candidates go soft here �
 >
 > **Long-term (1–3 months):** I keep close alignment between my delivery pipeline and my hiring plan. I'd rather slightly understaffed on new work and use contractors to flex up than overbuilt a permanent team that goes on bench.
 >
-> One lever I use in Guidewire delivery specifically: AMS tail engagements. Once a carrier goes live, I keep a small core team on AMS — 2–3 people. That creates a buffer. If a new engagement starts slow, I can temporarily pull from the AMS team and backfill. It reduces the cliff-edge transitions that create bench spikes.
+> One lever I use in Guidewire delivery specifically: Managed Services tail engagements. Once a carrier goes live, I keep a small core team on Managed Services — 2–3 people. That creates a buffer. If a new engagement starts slow, I can temporarily pull from the Managed Services team and backfill. It reduces the cliff-edge transitions that create bench spikes.
 >
 > At EY, I maintained portfolio utilization above 82% consistently — by managing transitions, not just delivery."
 
@@ -120,7 +120,7 @@ Own this territory confidently. Most delivery-focused candidates go soft here �
 
 > "I'd take a loss-leader for the right reasons — and there are two scenarios where I think it's justified:
 >
-> **New logo entry:** If a carrier is a strategic target — significant long-term AMS potential, reference value in a key market segment, or a named account that opens other doors — I'd accept thinner margin on the initial engagement. But I'd go in with eyes open: a documented strategic rationale, a path to margin improvement at renewal, and a ceiling on how much we'd subsidize.
+> **New logo entry:** If a carrier is a strategic target — significant long-term Managed Services potential, reference value in a key market segment, or a named account that opens other doors — I'd accept thinner margin on the initial engagement. But I'd go in with eyes open: a documented strategic rationale, a path to margin improvement at renewal, and a ceiling on how much we'd subsidize.
 >
 > **Capability investment:** If an engagement lets us build a reusable accelerator, a new practice capability, or a GenAI POC that we can take to market — I'd accept lower margin in exchange for the IP we develop. That's an R&D investment disguised as a delivery engagement.
 >
@@ -197,7 +197,7 @@ Own this territory confidently. Most delivery-focused candidates go soft here �
 | **Change order / RFC** | Formal mechanism for approved scope changes |
 | **Margin** | Revenue minus cost; track per engagement, not just portfolio |
 | **Land and expand** | Win initial engagement, grow account organically |
-| **AMS / managed services** | Recurring post-go-live revenue — stickiest commercial model |
+| **Managed Services / managed services** | Recurring post-go-live revenue — stickiest commercial model |
 | **Fixed-fee vs. T&M** | Two primary commercial structures; hybrid is common |
 | **Bench** | Unbilled team members between engagements — direct cost |
 | **Pipeline** | Forward-looking revenue opportunities in pre-sales |
