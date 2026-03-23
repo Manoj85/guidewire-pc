@@ -603,6 +603,18 @@ Choks is a delivery professional who has seen everything. He respects substance,
 
 ---
 
+**Q32. How would you handle onboarding a new client while managing your existing portfolio?**
+
+> "Two things that make this work: a strong delivery bench and a clear onboarding playbook.
+>
+> On the delivery side — I shouldn't be the operational bottleneck on existing accounts. If I've built the right team structure, my delivery leads are running the day-to-day on current programs. My role on mature accounts is relationship and commercial oversight, not daily delivery management. That frees me to invest in a new client onboarding.
+>
+> On the onboarding side — the first 30 days with a new client are the most important. I focus entirely on: understand their business, understand their IT landscape, meet every key stakeholder, and establish the communication and governance model. I don't try to multi-task onboarding with deep operational work on other accounts — those 30 days deserve full attention.
+>
+> The risk to watch: new client urgency pulling me away from existing client relationships at a critical moment — go-live, renewal, escalation. I manage that by being explicit with the new client about my availability in the first 30 days and setting clear expectations on both sides."
+
+---
+
 **Q33. How did you structure the financials on your engagements?**
 
 > "I managed engagement financials at three levels: contract structure, monthly P&L tracking, and commercial levers.
@@ -617,15 +629,3 @@ Choks is a delivery professional who has seen everything. He respects substance,
 > - **Role mix optimization** — using senior engineers only on architecture and complex Gosu, mid-level on configuration, junior on testing and documentation. Right person, right rate, right task.
 >
 > **How I reported it internally:** Monthly one-page financial summary to the engagement partner — revenue, cost, margin, forecast to complete, change order log, and any risks to the financial plan. No surprises at quarter-end."
-
----
-
-**Q32. How would you handle onboarding a new client while managing your existing portfolio?**
-
-> "Two things that make this work: a strong delivery bench and a clear onboarding playbook.
->
-> On the delivery side — I shouldn't be the operational bottleneck on existing accounts. If I've built the right team structure, my delivery leads are running the day-to-day on current programs. My role on mature accounts is relationship and commercial oversight, not daily delivery management. That frees me to invest in a new client onboarding.
->
-> On the onboarding side — the first 30 days with a new client are the most important. I focus entirely on: understand their business, understand their IT landscape, meet every key stakeholder, and establish the communication and governance model. I don't try to multi-task onboarding with deep operational work on other accounts — those 30 days deserve full attention.
->
-> The risk to watch: new client urgency pulling me away from existing client relationships at a critical moment — go-live, renewal, escalation. I manage that by being explicit with the new client about my availability in the first 30 days and setting clear expectations on both sides."
