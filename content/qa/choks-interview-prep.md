@@ -32,26 +32,6 @@
 
 ---
 
-## VM LANGUAGE — USE THIS IN YOUR ANSWERS
-
-ValueMomentum organizes its delivery model in three terms. Use these naturally — it signals you understand how VM thinks:
-
-| VM Term | Means | Use instead of |
-|---|---|---|
-| **Build** | New / greenfield implementation | "new project", "greenfield", "new implementation" |
-| **Grow** | Transformation / modernization / upgrade | "transformation program", "modernization", "upgrade engagement" |
-| **Run** | Managed Services / ongoing support | "AMS", "post go-live support", "support contract" |
-
-**How to use it naturally in answers:**
-- *"I've led all three — Build, Grow, and Run engagements across my carrier portfolio."*
-- *"The Nationwide program was a Build. Once we went live, we transitioned into Run."*
-- *"The Alfa Insurance turnaround was effectively a Grow — a modernization program that had stalled mid-flight."*
-- *"At VM the portfolio mix across Build, Grow, and Run is what I'd want to understand in the first 30 days."*
-
-> **Why this matters:** When you use VM's own language, Choks hears someone who has already made the mental shift from EY to VM. Don't overdo it — 2–3 natural uses across the interview is enough.
-
----
-
 ## OPENING — USE YOUR REFERRAL
 
 Start by mentioning your mutual contact within the first 2 minutes:
@@ -213,7 +193,7 @@ Pick 2, based on conversation flow:
 
 2. **"How does ValueMomentum's delivery model differ from what I'd be used to at EY — what's the adjustment you see most new leaders need to make?"**
 
-3. **"What's the current mix of the delivery portfolio across Build, Grow, and Run — and how is that shifting over the next two years?"**
+3. **"What's the current mix of the delivery portfolio — new implementations, transformation programs, Managed Services? And how is that shifting over the next two years?"**
 
 4. **"You've been in Guidewire delivery for a long time. What's the hardest part of managing carrier relationships at this level that most people underestimate?"**
 *(This one shows respect for his experience and invites him to share — good closing move with a detail-oriented interviewer)*
@@ -374,13 +354,13 @@ Choks is a delivery professional who has seen everything. He respects substance,
 
 **Q12. What is your understanding of ValueMomentum's core service offerings and how would you position them to clients?**
 
-> "VM operates across three delivery modes — Build, Grow, and Run — and I think that's exactly the right way to frame it to a carrier CIO.
+> "VM's core is P&C insurance technology services across the full delivery lifecycle — new implementations, transformation programs, and Managed Services — on Guidewire, Duck Creek, EIS, and Majesco. Plus digital and data engineering, and AI/analytics through iFoundry.
 >
-> Build is new implementation: Guidewire, Duck Creek, EIS, Majesco — taking a carrier from legacy or paper to a modern core platform. Grow is transformation and modernization: upgrading an existing Guidewire environment, migrating on-prem to Guidewire Cloud, or expanding from one suite to all three. Run is Managed Services: owning the carrier's production system, SLA governance, proactive support, and continuous improvement post go-live.
+> What makes VM's position strong is that the same team owns the full lifecycle. A Big 4 firm typically hands off between implementation and Managed Services. VM stays. Your implementation knowledge doesn't walk out the door at go-live.
 >
-> What makes VM's position strong is that they can do all three with the same team and the same institutional knowledge of the carrier's environment. A Big 4 firm typically hands off between delivery and support. VM owns the full lifecycle.
+> How I'd position it to a carrier CIO: 'VM is a P&C-first technology partner — 25 years, 75+ carriers. Whether you're standing up a new system, transforming what you have, or running what's live, you get the same insurance-native team with the same carrier context throughout.'
 >
-> How I'd position it to a carrier CIO: 'VM is a P&C-first technology partner — 25 years, 75+ carriers. Whether you're standing up a new system, transforming what you have, or running what's live, the same insurance-native team stays with you. Your implementation knowledge doesn't walk out the door at go-live.'"
+> For Guidewire specifically: six active specializations including Cloud Platform — that's the message for carriers moving off on-prem. VM is certified for where the market is going."
 
 ---
 
@@ -743,26 +723,26 @@ Choks is a delivery professional who has seen everything. He respects substance,
 
 ---
 
-**Q38. What are the easy AI wins you'd go after first in a carrier engagement — Build, Grow, or Run?**
+**Q38. What are the easy AI wins you'd go after first in a carrier engagement?**
 
-> "The best AI wins are the ones that use data the carrier already has, don't touch regulatory decision-making, and show ROI in under 60 days. Here's what I'd go after by engagement type:
+> "The best AI wins use data the carrier already has, don't touch regulatory decision-making, and show ROI in under 60 days. Here's where I'd go first:
 >
-> **In a Run (Managed Services) engagement — easiest entry point:**
+> **On a Managed Services engagement — easiest entry point:**
 >
-> *ClaimCenter notes summarization.* Adjusters write long free-text notes in ClaimCenter. A simple LLM summarization layer surfaces the key facts — coverage, liability, reserve rationale — in 3 bullet points. No new data pipeline, no regulatory risk, no integration complexity. A claims handler reviews 10 claims in the time it used to take to review 4. Build time: 3–4 weeks. This is the lowest-friction AI win I know of in P&C.
+> *ClaimCenter notes summarization.* Adjusters write long free-text notes in ClaimCenter. A simple LLM summarization layer surfaces the key facts — coverage, liability, reserve rationale — in 3 bullet points. No new data pipeline, no regulatory risk, no integration complexity. A claims handler reviews 10 claims in the time it used to take to review 4. Delivery time: 3–4 weeks. This is the lowest-friction AI win I know of in P&C.
 >
-> *Run anomaly detection.* On a Managed Services engagement, we already have access to Guidewire application logs. An LLM-assisted pattern detection model flags anomalies — memory spikes, slow query patterns, failed integration calls — 24–48 hours before they become P1 incidents. This shifts the Run team from reactive to predictive. No carrier data governance issue because it's log data, not policyholder data.
+> *Proactive anomaly detection.* On a Managed Services engagement, I already have access to Guidewire application logs. An LLM-assisted pattern detection model flags anomalies — memory spikes, slow query patterns, failed integration calls — 24–48 hours before they become P1 incidents. Shifts the team from reactive to predictive. No carrier data governance issue because it's log data, not policyholder data.
 >
-> **In a Grow (transformation) engagement:**
+> **On a transformation or upgrade engagement:**
 >
-> *Upgrade impact analysis.* When a carrier upgrades Guidewire, the biggest risk is undocumented Gosu customizations that break. I run an LLM-assisted code scan across their Gosu library — the model classifies each customization by upgrade risk level (high/medium/low) and flags which ones need re-testing. Cuts upgrade QA scoping time by 40–50%. The carrier sees immediate value in the discovery phase before the upgrade even starts.
+> *Upgrade impact analysis.* When a carrier upgrades Guidewire, the biggest risk is undocumented Gosu customizations that break. I run an LLM-assisted code scan across their Gosu library — the model classifies each customization by upgrade risk (high/medium/low) and flags which ones need re-testing. Cuts QA scoping time by 40–50%. The carrier sees value in the discovery phase before the upgrade even starts.
 >
-> *Legacy data migration quality.* During a Grow engagement, carriers migrate years of policy and claims data. LLM-assisted data profiling detects anomalies in source data — duplicate records, inconsistent coding, missing mandatory fields — before they land in Guidewire. Saves weeks of post-migration defect fixing.
+> *Data migration quality.* Carriers migrate years of policy and claims data during modernization. LLM-assisted data profiling detects anomalies in source data — duplicate records, inconsistent coding, missing mandatory fields — before they land in Guidewire. Saves weeks of post-migration defect fixing.
 >
-> **In a Build (new implementation) engagement:**
+> **On a new implementation:**
 >
-> *Submission triage for commercial lines.* Underwriters receive commercial submissions as unstructured emails and PDFs. An LLM extraction layer pulls the key risk data — coverage requested, property details, loss history — and pre-populates the PolicyCenter application. Underwriter decision time drops significantly. No regulatory issue because the underwriter still makes the decision — AI just removes the data entry step.
+> *Submission triage for commercial lines.* Underwriters receive submissions as unstructured emails and PDFs. An LLM extraction layer pulls key risk data — coverage requested, property details, loss history — and pre-populates the PolicyCenter application. Underwriter decision time drops significantly. No regulatory issue because the underwriter still makes the decision — AI removes the data entry step, not the judgment.
 >
-> *Requirements traceability.* On a Build, I use LLM-assisted mapping between business requirements and Guidewire configuration items. The model flags gaps — requirements with no corresponding configuration — before SIT. Catches scope holes in week 4 instead of week 14.
+> *Requirements traceability.* I use LLM-assisted mapping between business requirements and Guidewire configuration items. The model flags gaps — requirements with no corresponding configuration — before SIT. Catches scope holes in week 4 instead of week 14.
 >
-> **The common thread across all three:** these wins use existing data, stay on the right side of DOI explainability requirements, and show measurable ROI within a single sprint cycle. That's how you build carrier confidence for the bigger AI investments — Phase 2, Phase 3 — that follow."
+> **The common thread:** all of these use existing data, stay on the right side of DOI explainability requirements, and show measurable ROI within a single sprint cycle. That's how you build carrier confidence for the larger AI investments that follow."
