@@ -42,7 +42,7 @@
 | Raghavendra "Raghu" Aithal | SVP, Head of P&C Claims | Leads AI claims automation and agentic systems for claims |
 | Kott "Siva" Sivakumar | SVP, Head of Enterprise IT | CPCU designation |
 | Wayne Rodrigues | SVP, Market Success – North America | Customer engagement, North America |
-| Naren Sivakumar | SVP, Customer Success | |
+| Naren Sivakumar | COO (Chief Operating Officer) | Previously listed as SVP Customer Success; confirmed COO |
 | Vijay Mahendrakar | SVP, Head of Insurance Solutions – UK & Europe | Led UK market entry (Nov 2024); AI-enabled submission triage |
 | Pankaj Kumar | SVP, Head of Platforms, Applications & Infrastructure | |
 | Neil Dias | SVP, Head of Advanced Analytics Technology Solutions | |
@@ -59,6 +59,13 @@
 | Avdhut "AV" Nadkarni | VP, Client Partner, Insurance | Insurance sector client partnerships |
 | Jeyasekaran Ethiraj | VP | Joined October 2024 |
 
+### HR & Talent
+
+| Name | Title | Notes |
+|---|---|---|
+| Gopal Bora | HR Director | CC'd on interview invite; key HR stakeholder |
+| Suman Beeram | Recruiter / Coordinator | Sent the interview invitation |
+
 ### Associate Vice Presidents (AVP)
 
 | Name | Title | Notes |
@@ -66,7 +73,11 @@
 | V. S. Prasad Guntupalli | AVP, Head of Engineering – Core Platforms | Leads Guidewire practice engineering; ex-EY (2014–2019) — ISB Executive MBA |
 | Sudeep Karnavat | AVP, Head of Engineering – Data & BI | Data and business intelligence engineering |
 | Swapnil Vijay Bhargavva | AVP, Regional Head – Canada | Canada regional operations |
-| Choks Kandaswamy | AVP, Delivery | Clarksburg, MD — background in insurance tech delivery; prior: Westfield Insurance, CSAA Insurance Group, Liberty, WinWire |
+| Chokkalingam "Choks" Kandaswamy | Delivery Officer | Clarksburg, MD — **your confirmed interviewer**; background: Westfield Insurance, CSAA Insurance Group, Liberty, WinWire |
+
+> **YOUR INTERVIEW:** Confirmed panel — Choks Kandaswamy (Delivery Officer, interviewer), Naren Sivakumar (COO, CC'd), Gopal Bora (HR Director, CC'd). Coordinated by Suman Beeram.
+
+> **Choks interview style (insider intel):** Very detail-oriented — he will read every word on your resume. Expect deep follow-up questions on exactly what you say. He focuses on *what you have done* and *your actual experience*. Straightforward guy overall — no games, just substance. **You can mention your mutual contact as a referral** (friend knows Choks well).
 
 > **Interview insight:** V. S. Prasad Guntupalli (AVP, Core Platforms) is a former EY colleague — he was at EY from 2014–2019. This is a direct peer-level contact who understands the EY background and the Guidewire practice. Worth acknowledging the EY connection if his name comes up.
 
