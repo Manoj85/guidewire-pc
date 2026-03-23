@@ -759,7 +759,7 @@ Choks is a delivery professional who has seen everything. He respects substance,
 >
 > **My Solution — TestAI:**
 >
-> At EY, I served as the AI Advisor for the Quality Engineering practice. In that capacity, I advised on and shaped TestAI — an end-to-end automated test lifecycle solution leveraging GenAI adoption that the QE practice built and took to market.
+> At EY, I am serving as the AI Advisor for the Quality Engineering practice. In that capacity, I am advising on and shaping TestAI — an end-to-end automated test lifecycle solution leveraging GenAI adoption that the QE practice is building and taking to market.
 >
 > **How it works:**
 >
