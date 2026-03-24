@@ -53,7 +53,7 @@ function GroupSection({
   dotClass: string
 }) {
   const hasSelected = files.some(f => f.path === selectedFile)
-  const [open, setOpen] = useState(hasSelected || true)
+  const [open, setOpen] = useState<boolean>(true)
 
   return (
     <div>

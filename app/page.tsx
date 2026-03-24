@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import Sidebar from '@/components/Sidebar'
 import FileViewer from '@/components/FileViewer'
 
-export type FileEntry = { name: string; path: string; folder: string }
+export type FileEntry = { name: string; path: string; folder: string; group?: string }
 export type FileTree = Record<string, FileEntry[]>
 export type SearchResult = { file: FileEntry; snippet: string; matches: number }
 
