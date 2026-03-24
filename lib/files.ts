@@ -7,8 +7,9 @@ export type FolderName = (typeof CONTENT_DIRS)[number]
 
 export interface FileEntry {
   name: string      // filename without .md
-  path: string      // relative path e.g. "jd/foo.md"
+  path: string      // relative path e.g. "jd/foo.md" or "qa/choks/01-strategy.md"
   folder: FolderName
+  group?: string    // subdirectory name e.g. "choks"
 }
 
 export type FileTree = Record<FolderName, FileEntry[]>
@@ -22,14 +23,34 @@ export function getFileTree(): FileTree {
       tree[dir] = []
       continue
     }
-    tree[dir] = fs.readdirSync(dirPath)
-      .filter(f => f.endsWith('.md'))
-      .sort()
-      .map(f => ({
-        name: f.replace(/\.md$/, ''),
-        path: `${dir}/${f}`,
-        folder: dir,
-      }))
+
+    const entries: FileEntry[] = []
+    const items = fs.readdirSync(dirPath, { withFileTypes: true })
+      .sort((a, b) => a.name.localeCompare(b.name))
+
+    for (const item of items) {
+      if (item.isFile() && item.name.endsWith('.md')) {
+        entries.push({
+          name: item.name.replace(/\.md$/, ''),
+          path: `${dir}/${item.name}`,
+          folder: dir,
+        })
+      } else if (item.isDirectory()) {
+        const subDirPath = path.join(dirPath, item.name)
+        const subFiles = fs.readdirSync(subDirPath)
+          .filter(f => f.endsWith('.md'))
+          .sort()
+          .map(f => ({
+            name: f.replace(/\.md$/, ''),
+            path: `${dir}/${item.name}/${f}`,
+            folder: dir as FolderName,
+            group: item.name,
+          }))
+        entries.push(...subFiles)
+      }
+    }
+
+    tree[dir] = entries
   }
 
   return tree

@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import type { FileTree, FileEntry, SearchResult } from '@/app/page'
 
 const FOLDER_META: Record<string, { label: string; dotClass: string; textClass: string }> = {
@@ -20,6 +21,82 @@ interface Props {
   onSearchChange: (q: string) => void
   onFileSelect: (path: string) => void
   searchResults: SearchResult[]
+}
+
+function FileButton({ file, selected, onSelect }: { file: FileEntry; selected: boolean; onSelect: () => void }) {
+  return (
+    <button
+      onClick={onSelect}
+      className={`w-full text-left px-4 py-1.5 flex items-center gap-2 text-sm
+        transition-colors group
+        ${selected ? 'bg-slate-700 text-white' : 'text-slate-500 hover:bg-slate-800 hover:text-slate-200'}`}
+    >
+      <svg
+        className="w-3.5 h-3.5 flex-shrink-0 ml-2 opacity-40 group-hover:opacity-60"
+        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+      <span className="truncate">{humanize(file.name)}</span>
+    </button>
+  )
+}
+
+function GroupSection({
+  groupName, files, selectedFile, onFileSelect, dotClass,
+}: {
+  groupName: string
+  files: FileEntry[]
+  selectedFile: string | null
+  onFileSelect: (p: string) => void
+  dotClass: string
+}) {
+  const hasSelected = files.some(f => f.path === selectedFile)
+  const [open, setOpen] = useState(hasSelected || true)
+
+  return (
+    <div>
+      {/* Group header */}
+      <button
+        onClick={() => setOpen(o => !o)}
+        className="w-full text-left px-4 py-1 flex items-center gap-2 text-xs text-slate-500
+                   hover:text-slate-300 transition-colors group"
+      >
+        <span className={`w-1.5 h-1.5 rounded-sm flex-shrink-0 ${dotClass} opacity-60`} />
+        <span className="truncate font-medium tracking-wide">{humanize(groupName)}</span>
+        <svg
+          className={`w-3 h-3 ml-auto flex-shrink-0 opacity-40 transition-transform ${open ? 'rotate-90' : ''}`}
+          fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      {/* Group files — indented */}
+      {open && files.map(file => (
+        <button
+          key={file.path}
+          onClick={() => onFileSelect(file.path)}
+          className={`w-full text-left pl-8 pr-4 py-1.5 flex items-center gap-2 text-sm
+            transition-colors group
+            ${selectedFile === file.path
+              ? 'bg-slate-700 text-white'
+              : 'text-slate-500 hover:bg-slate-800 hover:text-slate-200'
+            }`}
+        >
+          <svg
+            className="w-3 h-3 flex-shrink-0 opacity-30 group-hover:opacity-50"
+            fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span className="truncate">{humanize(file.name)}</span>
+        </button>
+      ))}
+    </div>
+  )
 }
 
 export default function Sidebar({
@@ -101,6 +178,17 @@ export default function Sidebar({
         ) : (
           Object.entries(fileTree).map(([folder, files]) => {
             const meta = FOLDER_META[folder] ?? { label: folder, dotClass: 'bg-slate-400', textClass: 'text-slate-400' }
+
+            // Separate root files from grouped files
+            const rootFiles = files.filter(f => !f.group)
+            const groups = files.reduce((acc, f) => {
+              if (f.group) {
+                if (!acc[f.group]) acc[f.group] = []
+                acc[f.group].push(f)
+              }
+              return acc
+            }, {} as Record<string, FileEntry[]>)
+
             return (
               <div key={folder} className="mb-3">
                 {/* Folder header */}
@@ -112,31 +200,32 @@ export default function Sidebar({
                   <span className="text-xs text-slate-700 ml-auto">{files.length}</span>
                 </div>
 
-                {/* Files */}
                 {files.length === 0 ? (
                   <p className="px-7 py-1 text-xs text-slate-700 italic">Empty</p>
                 ) : (
-                  files.map(file => (
-                    <button
-                      key={file.path}
-                      onClick={() => onFileSelect(file.path)}
-                      className={`w-full text-left px-4 py-1.5 flex items-center gap-2 text-sm
-                        transition-colors group
-                        ${selectedFile === file.path
-                          ? 'bg-slate-700 text-white'
-                          : 'text-slate-500 hover:bg-slate-800 hover:text-slate-200'
-                        }`}
-                    >
-                      <svg
-                        className="w-3.5 h-3.5 flex-shrink-0 ml-2 opacity-40 group-hover:opacity-60"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                      <span className="truncate">{humanize(file.name)}</span>
-                    </button>
-                  ))
+                  <>
+                    {/* Root-level files */}
+                    {rootFiles.map(file => (
+                      <FileButton
+                        key={file.path}
+                        file={file}
+                        selected={selectedFile === file.path}
+                        onSelect={() => onFileSelect(file.path)}
+                      />
+                    ))}
+
+                    {/* Grouped sub-files */}
+                    {Object.entries(groups).map(([groupName, groupFiles]) => (
+                      <GroupSection
+                        key={groupName}
+                        groupName={groupName}
+                        files={groupFiles}
+                        selectedFile={selectedFile}
+                        onFileSelect={onFileSelect}
+                        dotClass={meta.dotClass}
+                      />
+                    ))}
+                  </>
                 )}
               </div>
             )
