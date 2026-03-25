@@ -1,0 +1,14 @@
+[
+  {
+    "id": "guidewire-pc",
+    "label": "Guidewire P&C",
+    "description": "Guidewire P&C Insurance interview preparation",
+    "color": "blue",
+    "folders": [
+      { "id": "jd",       "label": "Job Descriptions", "color": "blue"    },
+      { "id": "qa",       "label": "Interview Q&A",    "color": "emerald" },
+      { "id": "resume",   "label": "Resume Notes",     "color": "violet"  },
+      { "id": "research", "label": "Research",         "color": "amber"   }
+    ]
+  }
+]

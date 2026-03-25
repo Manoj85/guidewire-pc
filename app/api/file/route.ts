@@ -2,11 +2,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import { readFile, writeFile } from '@/lib/files'
 
 export async function GET(req: NextRequest) {
+  const topic    = req.nextUrl.searchParams.get('topic') ?? 'guidewire-pc'
   const filePath = req.nextUrl.searchParams.get('path')
   if (!filePath) return NextResponse.json({ error: 'No path' }, { status: 400 })
 
   try {
-    const content = readFile(filePath)
+    const content = readFile(topic, filePath)
     return NextResponse.json({ content })
   } catch {
     return NextResponse.json({ error: 'File not found' }, { status: 404 })
@@ -19,13 +20,13 @@ export async function PUT(req: NextRequest) {
   }
 
   const body = await req.json()
-  const { path: filePath, content } = body
+  const { topic = 'guidewire-pc', path: filePath, content } = body
   if (!filePath || content === undefined) {
     return NextResponse.json({ error: 'Missing path or content' }, { status: 400 })
   }
 
   try {
-    writeFile(filePath, content)
+    writeFile(topic, filePath, content)
     return NextResponse.json({ ok: true })
   } catch {
     return NextResponse.json({ error: 'Write failed' }, { status: 500 })

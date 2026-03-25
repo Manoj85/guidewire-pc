@@ -4,35 +4,76 @@ import { useState, useEffect, useCallback, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Sidebar from '@/components/Sidebar'
 import FileViewer from '@/components/FileViewer'
+import SettingsModal, { defaultSettings, type AllSettings } from '@/components/SettingsModal'
+import type { FileEntry, FileTree, SearchResult, Topic } from '@/lib/files'
 
-export type FileEntry = { name: string; path: string; folder: string; group?: string }
-export type FileTree = Record<string, FileEntry[]>
-export type SearchResult = { file: FileEntry; snippet: string; matches: number }
+export type { FileEntry, FileTree, SearchResult }
+
+const SETTINGS_KEY = 'prep-hub-settings'
+const TOPIC_KEY    = 'prep-hub-topic'
 
 function AppContent() {
-  const router = useRouter()
+  const router       = useRouter()
   const searchParams = useSearchParams()
 
-  const [fileTree, setFileTree]         = useState<FileTree>({})
-  const [canEdit, setCanEdit]           = useState(false)
-  const [selectedFile, setSelectedFile] = useState<string | null>(null)
-  const [content, setContent]           = useState('')
-  const [loading, setLoading]           = useState(false)
-  const [searchQuery, setSearchQuery]   = useState('')
+  const [topics, setTopics]               = useState<Topic[]>([])
+  const [selectedTopic, setSelectedTopic] = useState<string>('guidewire-pc')
+  const [fileTree, setFileTree]           = useState<FileTree>({})
+  const [canEdit, setCanEdit]             = useState(false)
+  const [selectedFile, setSelectedFile]   = useState<string | null>(null)
+  const [content, setContent]             = useState('')
+  const [loading, setLoading]             = useState(false)
+  const [searchQuery, setSearchQuery]     = useState('')
   const [searchResults, setSearchResults] = useState<SearchResult[]>([])
-  const [isEditing, setIsEditing]       = useState(false)
-  const [editContent, setEditContent]   = useState('')
-  const [saving, setSaving]             = useState(false)
+  const [isEditing, setIsEditing]         = useState(false)
+  const [editContent, setEditContent]     = useState('')
+  const [saving, setSaving]               = useState(false)
+  const [settingsOpen, setSettingsOpen]   = useState(false)
+  const [allSettings, setAllSettings]     = useState<AllSettings>({})
 
-  // Load file tree + canEdit flag from the server
+  // Load topics
   useEffect(() => {
-    fetch('/api/files')
+    fetch('/api/topics')
+      .then(r => r.json())
+      .then((data: Topic[]) => {
+        setTopics(data)
+        // Restore last topic from localStorage
+        const saved = localStorage.getItem(TOPIC_KEY)
+        if (saved && data.find(t => t.id === saved)) {
+          setSelectedTopic(saved)
+        } else if (data.length > 0) {
+          setSelectedTopic(data[0].id)
+        }
+      })
+  }, [])
+
+  // Load settings from localStorage
+  useEffect(() => {
+    const raw = localStorage.getItem(SETTINGS_KEY)
+    if (raw) {
+      try { setAllSettings(JSON.parse(raw)) } catch { /* ignore */ }
+    }
+  }, [])
+
+  // Persist settings
+  useEffect(() => {
+    localStorage.setItem(SETTINGS_KEY, JSON.stringify(allSettings))
+  }, [allSettings])
+
+  // Load file tree when topic changes
+  useEffect(() => {
+    if (!selectedTopic) return
+    localStorage.setItem(TOPIC_KEY, selectedTopic)
+    setSelectedFile(null)
+    setContent('')
+    setSearchQuery('')
+    fetch(`/api/files?topic=${selectedTopic}`)
       .then(r => r.json())
       .then(data => {
         setFileTree(data.tree ?? {})
         setCanEdit(data.canEdit ?? false)
       })
-  }, [])
+  }, [selectedTopic])
 
   const loadFile = useCallback(async (filePath: string) => {
     setLoading(true)
@@ -40,14 +81,14 @@ function AppContent() {
     setSelectedFile(filePath)
     router.push(`?file=${encodeURIComponent(filePath)}`, { scroll: false })
     try {
-      const r = await fetch(`/api/file?path=${encodeURIComponent(filePath)}`)
+      const r = await fetch(`/api/file?topic=${selectedTopic}&path=${encodeURIComponent(filePath)}`)
       const data = await r.json()
       setContent(data.content ?? '')
     } catch {
       setContent('# Error\n\nCould not load file.')
     }
     setLoading(false)
-  }, [router])
+  }, [router, selectedTopic])
 
   // Restore selected file from URL on first load
   useEffect(() => {
@@ -60,22 +101,16 @@ function AppContent() {
 
   // Debounced search
   useEffect(() => {
-    if (!searchQuery.trim()) {
-      setSearchResults([])
-      return
-    }
+    if (!searchQuery.trim()) { setSearchResults([]); return }
     const timer = setTimeout(async () => {
-      const r = await fetch(`/api/search?q=${encodeURIComponent(searchQuery)}`)
+      const r = await fetch(`/api/search?topic=${selectedTopic}&q=${encodeURIComponent(searchQuery)}`)
       const data = await r.json()
       setSearchResults(Array.isArray(data) ? data : [])
     }, 300)
     return () => clearTimeout(timer)
-  }, [searchQuery])
+  }, [searchQuery, selectedTopic])
 
-  const handleEdit = () => {
-    setEditContent(content)
-    setIsEditing(true)
-  }
+  const handleEdit = () => { setEditContent(content); setIsEditing(true) }
 
   const handleSave = async () => {
     if (!selectedFile) return
@@ -83,18 +118,24 @@ function AppContent() {
     const r = await fetch('/api/file', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ path: selectedFile, content: editContent }),
+      body: JSON.stringify({ topic: selectedTopic, path: selectedFile, content: editContent }),
     })
-    if (r.ok) {
-      setContent(editContent)
-      setIsEditing(false)
-    }
+    if (r.ok) { setContent(editContent); setIsEditing(false) }
     setSaving(false)
   }
+
+  const currentTopic   = topics.find(t => t.id === selectedTopic) ?? null
+  const topicSettings  = currentTopic
+    ? (allSettings[selectedTopic] ?? defaultSettings(currentTopic))
+    : null
 
   return (
     <div className="flex h-screen overflow-hidden">
       <Sidebar
+        topics={topics}
+        selectedTopic={selectedTopic}
+        onTopicChange={setSelectedTopic}
+        topicSettings={topicSettings}
         fileTree={fileTree}
         selectedFile={selectedFile}
         searchQuery={searchQuery}
@@ -114,6 +155,14 @@ function AppContent() {
         onCancel={() => setIsEditing(false)}
         saving={saving}
         canEdit={canEdit}
+        onSettingsOpen={() => setSettingsOpen(true)}
+      />
+      <SettingsModal
+        open={settingsOpen}
+        onClose={() => setSettingsOpen(false)}
+        topic={currentTopic}
+        settings={allSettings}
+        onSettingsChange={s => setAllSettings(s)}
       />
     </div>
   )

@@ -2,25 +2,69 @@ import fs from 'fs'
 import path from 'path'
 
 const CONTENT_ROOT = path.join(process.cwd(), 'content')
-const CONTENT_DIRS = ['jd', 'qa', 'resume', 'research'] as const
-export type FolderName = (typeof CONTENT_DIRS)[number]
 
-export interface FileEntry {
-  name: string      // filename without .md
-  path: string      // relative path e.g. "jd/foo.md" or "qa/choks/01-strategy.md"
-  folder: FolderName
-  group?: string    // subdirectory name e.g. "choks"
+// ─── Topic types ─────────────────────────────────────────────────────────────
+
+export interface FolderMeta {
+  id: string
+  label: string
+  color: string
 }
 
-export type FileTree = Record<FolderName, FileEntry[]>
+export interface Topic {
+  id: string
+  label: string
+  description: string
+  color: string
+  folders: FolderMeta[]
+}
 
-export function getFileTree(): FileTree {
-  const tree = {} as FileTree
+// ─── File types ───────────────────────────────────────────────────────────────
 
-  for (const dir of CONTENT_DIRS) {
-    const dirPath = path.join(CONTENT_ROOT, dir)
+export interface FileEntry {
+  name: string    // filename without .md
+  path: string    // relative to topic root e.g. "jd/foo.md"
+  folder: string
+  group?: string  // subdirectory name e.g. "choks"
+}
+
+export type FileTree = Record<string, FileEntry[]>
+
+export interface SearchResult {
+  file: FileEntry
+  snippet: string
+  matches: number
+}
+
+// ─── Topic helpers ────────────────────────────────────────────────────────────
+
+export function getTopics(): Topic[] {
+  const topicsPath = path.join(CONTENT_ROOT, 'topics.json')
+  const raw = fs.readFileSync(topicsPath, 'utf-8')
+  return JSON.parse(raw) as Topic[]
+}
+
+export function getTopic(topicId: string): Topic | undefined {
+  return getTopics().find(t => t.id === topicId)
+}
+
+function topicRoot(topicId: string): string {
+  return path.join(CONTENT_ROOT, topicId)
+}
+
+// ─── File tree ────────────────────────────────────────────────────────────────
+
+export function getFileTree(topicId: string): FileTree {
+  const topic = getTopic(topicId)
+  if (!topic) return {}
+
+  const root = topicRoot(topicId)
+  const tree: FileTree = {}
+
+  for (const folder of topic.folders) {
+    const dirPath = path.join(root, folder.id)
     if (!fs.existsSync(dirPath)) {
-      tree[dir] = []
+      tree[folder.id] = []
       continue
     }
 
@@ -32,8 +76,8 @@ export function getFileTree(): FileTree {
       if (item.isFile() && item.name.endsWith('.md')) {
         entries.push({
           name: item.name.replace(/\.md$/, ''),
-          path: `${dir}/${item.name}`,
-          folder: dir,
+          path: `${folder.id}/${item.name}`,
+          folder: folder.id,
         })
       } else if (item.isDirectory()) {
         const subDirPath = path.join(dirPath, item.name)
@@ -42,46 +86,54 @@ export function getFileTree(): FileTree {
           .sort()
           .map(f => ({
             name: f.replace(/\.md$/, ''),
-            path: `${dir}/${item.name}/${f}`,
-            folder: dir as FolderName,
+            path: `${folder.id}/${item.name}/${f}`,
+            folder: folder.id,
             group: item.name,
           }))
         entries.push(...subFiles)
       }
     }
 
-    tree[dir] = entries
+    tree[folder.id] = entries
   }
 
   return tree
 }
 
-function safePath(filePath: string): string {
-  const full = path.resolve(CONTENT_ROOT, filePath)
-  const rel = path.relative(CONTENT_ROOT, full)
+// ─── Safe path resolution ─────────────────────────────────────────────────────
+
+function safePath(topicId: string, filePath: string): string {
+  const topic = getTopic(topicId)
+  if (!topic) throw new Error('Unknown topic')
+
+  const root = topicRoot(topicId)
+  const full = path.resolve(root, filePath)
+  const rel = path.relative(root, full)
   if (rel.startsWith('..') || path.isAbsolute(rel)) throw new Error('Access denied')
+
   const topDir = rel.split(path.sep)[0]
-  if (!CONTENT_DIRS.includes(topDir as FolderName)) throw new Error('Access denied')
+  const validFolders = topic.folders.map(f => f.id)
+  if (!validFolders.includes(topDir)) throw new Error('Access denied')
+
   return full
 }
 
-export function readFile(filePath: string): string {
-  return fs.readFileSync(safePath(filePath), 'utf-8')
+// ─── Read / Write ─────────────────────────────────────────────────────────────
+
+export function readFile(topicId: string, filePath: string): string {
+  return fs.readFileSync(safePath(topicId, filePath), 'utf-8')
 }
 
-export function writeFile(filePath: string, content: string): void {
-  fs.writeFileSync(safePath(filePath), content, 'utf-8')
+export function writeFile(topicId: string, filePath: string, content: string): void {
+  fs.writeFileSync(safePath(topicId, filePath), content, 'utf-8')
 }
 
-export interface SearchResult {
-  file: FileEntry
-  snippet: string
-  matches: number
-}
+// ─── Search ───────────────────────────────────────────────────────────────────
 
-export function searchFiles(query: string): SearchResult[] {
+export function searchFiles(topicId: string, query: string): SearchResult[] {
   if (!query.trim()) return []
-  const tree = getFileTree()
+
+  const tree = getFileTree(topicId)
   const q = query.toLowerCase()
   const escaped = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
   const results: SearchResult[] = []
@@ -89,7 +141,7 @@ export function searchFiles(query: string): SearchResult[] {
   for (const files of Object.values(tree)) {
     for (const file of files) {
       try {
-        const content = readFile(file.path)
+        const content = readFile(topicId, file.path)
         const lower = content.toLowerCase()
         const matchCount = (lower.match(new RegExp(escaped, 'g')) ?? []).length
         if (matchCount > 0) {
