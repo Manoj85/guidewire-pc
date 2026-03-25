@@ -53,16 +53,14 @@ This is what Choks will probe. Your AI Advisor story needs to be crisp, real, an
 
 **Expected follow-up from Choks. Answer:**
 
-> "We took an intermediate path — GW8 → GW9 → GW10 Cloud (Dobson). Due to the complexity of CompSource's landscape — significant customizations accumulated over years of on-prem operation — going direct from GW8 to GW10 cloud would have made it very difficult to isolate and resolve all customization conflicts at once.
+> "We took an intermediate path — GW8 → GW9 → GW10 Cloud (Dobson). Given the complexity of CompSource's landscape — significant customizations accumulated over years of on-prem operation — we chose to stage through GW9 deliberately.
 >
-> The rationale for staging through GW9:
+> The rationale:
 >
-> - InsuranceSuite 9 was specifically designed as a cloud-ready intermediate release — it gave us flexible deployment options in private, public, or hybrid cloud environments. It served as a useful stepping stone to reduce the complexity of the final cloud transition.
-> - The incremental approach let us resolve customization conflicts in stages — GW8 to GW9 first, stabilize, then GW9 to GW10 cloud. Much more manageable than attempting everything at once.
+> - InsuranceSuite 9 was specifically designed as a cloud-ready intermediate release — giving us flexible deployment options across private, public, or hybrid cloud environments. It served as a structured stepping stone that reduced the complexity of the final cloud transition.
+> - The incremental approach let us resolve customization conflicts in stages — GW8 to GW9 first, stabilize, then GW9 to GW10 cloud. Each phase had a clear scope, a clear outcome, and a defined go-live.
 >
-> I'll be transparent — this approach means two separate upgrade projects, which doubles timelines, costs, and organizational effort. We made that tradeoff deliberately given the landscape complexity.
->
-> To answer directly: a direct upgrade from GW8 to GW10 Cloud Dobson is technically possible and many carriers do take that path. We assessed it and determined the intermediate step was the right call for CompSource specifically."
+> A direct upgrade from GW8 to GW10 Cloud Dobson is possible — many carriers take that path. We assessed it and made a deliberate call that the staged approach was the right one for CompSource's landscape and risk profile."
 
 ---
 
@@ -70,13 +68,13 @@ This is what Choks will probe. Your AI Advisor story needs to be crisp, real, an
 
 **Choks may ask this given your depth of Guidewire delivery. Answer:**
 
-> "That's a fair question. My role at EY was aligned to the Digital Engineering practice, with a dual advisory function across both the Insurance and Quality Engineering practices. My focus was on solution offering development and delivery execution — not product certification.
+> "My role at EY was aligned to the Digital Engineering practice, with a dual advisory function across both the Insurance and Quality Engineering practices. My focus was on solution offering development and delivery execution — and specifically on AI enablement.
 >
-> Practically: I was leveraging my technical depth in AI to shape AI-enabled solutions and go-to-market offerings. I led teams with certified Guidewire practitioners — ACE-certified developers, configuration specialists — but my personal investment was in AI certifications and upskilling, because that's where I was adding unique value that my team couldn't provide themselves.
+> I led teams with certified Guidewire practitioners — ACE-certified developers, configuration specialists — and my personal investment was in AI certifications and upskilling, because that's where I was adding unique strategic value that the delivery team looked to me for.
 >
-> I've invested heavily in AI certifications — LLMs, Agentic AI, generative AI-based automation — because that's where I was operating at the intersection of P&C insurance domain knowledge, solution architecture, and AI strategy.
+> I've invested heavily in AI certifications — LLMs, Agentic AI, generative AI-based automation — operating at the intersection of P&C insurance domain knowledge, solution architecture, and AI strategy. That combination is what both the Insurance and QE practices at EY brought me in to shape.
 >
-> If ValueMomentum wants me to pursue specific Guidewire certifications, I'd do it. But I want to be honest — my strength is in delivery leadership and AI advisory, not in being the senior-most Gosu developer on the team."
+> If ValueMomentum wants me to pursue specific Guidewire certifications, I'm ready to do that."
 
 ---
 
@@ -119,7 +117,7 @@ Choks may probe your P&C depth. Be able to speak to each line of business you've
 
 When Guidewire certification comes up, pivot immediately to your actual certifications:
 
-> "While I haven't pursued Guidewire product certification given my role, I've been deeply invested in AI certifications that directly supported my advisory work — AWS Certified Cloud Practitioner, Azure AI Fundamentals, and certifications in LLMs, Agentic AI, and generative AI platforms. These weren't checkbox exercises — they reinforced the credibility I needed to advise carriers and practice leaders on AI adoption. In the P&C space right now, that combination of insurance delivery depth and hands-on AI knowledge is relatively rare."
+> "I've been deeply invested in AI certifications that directly supported my advisory work — AWS Certified Cloud Practitioner, Azure AI Fundamentals, and certifications in LLMs, Agentic AI, and generative AI platforms. These reinforced the credibility I needed to advise carriers and practice leaders on AI adoption. In the P&C space right now, that combination of insurance delivery depth and hands-on AI knowledge is relatively rare."
 
 **Specific certifications to mention (from your background):**
 - AWS Certified Cloud Practitioner
@@ -147,7 +145,7 @@ Choks will likely find the dual advisor (Insurance + QE) unusual. Preempt with:
 | **Choks Kandaswamy** | Delivery Officer, VM | Asked by Rupesh to speak with you |
 
 Use the referral early:
-> "I understand Sanjay had a chance to speak with Rupesh about my background — I appreciate that chain of introduction. Sanjay and I have known each other for a while in the P&C space."
+> "Sanjay and I worked together at CompSource Mutual — good to reconnect in this context."
 
 ---
 
