@@ -71,13 +71,25 @@
 
 > "Three patterns, and which one you use depends on where in the claim lifecycle the AI is acting.
 >
-> **Pre-intake processing** — the AI runs before the claim record is created in ClaimCenter. Document ingestion, NLP extraction, classification all happen upstream. The output is a structured JSON payload that gets passed to ClaimCenter's FNOL API to create the claim record with fields pre-populated. This is the pattern we used at Nationwide. Advantage: ClaimCenter doesn't need to know about the AI model at all — it just receives structured input. Clean separation of concerns.
+> **Pre-intake processing** — the AI runs before the claim record is created in ClaimCenter. 
+> Document ingestion, NLP extraction, classification all happen upstream.
+> The output is a structured JSON payload that gets passed to ClaimCenter's FNOL API to create the claim record with fields pre-populated. 
+> This is the pattern we used at Nationwide. 
 >
-> **Event-driven processing** — the AI triggers off a ClaimCenter business event. Example: when a claim moves to a specific status, ClaimCenter fires a message event to an integration layer (MuleSoft, Azure Service Bus), which calls the AI model and writes the result back into the claim via REST API. Used when you need AI enrichment at a specific point in the claim lifecycle — reserve validation, settlement recommendation, fraud signal.
+> Advantage: ClaimCenter doesn't need to know about the AI model at all — it just receives structured input. Clean separation of concerns.
 >
-> **Embedded via Guidewire Cloud APIs** — for Guidewire Cloud customers, ClaimCenter Cloud exposes a richer API surface. You can use PolicyCenter and ClaimCenter's cloud APIs to read claim data, pass it to an AI service, and write enriched outputs back in near-real-time. This is the cleaner pattern for cloud-native implementations going forward.
+> **Event-driven processing** — the AI triggers off a ClaimCenter business event. 
+> Example: when a claim moves to a specific status, ClaimCenter fires a message event to an integration layer (MuleSoft, Azure Service Bus), which calls the AI model and writes the result back into the claim via REST API. 
+> Used when you need AI enrichment at a specific point in the claim lifecycle — reserve validation, settlement recommendation, fraud signal.
 >
-> The choice always comes down to: where in the workflow does the AI output need to live, and how much latency is acceptable? Real-time triage needs pre-intake or event-driven. Overnight scoring for fraud detection can run as a batch against closed claims."
+> **Embedded via Guidewire Cloud APIs** — for Guidewire Cloud customers, ClaimCenter Cloud exposes a richer API surface. 
+> You can use PolicyCenter and ClaimCenter's cloud APIs to read claim data, pass it to an AI service, and write enriched outputs back in near-real-time. This is the cleaner pattern for cloud-native implementations going forward.
+>
+> The choice always comes down to: 
+> where in the workflow does the AI output need to live, and how much latency is acceptable? 
+>
+> Real-time triage needs pre-intake or event-driven.
+> Overnight scoring for fraud detection can run as a batch against closed claims."
 
 ---
 
@@ -104,9 +116,13 @@
 
 > "Two different tools for two different problems.
 >
-> **Predictive AI** — trained on historical data to output a specific numeric or categorical prediction. Examples: claim complexity classifier, fraud probability score, next best action recommendation, churn propensity. Output is a number or a category. These models have measurable accuracy — you can back-test them on held-out data and give the client a precision/recall number. I used predictive AI in the Nationwide claims triage: gradient boosting classifier predicting routing category.
+> **Predictive AI** — trained on historical data to output a specific numeric or categorical prediction. 
+> Examples: claim complexity classifier, fraud probability score, next best action recommendation, churn propensity. Output is a number or a category. These models have measurable accuracy — you can back-test them on held-out data and give the client a precision/recall number. I used predictive AI in the Nationwide claims triage: gradient boosting classifier predicting routing category.
 >
-> **Generative AI** — LLMs that produce text, code, or structured content from a prompt. Examples: test case generation (TestAI), policy document summarization, claims correspondence drafting, regulatory filing generation. Output is freeform content. You measure it differently — not accuracy in the statistical sense, but quality, relevance, and consistency.
+> **Generative AI** — LLMs that produce text, code, or structured content from a prompt.
+> Examples: test case generation (TestAI), policy document summarization, claims correspondence drafting, regulatory filing generation. 
+> Output is freeform content.
+> You measure it differently — not accuracy in the statistical sense, but quality, relevance, and consistency.
 >
 > **When to use which in insurance:**
 > - Use predictive AI when you have a well-defined outcome to optimize (route this claim, score this risk, predict this payment) and historical data to train on.

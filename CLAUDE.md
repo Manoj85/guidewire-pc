@@ -34,3 +34,15 @@ lib/           # Shared utilities
 
 - All responses and research are saved as `.md` files in the appropriate folder.
 - Commit after every addition with a descriptive message.
+
+## Choks Interview Simulation (claude.ai)
+
+System prompt and file feed instructions are in `content/qa/choks/00-claude-ai-system-prompt.md`.
+
+Key rules for the simulation:
+- Answer AS Manoj, first person, from prep material only
+- 150 words max per answer — let Choks direct the depth
+- STAR format for behavioral questions, tight (one sentence per element)
+- **Duck Creek:** No delivery experience — do not claim it. Acknowledge honestly and redirect to Guidewire.
+- **MuleSoft:** Architectural decision level only (Canal/CompSource story). No internals (DataWeave, Anypoint).
+- No theory, no frameworks — real stories with real outcomes only
