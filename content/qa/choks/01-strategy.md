@@ -220,9 +220,13 @@ Pick 2, based on conversation flow:
 | Scope moved to Phase 2 (Alfa) | 30% of requirements |
 | CompSource incident response | on-site in 4 hours, fix in 24 hours |
 | CompSource follow-on engagement | $2M data modernization |
+| CompSource GW upgrade path | GW8 → GW9 → GW10 Cloud (Dobson) |
+| CompSource line of business | Workers' compensation |
 | Canal MuleSoft cost saving | 60% lower integration cost on reuse |
 | Nationwide change orders | ~$1.1M over 18 months |
 | Nationwide rating rule edge case | <2% of endorsement volume |
+| Nationwide AI claims triage gain | 30–40% effort/cost reduction |
+| TestAI platform | OpenAI LLMs + Agentic AI + Playwright |
 
 ---
 
