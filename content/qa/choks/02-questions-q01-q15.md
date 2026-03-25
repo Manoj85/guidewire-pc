@@ -58,9 +58,15 @@
 
 > "Nationwide Personal Lines is the best example. This was an 18-month PolicyCenter and BillingCenter implementation — personal auto and personal property — with a team of 50+ across three workstreams.
 >
-> I structured the engagement in three layers. Delivery layer: three workstream leads (Dev, QA, Integration) each owning their track with weekly deliverable commitments. Client layer: I owned the relationship with the carrier's IT VP and business sponsor — weekly steering committee, biweekly executive summary, daily availability for any escalation. Commercial layer: I tracked the engagement P&L monthly — utilization, margin, scope change log, contract renewal status.
+> I structured the engagement in three layers.
 >
-> The key to managing complexity at that scale is not being everywhere — it's building the right structure so that the right people are making the right decisions at the right level. My job was to protect the team from client noise and protect the client from internal delivery issues."
+> Delivery layer: three workstream leads (Dev, QA, Integration) each owning their track with weekly deliverable commitments.
+>
+> Client layer: I owned the relationship with the carrier's IT VP and business sponsor — weekly steering committee, biweekly executive summary, daily availability for any escalation.
+>
+> Commercial layer: I tracked the engagement P&L monthly — utilization, margin, scope change log, contract renewal status.
+>
+The key to managing complexity at that scale is not being everywhere — it's building the right structure so that the right people are making the right decisions at the right level. My job was to protect the team from client noise and protect the client from internal delivery issues."
 
 ---
 
