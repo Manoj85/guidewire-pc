@@ -5,6 +5,15 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — Q&A deep detail blocks: Q22–Q24
+
+**Enriched: Q22–Q24** — `qa/choks/03-questions-q16-q42.md`
+- Q22: Phased alternative deep detail — personal auto (6mo) → homeowners (4mo) → specialty (4mo), net faster than big-bang, GW reference client tactic, CFO capital risk reframe (delivery preference → fiduciary risk)
+- Q23: Three-component mentorship model deep detail — shadowing+debrief mechanics (20-min post-call, invisible craft), stretch assignment guardrails, domain investment rationale, $450K junior CSM story with DataHub/Explore expansion context
+- Q24: Tiger team deep detail — configurator + UW-domain BA pairing rationale, 23 validation rules rebuilt from full UW manual (not summary doc), joint CUO validation session as trust repair moment, BillingCenter expansion sourced from CUO credibility transfer (no RFP)
+
+---
+
 ## 2026-03-26 — Fix: Sources folder missing from sidebar
 
 **Fixed: `sources/` not visible in UI**
