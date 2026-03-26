@@ -114,6 +114,8 @@ interface Props {
   selectedFile: string | null
   searchQuery: string
   onSearchChange: (q: string) => void
+  matchCase: boolean
+  onMatchCaseChange: (v: boolean) => void
   onFileSelect: (path: string) => void
   searchResults: SearchResult[]
   onChangelogOpen: () => void
@@ -121,8 +123,8 @@ interface Props {
 
 export default function Sidebar({
   topics, selectedTopic, onTopicChange, topicSettings,
-  fileTree, selectedFile, searchQuery, onSearchChange, onFileSelect, searchResults,
-  onChangelogOpen,
+  fileTree, selectedFile, searchQuery, onSearchChange, matchCase, onMatchCaseChange,
+  onFileSelect, searchResults, onChangelogOpen,
 }: Props) {
   const isSearching = searchQuery.trim().length > 0
   const currentTopic = topics.find(t => t.id === selectedTopic)
@@ -184,10 +186,22 @@ export default function Sidebar({
             value={searchQuery}
             onChange={e => onSearchChange(e.target.value)}
             placeholder="Search files…"
-            className="w-full bg-slate-800 text-slate-200 text-sm pl-8 pr-8 py-2 rounded-md
+            className="w-full bg-slate-800 text-slate-200 text-sm pl-8 pr-14 py-2 rounded-md
                        border border-slate-700 focus:outline-none focus:border-blue-500
                        placeholder-slate-600 transition-colors"
           />
+          {/* Match-case toggle */}
+          <button
+            onClick={() => onMatchCaseChange(!matchCase)}
+            title={matchCase ? 'Match case: on' : 'Match case: off'}
+            className={`absolute top-1.5 px-1 py-0.5 rounded text-xs font-mono font-bold transition-colors
+              ${isSearching ? 'right-8' : 'right-2'}
+              ${matchCase
+                ? 'text-blue-400 bg-slate-700 ring-1 ring-blue-500'
+                : 'text-slate-500 hover:text-slate-300'}`}
+          >
+            Aa
+          </button>
           {isSearching && (
             <button onClick={() => onSearchChange('')}
               className="absolute right-2 top-2 text-slate-500 hover:text-slate-300 transition-colors">

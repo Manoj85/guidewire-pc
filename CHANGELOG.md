@@ -5,6 +5,17 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — Feature: match case toggle for search
+
+**Added: case-sensitive search toggle**
+- `components/Sidebar.tsx`: "Aa" button inside search box — highlighted blue when active, shifts left when clear button is visible
+- `lib/files.ts`: `searchFiles` accepts `matchCase` param — uses `gi` (default) or `g` flags accordingly
+- `app/api/search/route.ts`: reads `matchCase` query param and passes to `searchFiles`
+- `app/page.tsx`: `matchCase` state wired into search fetch and passed to FileViewer
+- `components/FileViewer.tsx`: highlight regex respects `matchCase` prop
+
+---
+
 ## 2026-03-26 — Fix: search result clicks now highlight matched text in viewer
 
 **Fixed: search term not highlighted after clicking a result**

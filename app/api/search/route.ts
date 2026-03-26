@@ -2,10 +2,11 @@ import { NextRequest, NextResponse } from 'next/server'
 import { searchFiles } from '@/lib/files'
 
 export async function GET(req: NextRequest) {
-  const topic = req.nextUrl.searchParams.get('topic') ?? 'guidewire-pc'
-  const q     = req.nextUrl.searchParams.get('q') ?? ''
+  const topic     = req.nextUrl.searchParams.get('topic') ?? 'guidewire-pc'
+  const q         = req.nextUrl.searchParams.get('q') ?? ''
+  const matchCase = req.nextUrl.searchParams.get('matchCase') === 'true'
   try {
-    const results = searchFiles(topic, q)
+    const results = searchFiles(topic, q, matchCase)
     return NextResponse.json(results)
   } catch {
     return NextResponse.json({ error: 'Search failed' }, { status: 500 })

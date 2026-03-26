@@ -130,24 +130,24 @@ export function writeFile(topicId: string, filePath: string, content: string): v
 
 // ─── Search ───────────────────────────────────────────────────────────────────
 
-export function searchFiles(topicId: string, query: string): SearchResult[] {
+export function searchFiles(topicId: string, query: string, matchCase = false): SearchResult[] {
   if (!query.trim()) return []
 
   const tree = getFileTree(topicId)
-  const q = query.toLowerCase()
-  const escaped = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  const flags = matchCase ? 'g' : 'gi'
+  const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  const regex = new RegExp(escaped, flags)
   const results: SearchResult[] = []
 
   for (const files of Object.values(tree)) {
     for (const file of files) {
       try {
         const content = readFile(topicId, file.path)
-        const lower = content.toLowerCase()
-        const matchCount = (lower.match(new RegExp(escaped, 'g')) ?? []).length
+        const matchCount = (content.match(regex) ?? []).length
         if (matchCount > 0) {
-          const idx = lower.indexOf(q)
+          const idx = content.search(regex)
           const start = Math.max(0, idx - 80)
-          const end = Math.min(content.length, idx + q.length + 80)
+          const end = Math.min(content.length, idx + query.length + 80)
           const snippet =
             (start > 0 ? '…' : '') +
             content.slice(start, end).replace(/\n+/g, ' ') +

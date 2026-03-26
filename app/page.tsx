@@ -23,9 +23,10 @@ function AppContent() {
   const [selectedFile, setSelectedFile]   = useState<string | null>(null)
   const [content, setContent]             = useState('')
   const [loading, setLoading]             = useState(false)
-  const [searchQuery, setSearchQuery]     = useState('')
-  const [searchResults, setSearchResults] = useState<SearchResult[]>([])
+  const [searchQuery, setSearchQuery]       = useState('')
+  const [searchResults, setSearchResults]   = useState<SearchResult[]>([])
   const [highlightQuery, setHighlightQuery] = useState('')
+  const [matchCase, setMatchCase]           = useState(false)
   const [isEditing, setIsEditing]         = useState(false)
   const [editContent, setEditContent]     = useState('')
   const [saving, setSaving]               = useState(false)
@@ -122,12 +123,12 @@ function AppContent() {
   useEffect(() => {
     if (!searchQuery.trim()) { setSearchResults([]); return }
     const timer = setTimeout(async () => {
-      const r = await fetch(`/api/search?topic=${selectedTopic}&q=${encodeURIComponent(searchQuery)}`)
+      const r = await fetch(`/api/search?topic=${selectedTopic}&q=${encodeURIComponent(searchQuery)}&matchCase=${matchCase}`)
       const data = await r.json()
       setSearchResults(Array.isArray(data) ? data : [])
     }, 300)
     return () => clearTimeout(timer)
-  }, [searchQuery, selectedTopic])
+  }, [searchQuery, matchCase, selectedTopic])
 
   const handleEdit = () => { setEditContent(content); setIsEditing(true) }
 
@@ -159,6 +160,8 @@ function AppContent() {
         selectedFile={selectedFile}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
+        matchCase={matchCase}
+        onMatchCaseChange={setMatchCase}
         onFileSelect={path => {
           // If clicking from search results, preserve query for highlighting
           setHighlightQuery(searchQuery.trim())
@@ -183,6 +186,7 @@ function AppContent() {
         onSettingsOpen={() => setSettingsOpen(true)}
         onFileNavigate={path => { setHighlightQuery(''); loadFile(path) }}
         searchQuery={highlightQuery}
+        matchCase={matchCase}
       />
       <SettingsModal
         open={settingsOpen}

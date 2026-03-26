@@ -24,6 +24,7 @@ interface Props {
   onSettingsOpen: () => void
   onFileNavigate?: (path: string) => void
   searchQuery?: string
+  matchCase?: boolean
 }
 
 const FOLDER_LABELS: Record<string, string> = {
@@ -59,7 +60,7 @@ function resolveFilePath(raw: string): string | null {
 export default function FileViewer({
   filePath, content, loading, isEditing, editContent,
   onEditContentChange, onEdit, onSave, onCancel, saving, canEdit, onSettingsOpen,
-  onFileNavigate, searchQuery,
+  onFileNavigate, searchQuery, matchCase,
 }: Props) {
   const [modalTerm, setModalTerm] = useState<string | null>(null)
 
@@ -81,7 +82,8 @@ export default function FileViewer({
     if (!term || isEditing || loading) return
 
     const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-    const regex = new RegExp(`(${escaped})`, 'gi')
+    const flags = matchCase ? 'g' : 'gi'
+    const regex = new RegExp(`(${escaped})`, flags)
 
     // Collect all text nodes, skipping script/style/mark/code
     const textNodes: Text[] = []
@@ -121,7 +123,7 @@ export default function FileViewer({
     }
 
     firstMark?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-  }, [searchQuery, content, isEditing, loading])
+  }, [searchQuery, matchCase, content, isEditing, loading])
 
   // Custom components: intercept glossary-term spans, file path links, external links
   const mdComponents = useMemo(() => ({
