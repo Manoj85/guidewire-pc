@@ -25,6 +25,7 @@ function AppContent() {
   const [loading, setLoading]             = useState(false)
   const [searchQuery, setSearchQuery]     = useState('')
   const [searchResults, setSearchResults] = useState<SearchResult[]>([])
+  const [highlightQuery, setHighlightQuery] = useState('')
   const [isEditing, setIsEditing]         = useState(false)
   const [editContent, setEditContent]     = useState('')
   const [saving, setSaving]               = useState(false)
@@ -158,7 +159,12 @@ function AppContent() {
         selectedFile={selectedFile}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
-        onFileSelect={path => { setSearchQuery(''); loadFile(path) }}
+        onFileSelect={path => {
+          // If clicking from search results, preserve query for highlighting
+          setHighlightQuery(searchQuery.trim())
+          setSearchQuery('')
+          loadFile(path)
+        }}
         searchResults={searchResults}
         onChangelogOpen={loadChangelog}
       />
@@ -175,7 +181,8 @@ function AppContent() {
         saving={saving}
         canEdit={canEdit}
         onSettingsOpen={() => setSettingsOpen(true)}
-        onFileNavigate={loadFile}
+        onFileNavigate={path => { setHighlightQuery(''); loadFile(path) }}
+        searchQuery={highlightQuery}
       />
       <SettingsModal
         open={settingsOpen}

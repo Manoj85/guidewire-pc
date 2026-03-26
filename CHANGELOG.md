@@ -5,6 +5,15 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — Fix: search result clicks now highlight matched text in viewer
+
+**Fixed: search term not highlighted after clicking a result**
+- `app/page.tsx`: added `highlightQuery` state — captures search term when clicking a result, cleared when navigating via file links
+- `components/FileViewer.tsx`: added `searchQuery` prop + `useEffect` that walks DOM text nodes after render, wraps matches in `<mark>` tags (yellow highlight), and scrolls first match into view
+- Added `data-prose-content` attribute to read-only prose container as highlight target
+
+---
+
 ## 2026-03-26 — Glossary: 33 missing tooltip terms added
 
 **Added: 33 terms to `content/glossary.json`** — all were used in Q&A files but had no tooltip

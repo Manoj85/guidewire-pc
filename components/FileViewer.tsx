@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
@@ -23,6 +23,7 @@ interface Props {
   canEdit: boolean
   onSettingsOpen: () => void
   onFileNavigate?: (path: string) => void
+  searchQuery?: string
 }
 
 const FOLDER_LABELS: Record<string, string> = {
@@ -58,9 +59,69 @@ function resolveFilePath(raw: string): string | null {
 export default function FileViewer({
   filePath, content, loading, isEditing, editContent,
   onEditContentChange, onEdit, onSave, onCancel, saving, canEdit, onSettingsOpen,
-  onFileNavigate,
+  onFileNavigate, searchQuery,
 }: Props) {
   const [modalTerm, setModalTerm] = useState<string | null>(null)
+
+  // Highlight search matches in the rendered content after every render
+  useEffect(() => {
+    const container = document.querySelector<HTMLElement>('[data-prose-content]')
+    if (!container) return
+
+    // Remove previous highlights
+    container.querySelectorAll('mark[data-search]').forEach(mark => {
+      const parent = mark.parentNode
+      if (parent) {
+        parent.replaceChild(document.createTextNode(mark.textContent || ''), mark)
+        parent.normalize()
+      }
+    })
+
+    const term = searchQuery?.trim()
+    if (!term || isEditing || loading) return
+
+    const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    const regex = new RegExp(`(${escaped})`, 'gi')
+
+    // Collect all text nodes, skipping script/style/mark/code
+    const textNodes: Text[] = []
+    const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        const tag = node.parentElement?.tagName.toLowerCase() ?? ''
+        return ['script', 'style', 'mark', 'code'].includes(tag)
+          ? NodeFilter.FILTER_REJECT
+          : NodeFilter.FILTER_ACCEPT
+      },
+    })
+    let n: Node | null
+    while ((n = walker.nextNode())) textNodes.push(n as Text)
+
+    let firstMark: HTMLElement | null = null
+
+    for (const textNode of textNodes) {
+      const text = textNode.textContent || ''
+      if (!regex.test(text)) { regex.lastIndex = 0; continue }
+      regex.lastIndex = 0
+
+      const frag = document.createDocumentFragment()
+      let last = 0
+      let match: RegExpExecArray | null
+      while ((match = regex.exec(text)) !== null) {
+        if (match.index > last) frag.appendChild(document.createTextNode(text.slice(last, match.index)))
+        const mark = document.createElement('mark')
+        mark.setAttribute('data-search', '1')
+        mark.className = 'bg-yellow-200 text-yellow-900 rounded-sm px-0.5'
+        mark.textContent = match[0]
+        if (!firstMark) firstMark = mark
+        frag.appendChild(mark)
+        last = regex.lastIndex
+      }
+      if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+      textNode.parentNode?.replaceChild(frag, textNode)
+    }
+
+    firstMark?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }, [searchQuery, content, isEditing, loading])
 
   // Custom components: intercept glossary-term spans, file path links, external links
   const mdComponents = useMemo(() => ({
@@ -252,7 +313,7 @@ export default function FileViewer({
       ) : (
         <div className="flex-1 overflow-y-auto">
           <div className="max-w-4xl mx-auto px-8 py-8">
-            <div className="prose prose-slate max-w-none">
+            <div className="prose prose-slate max-w-none" data-prose-content>
               <MdContent source={content} />
             </div>
           </div>
