@@ -6,7 +6,9 @@
 
 ## How the Three Centers Relate
 
-> **PolicyCenter** defines *what's covered*. **ClaimCenter** handles *what happened*. **BillingCenter** manages *how money moves.*
+> **PolicyCenter** defines *what's covered*. 
+> **ClaimCenter** handles *what happened*. 
+> **BillingCenter** manages *how money moves.*
 
 - PolicyCenter passes billing instructions to BillingCenter when a policy is bound or changed
 - ClaimCenter looks up coverage details from PolicyCenter at FNOL

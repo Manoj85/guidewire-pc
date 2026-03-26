@@ -5,6 +5,22 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — Q&A enrichment: Q1–Q15 spoken answers tightened + deep details added
+
+**Enriched: Q1–Q15** — `qa/choks/02-questions-q01-q15.md`
+- Spoken answers trimmed to ~150-word target with header note added
+- "Alternatively" sections converted to `> **Deep detail:**` study blocks throughout
+- Q1: Self-sufficiency success moment (Nationwide PolicyCenter endorsement), NRR >110% + client advocacy tier added to deep detail
+- Q2: Tiered account management model (>$5M ARR dedicated CP, mid-market pooled, digital-first small), 8→22 clients, 40% escalation reduction moved to deep detail
+- Q3: Account-Based Growth Planning as primary methodology; WC BillingCenter $2.4M + iFoundry WC accelerators in deep detail; CompSource data modernization $2M story added
+- Q4: 40% strategic time rule and Delivery Lead ownership in spoken answer; COO relationship conversation in deep detail
+- Q6: Full suite SteerCo (CIO/CFO/Chief Claims Officer) scope and "first time delivered on time" outcome in deep detail
+- Q15: $800M GWP carrier 5-month→3-week rate change (85% improvement) and Product Configuration CoE recommendation in deep detail
+
+**Minor fix:** `research/guidewire-centers-reference.md` — line break formatting in center definitions
+
+---
+
 ## 2026-03-26 — Fix: Kafka reference removed from AVP prep
 
 **Fixed: language rule violation** — `qa/AVP-interview-prep.md`
