@@ -8,7 +8,8 @@
       { "id": "jd",       "label": "Job Descriptions", "color": "blue"    },
       { "id": "qa",       "label": "Interview Q&A",    "color": "emerald" },
       { "id": "resume",   "label": "Resume Notes",     "color": "violet"  },
-      { "id": "research", "label": "Research",         "color": "amber"   }
+      { "id": "research", "label": "Research",         "color": "amber"   },
+      { "id": "sources",  "label": "Sources",          "color": "sky"     }
     ]
   }
 ]

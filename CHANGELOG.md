@@ -5,6 +5,14 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — Fix: Sources folder missing from sidebar
+
+**Fixed: `sources/` not visible in UI**
+- Added `sources` entry to `content/topics.json` (color: sky)
+- `EY-SeniorManager-ClientServices-interview-prep.md` now visible in sidebar under Sources
+
+---
+
 ## 2026-03-26 — CLAUDE.md and memory sync
 
 **Updated: CLAUDE.md** — brought in line with actual repo state and all standing rules
