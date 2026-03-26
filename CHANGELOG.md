@@ -5,6 +5,16 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — Fix: remove ACE certification mentions from answer files
+
+**Fixed: ACE references in answer-context files** (would surface in claude.ai responses)
+- `qa/choks/06-sanjay-intel.md`: "ACE-certified developers" → "developers and configuration specialists with platform certifications"; reference note updated to "Guidewire certification program leadership"
+- `qa/choks/01-strategy.md`: cheat sheet row updated to "Guidewire certification program (EY)"
+- `qa/choks/03-questions-q16-q42.md`: Q40 community answer updated to "Guidewire Education and Certification"
+- Reference files (`04-reference.md`, `05-acronyms.md`) left unchanged — ACE is a real Guidewire term, just not one Manoj claims as a credential
+
+---
+
 ## 2026-03-26 — Feature: match case toggle for search
 
 **Added: case-sensitive search toggle**

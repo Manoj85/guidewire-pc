@@ -247,7 +247,7 @@ Pick 2, based on conversation flow:
 | APD product config time savings | 30–40% |
 | EY Guidewire certified professionals | 2,100+ |
 | EY integrations and accelerators | 550+ |
-| ACE certification program (EY) | 12 engineers in 18 months |
+| Guidewire certification program (EY) | 12 engineers in 18 months |
 | Alfa turnaround time | 5 months to go-live |
 | Scope moved to Phase 2 (Alfa) | 30% of requirements |
 | CompSource incident response | on-site in 4 hours, fix in 24 hours |

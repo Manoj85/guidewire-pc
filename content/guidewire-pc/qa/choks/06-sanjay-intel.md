@@ -70,7 +70,7 @@ This is what Choks will probe. Your AI Advisor story needs to be crisp, real, an
 
 > "My role at EY was aligned to the Digital Engineering practice, with a dual advisory function across both the Insurance and Quality Engineering practices. My focus was on solution offering development and delivery execution — and specifically on AI enablement.
 >
-> I led teams with certified Guidewire practitioners — ACE-certified developers, configuration specialists — and my personal investment was in AI certifications and upskilling, because that's where I was adding unique strategic value that the delivery team looked to me for.
+> I led teams with certified Guidewire practitioners — developers and configuration specialists with platform certifications — and my personal investment was in AI certifications and upskilling, because that's where I was adding unique strategic value that the delivery team looked to me for.
 >
 > I've invested heavily in AI certifications — LLMs, Agentic AI, generative AI-based automation — operating at the intersection of P&C insurance domain knowledge, solution architecture, and AI strategy. That combination is what both the Insurance and QE practices at EY brought me in to shape.
 >
@@ -124,7 +124,7 @@ When Guidewire certification comes up, pivot immediately to your actual certific
 - Azure AI Fundamentals (or equivalent)
 - Any OpenAI / LLM / Agentic AI certifications
 - Any SAFe Agile / RTE certification
-- EY internal: ACE certification program leadership (built the program, 12 engineers certified)
+- EY internal: Guidewire certification program leadership (built the program, 12 engineers certified in 18 months)
 
 ---
 

@@ -489,7 +489,7 @@
 > - **Guidewire DEVSummit** — the annual developer conference, primarily in Bengaluru, focused on technical tracks and practitioner learning.
 > - **Guidewire Insurance Forum (GIF)** — smaller executive-format gatherings for senior insurance leaders, regional editions.
 > - **Guidewire Marketplace Summit** — partner and technology showcase events, expanding globally in 2026.
-> - **ACE Certification and Training** — I have been involved in building Guidewire certification programs for my delivery teams.
+> - **Guidewire Education and Certification** — I have built Guidewire certification programs for my delivery teams, putting 12 engineers through platform credentials in 18 months.
 >
 > I also follow the Guidewire Community portal and PartnerConnect announcements — Guidewire made all e-learning free for PartnerConnect partners in October 2025, which directly benefits VM's delivery teams."
 
