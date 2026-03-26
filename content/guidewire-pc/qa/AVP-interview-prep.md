@@ -8,7 +8,11 @@
 
 ## POSITIONING STATEMENT (Use as opener or when asked "Tell me about yourself")
 
-> "I'm a Senior Manager at EY with 17+ years delivering P&C insurance technology programs — specifically Guidewire transformations across PolicyCenter, BillingCenter, and ClaimCenter for Tier-1 carriers. I've led cross-functional teams of 50+, managed $10M+ engagement portfolios, and run the full lifecycle from solution architecture through production release. My clients have included carriers in personal auto, personal property, workers compensation, and commercial lines. I'm drawn to ValueMomentum specifically because you're a pure-play P&C technology firm — this is all you do, which means deeper craft and stronger carrier relationships. I want to apply my delivery and transformation experience at that level of specialization."
+> "I'm a Senior Manager at EY with 17+ years delivering P&C insurance technology programs — specifically Guidewire transformations across PolicyCenter, BillingCenter, and ClaimCenter for Tier-1 carriers across personal, commercial, and workers compensation lines. I've led cross-functional teams of 50+, managed $10M+ engagement portfolios, and run the full lifecycle from architecture through production release and into Managed Services.
+>
+> Beyond the P&C core: at EY I carried dual AI Advisor roles — for the Insurance practice, where I architected an AI-powered claims triage solution for Nationwide that reduced manual effort by 30–40%, and for the Quality Engineering practice, where I led the AI strategy behind our TestAI offering. My engineering background spans full-stack development, cloud-native delivery on AWS and Azure, mobile across Android and iOS, generative and agentic AI, and blockchain. I hold certifications in AWS, Azure AI Fundamentals, Google GAIL, and agentic AI — and I stay current: I'm always in a course and I mentor my teams on what I'm learning.
+>
+> I'm drawn to ValueMomentum because you're a pure-play P&C firm — this is all you do. I want to bring this combination of delivery depth and technology breadth to that level of specialization."
 
 ---
 

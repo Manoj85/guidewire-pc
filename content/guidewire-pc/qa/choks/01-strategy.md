@@ -179,9 +179,13 @@ Choks will read your resume and pick specific bullets. Anticipate these:
 
 After the referral mention:
 
-> "I'm a Senior Manager at EY with 17 years in P&C insurance technology — specifically Guidewire transformations across PolicyCenter, BillingCenter, and ClaimCenter. I've led delivery teams of 50+, managed programs from architecture through go-live and into Managed Services, and worked with carriers across personal lines, commercial lines, and workers compensation.
+> "You've seen the P&C and Guidewire side of my background — 17 years, PolicyCenter, BillingCenter, ClaimCenter, personal lines through commercial and workers comp, teams of 50+, programs from architecture through go-live and Managed Services. I want to give you the broader picture beyond that.
 >
-> I've competed against ValueMomentum on deals at EY. I know what you do and how you do it. I'm here because I want to be on this side of the table — at a firm where P&C insurance is the whole business."
+> At EY I held dual AI Advisor roles — for the Insurance practice at Nationwide, where I architected an AI-powered claims triage solution that cut manual effort by 30–40%, and for the Quality Engineering practice, where I led the AI strategy behind our TestAI offering built on OpenAI and agentic AI.
+>
+> My engineering background goes further — full-stack development, cloud-native on AWS and Azure, mobile across Android and iOS, generative and agentic AI, and proof-of-concept blockchain work. I hold certifications in AWS, Azure AI Fundamentals, Google GAIL, and agentic AI. I stay active — I'm always in a course and I mentor my teams the same way.
+>
+> I wanted to lay that out so you can take the conversation wherever you'd like to go."
 
 ---
 
