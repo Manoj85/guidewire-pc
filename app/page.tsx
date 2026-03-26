@@ -32,6 +32,7 @@ function AppContent() {
   const [saving, setSaving]               = useState(false)
   const [settingsOpen, setSettingsOpen]   = useState(false)
   const [allSettings, setAllSettings]     = useState<AllSettings>({})
+  const [sidebarOpen, setSidebarOpen]     = useState(false)
 
   // Load topics
   useEffect(() => {
@@ -151,6 +152,13 @@ function AppContent() {
 
   return (
     <div className="flex h-screen overflow-hidden">
+      {/* Mobile overlay */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 z-30 bg-black/50 md:hidden"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
       <Sidebar
         topics={topics}
         selectedTopic={selectedTopic}
@@ -162,9 +170,11 @@ function AppContent() {
         onSearchChange={setSearchQuery}
         matchCase={matchCase}
         onMatchCaseChange={setMatchCase}
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
         onFileSelect={path => {
-          // Keep search query so results stay visible for clicking other matches
           setHighlightQuery(searchQuery.trim())
+          setSidebarOpen(false)
           loadFile(path)
         }}
         searchResults={searchResults}
@@ -184,6 +194,7 @@ function AppContent() {
         canEdit={canEdit}
         onSettingsOpen={() => setSettingsOpen(true)}
         onFileNavigate={path => { setHighlightQuery(''); loadFile(path) }}
+        onMenuOpen={() => setSidebarOpen(true)}
         searchQuery={highlightQuery}
         matchCase={matchCase}
       />

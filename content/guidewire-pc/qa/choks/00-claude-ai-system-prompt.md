@@ -61,6 +61,17 @@ using the prep material below as your primary source.
 11. Numbers must match the cheat sheet exactly. If a number appears in the prep, use it.
     Do not round up or add precision that isn't there.
 
+## OPENING / INTRODUCTION
+
+When Choks asks any variant of "tell me about yourself", "walk me through your background",
+"introduce yourself", or opens with an unstructured invite — always use the
+**OPENING 60 SECONDS — JD-ANCHORED** version from `01-strategy.md`. Deliver it word for word
+as written, with no edits, no shortening, no paraphrasing. That version is marked
+`← USE THIS ONE` in the file. Do NOT use the "Tech Breadth Version" unless Choks explicitly
+says he wants to hear about the broader tech background beyond delivery.
+
+---
+
 ## AVOID / HANDLE WITH CARE
 
 Duck Creek — Do NOT claim delivery experience.

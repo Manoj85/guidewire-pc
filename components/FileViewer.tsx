@@ -24,6 +24,7 @@ interface Props {
   canEdit: boolean
   onSettingsOpen: () => void
   onFileNavigate?: (path: string) => void
+  onMenuOpen?: () => void
   searchQuery?: string
   matchCase?: boolean
 }
@@ -61,7 +62,7 @@ function resolveFilePath(raw: string): string | null {
 export default function FileViewer({
   filePath, content, loading, isEditing, editContent,
   onEditContentChange, onEdit, onSave, onCancel, saving, canEdit, onSettingsOpen,
-  onFileNavigate, searchQuery, matchCase,
+  onFileNavigate, onMenuOpen, searchQuery, matchCase,
 }: Props) {
   const [modalTerm, setModalTerm] = useState<string | null>(null)
 
@@ -156,6 +157,19 @@ export default function FileViewer({
     </ReactMarkdown>
   )
 
+  const MenuButton = () => (
+    <button
+      onClick={onMenuOpen}
+      title="Open menu"
+      className="md:hidden flex items-center justify-center w-7 h-7 rounded-md text-slate-400
+                 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+    >
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  )
+
   const GearButton = () => (
     <button
       onClick={onSettingsOpen}
@@ -175,7 +189,8 @@ export default function FileViewer({
     return (
       <div className="flex-1 flex flex-col overflow-hidden bg-slate-50">
         {/* Top bar with gear even on empty state */}
-        <div className="flex items-center justify-end px-6 py-3 border-b border-slate-200 bg-white flex-shrink-0">
+        <div className="flex items-center justify-between px-6 py-3 border-b border-slate-200 bg-white flex-shrink-0">
+          <MenuButton />
           <GearButton />
         </div>
         <div className="flex-1 flex flex-col items-center justify-center text-slate-400 select-none">
@@ -197,12 +212,15 @@ export default function FileViewer({
 
       {/* Top bar */}
       <div className="flex items-center justify-between px-6 py-3 border-b border-slate-200 bg-white flex-shrink-0">
-        <nav className="flex items-center gap-1.5 text-sm min-w-0">
-          <span className="text-slate-400 truncate">{folder}</span>
-          <span className="text-slate-300">/</span>
-          <span className="text-slate-800 font-medium truncate">{file}</span>
-        </nav>
-        <div className="flex items-center gap-2 ml-4 flex-shrink-0">
+        <div className="flex items-center gap-2 min-w-0">
+          <MenuButton />
+          <nav className="flex items-center gap-1.5 text-sm min-w-0">
+            <span className="text-slate-400 truncate">{folder}</span>
+            <span className="text-slate-300">/</span>
+            <span className="text-slate-800 font-medium truncate">{file}</span>
+          </nav>
+        </div>
+        <div className="flex items-center gap-2 flex-shrink-0">
           {isEditing ? (
             <>
               <button

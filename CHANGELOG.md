@@ -5,6 +5,20 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — Mobile responsiveness + system prompt opening rule
+
+**Updated: `app/page.tsx`, `components/Sidebar.tsx`, `components/FileViewer.tsx`**
+- Sidebar now slides in/out on mobile (fixed overlay with z-index, translate-x transition)
+- Overlay backdrop closes sidebar when tapped outside
+- Hamburger menu button (≡) appears in file viewer top bar on mobile only
+- Close (×) button in sidebar header on mobile
+- File selection auto-closes sidebar on mobile
+
+**Updated: `qa/choks/00-claude-ai-system-prompt.md`**
+- Added OPENING / INTRODUCTION section: instructs claude.ai to always use the JD-ANCHORED version from `qa/choks/01-strategy.md` for "tell me about yourself" variants — verbatim, no shortening
+
+---
+
 ## 2026-03-26 — System prompt: content fidelity rules to prevent stripping
 
 **Updated: `qa/choks/00-claude-ai-system-prompt.md`**

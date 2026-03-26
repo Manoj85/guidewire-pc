@@ -119,12 +119,14 @@ interface Props {
   onFileSelect: (path: string) => void
   searchResults: SearchResult[]
   onChangelogOpen: () => void
+  isOpen: boolean
+  onClose: () => void
 }
 
 export default function Sidebar({
   topics, selectedTopic, onTopicChange, topicSettings,
   fileTree, selectedFile, searchQuery, onSearchChange, matchCase, onMatchCaseChange,
-  onFileSelect, searchResults, onChangelogOpen,
+  onFileSelect, searchResults, onChangelogOpen, isOpen, onClose,
 }: Props) {
   const isSearching = searchQuery.trim().length > 0
   const currentTopic = topics.find(t => t.id === selectedTopic)
@@ -135,13 +137,26 @@ export default function Sidebar({
   ) ?? []
 
   return (
-    <aside className="w-72 flex-shrink-0 bg-slate-900 flex flex-col h-screen border-r border-slate-800">
+    <aside className={`
+      fixed inset-y-0 left-0 z-40 w-72 flex-shrink-0 bg-slate-900 flex flex-col h-screen border-r border-slate-800
+      transition-transform duration-200
+      md:relative md:translate-x-0
+      ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+    `}>
 
       {/* Header */}
       <div className="px-4 pt-5 pb-4 border-b border-slate-800">
         <div className="flex items-center gap-2 mb-4">
           <span className="text-lg">⚡</span>
           <span className="text-white font-bold text-sm tracking-widest">PREP HUB</span>
+          <button
+            onClick={onClose}
+            className="ml-auto md:hidden text-slate-500 hover:text-slate-300 transition-colors"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
 
         {/* Topic switcher */}
