@@ -14,6 +14,17 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — Fix: remove all Guidewire certification claims from answers
+
+**Fixed: no Guidewire certification claims in any spoken answer**
+- `qa/choks/03-questions-q16-q42.md`: Q23 spoken answer → "structured Guidewire learning program"; deep detail → "platform literacy is the floor"; Q24 tiger team → "deep platform delivery experience"; Q40 → "Guidewire platform learning programs"
+- `qa/choks/02-questions-q01-q15.md`: Q5 deep detail → removed "Beyond certification" framing
+- `qa/choks/01-strategy.md`: cheat sheet row → "Guidewire platform learning program"
+- `qa/choks/06-sanjay-intel.md`: cert list note → "Guidewire platform learning program leadership"
+- Retained: EY firm-wide "2,100+ certified professionals" stat (org scale, not personal); honest forward statement "ready to pursue if VM wants"
+
+---
+
 ## 2026-03-26 — Fix: remove ACE certification mentions from answer files
 
 **Fixed: ACE references in answer-context files** (would surface in claude.ai responses)

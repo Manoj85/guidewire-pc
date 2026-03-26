@@ -150,7 +150,7 @@
 >
 > I don't mentor through advice — I mentor through opportunity. I give junior team members stretch assignments: run the client workshop, own the steering committee deck, lead the retrospective. They might need coaching before and debrief after, but they do it themselves.
 >
-> Structured piece: I assign every junior team member a development goal for each 6-month period — a certification, a skill, a leadership experience. We track it in our 1:1s. At EY I ran a Guidewire certification program that put 12 engineers through Guidewire credentials in 18 months. That was about more than credentials — it built confidence and client credibility for people who were still early in their careers.
+> Structured piece: I assign every junior team member a development goal for each 6-month period — a domain skill, a platform capability, a leadership experience. We track it in our 1:1s. At EY I ran a structured Guidewire learning program for 12 engineers over 18 months — deep platform training, not just tooling. That built confidence and client credibility for people who were still early in their careers.
 >
 > I also make feedback frequent and specific. Not 'good job' — 'the way you handled the client's scope question in today's call was exactly right: you acknowledged it, offered the RFC process, and didn't get defensive. That's the move.' Specific feedback compounds faster than general praise."
 
@@ -172,7 +172,7 @@
 >
 > **Stretch assignments with guardrails:** I give real ownership — leading the QBR deck, running a carrier onboarding workshop, owning a Guidewire configuration workstream end-to-end. Not parallel shadow work — primary accountability. But the guardrails are clear: they have a pre-call with me to prepare, and a debrief after. I'm available on standby during the engagement. They know I won't let them fail in front of a client — but I also won't bail them out unless it's genuinely critical.
 >
-> **Domain investment:** Everyone on an insurance delivery account completes structured Guidewire learning — at minimum the relevant platform certification track. You can't have a credible conversation with a carrier's Chief Underwriting Officer about their PolicyCenter product model if you've never configured one. The certification is the floor; the depth comes from client exposure.
+> **Domain investment:** Everyone on an insurance delivery account completes structured Guidewire platform learning — PolicyCenter product model, ClaimCenter claim lifecycle, or BillingCenter billing plans, depending on what we're delivering. You can't have a credible conversation with a carrier's Chief Underwriting Officer about their PolicyCenter product model if you've never seen one configured. Platform literacy is the floor; the depth comes from client exposure.
 >
 > **The $450K story:** A junior CSM on my team — 2 years of experience — was managing a personal auto carrier's post-go-live account. Her pattern was reactive: respond to carrier calls, route escalations, report status. I coached her to shift to proactive: build a health score, identify one white-space opportunity, and run a growth-focused QBR. We did dry runs. She brought it. Six months later, she had identified a DataHub/Explore analytics expansion opportunity, built the business case, and closed a $450K engagement with the carrier's VP of Personal Lines — without me in the room. That's the test: when they can close without you, the mentoring worked.
 
@@ -203,7 +203,7 @@
 >
 > **Root cause:** PolicyCenter's personal lines product model had been configured with validation rules based on the implementation team's interpretation of the carrier's underwriting guidelines — not the guidelines themselves. The carrier's UW team had provided a summary document during requirements, not the full underwriting manual. Seventeen of the 23 validation rules we eventually rebuilt had been written against incomplete source material.
 >
-> **Tiger team composition:** One PolicyCenter senior configurator (3+ GW certifications, had worked on homeowners product models for two prior carriers) + one business analyst with 8 years of homeowners underwriting experience at a carrier (not a tech background — a domain expert who could read the UW manual and translate it into configuration requirements). That pairing was intentional: the configurator knew how to build it, the BA knew what to build.
+> **Tiger team composition:** One PolicyCenter senior configurator (deep platform delivery experience, had worked on homeowners product models for two prior carriers) + one business analyst with 8 years of homeowners underwriting experience at a carrier (not a tech background — a domain expert who could read the UW manual and translate it into configuration requirements). That pairing was intentional: the configurator knew how to build it, the BA knew what to build.
 >
 > **Validation process:** After rebuilding all 23 rules in UAT, I ran a joint validation session — PolicyCenter configurator + BA on our side, the carrier's Chief Underwriting Officer + 3 senior underwriters on their side. We walked through every rule line by line. Any ambiguity was decided in the room, documented, and signed off before we promoted to production. That joint session was the trust repair moment — the CUO saw that we were treating their UW guidelines as the source of truth, not interpreting them.
 >
@@ -489,7 +489,7 @@
 > - **Guidewire DEVSummit** — the annual developer conference, primarily in Bengaluru, focused on technical tracks and practitioner learning.
 > - **Guidewire Insurance Forum (GIF)** — smaller executive-format gatherings for senior insurance leaders, regional editions.
 > - **Guidewire Marketplace Summit** — partner and technology showcase events, expanding globally in 2026.
-> - **Guidewire Education and Certification** — I have built Guidewire certification programs for my delivery teams, putting 12 engineers through platform credentials in 18 months.
+> - **Guidewire Education** — I have built structured Guidewire platform learning programs for my delivery teams — 12 engineers, 18 months of deep platform training across PolicyCenter, BillingCenter, and ClaimCenter.
 >
 > I also follow the Guidewire Community portal and PartnerConnect announcements — Guidewire made all e-learning free for PartnerConnect partners in October 2025, which directly benefits VM's delivery teams."
 

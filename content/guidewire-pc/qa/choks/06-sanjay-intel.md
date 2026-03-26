@@ -124,7 +124,7 @@ When Guidewire certification comes up, pivot immediately to your actual certific
 - Azure AI Fundamentals (or equivalent)
 - Any OpenAI / LLM / Agentic AI certifications
 - Any SAFe Agile / RTE certification
-- EY internal: Guidewire certification program leadership (built the program, 12 engineers certified in 18 months)
+- EY internal: Guidewire platform learning program leadership (built the program, 12 engineers, 18 months)
 
 ---
 
