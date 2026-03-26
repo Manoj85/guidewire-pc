@@ -26,6 +26,10 @@
 >
 > Early warning: I run a weekly 'red flag' session with delivery leads — not status reporting, specifically surfacing concerns. I ask directly: what are you worried about that you haven't told me yet? That question gets real answers that a standard status call doesn't."
 
+**Alternatively:**
+
+> On a workers' comp carrier on a PolicyCenter and BillingCenter implementation, I introduced a shared Commitment Register — a live document listing every commitment made to the carrier, by whom, and by when. The delivery PM updated it weekly. This eliminated the gap where the client-facing team promises something the delivery team doesn't know was committed.
+
 ---
 
 **Q18. How do you handle scope creep when a client keeps adding requests outside the contract?**
@@ -37,6 +41,13 @@
 > When an informal request comes in anyway, my response is never 'no.' It's always: 'Let's put it through the RFC process — I'll have an impact assessment back to you in 48 hours.' When clients see the cost and timeline impact in writing, 60% of informal requests voluntarily move to Phase 2.
 >
 > For the 40% that are genuinely important, we have a formal conversation: here's the impact on current scope, here are the options (fund the additional work, descope something equivalent, defer to Phase 2). That's a real conversation between adults. It's never adversarial when you've set the expectation early."
+
+**Alternatively (STAR):**
+
+> *Situation:* A workers' comp carrier on a PolicyCenter implementation asked mid-project to add e-signature integration for policy issuance — not in scope.
+> *Task:* Handle it without damaging the relationship or derailing the program.
+> *Action:* Rather than a hard no, I presented three paths: add to current program for $85K and 6 weeks; defer to Phase 2 post-go-live; EY provides specifications so the carrier's internal team builds it.
+> *Result:* The client chose Phase 2 — and we booked a Phase 2 SOW. Scope creep became a pipeline event.
 
 ---
 
@@ -51,6 +62,10 @@
 > Stakeholder pulse checks — informal 15-minute calls with the carrier IT lead every other week, separate from steering committees. The question I always ask: 'Is there anything you're not fully comfortable with right now that we haven't talked about?' That question opens things that steering committees never surface.
 >
 > Post-sprint retrospectives with the carrier — not just internal. Every 4 weeks I run a brief retrospective that includes the carrier's QA lead and business analyst. What's working, what's not, what do we adjust. That makes issues visible before they become escalations."
+
+**Alternatively:**
+
+> On a personal auto carrier post-ClaimCenter go-live, I implemented a monthly System Health Report — pulling adjuster login rates, average claim cycle time, and straight-through processing percentage. When claim cycle time on auto physical damage jumped 18% in month 3, I scheduled a workflow optimization session before the carrier noticed it in their own KPIs. We resolved a queue routing configuration issue that would have been a major complaint at the next QBR.
 
 ---
 
@@ -78,6 +93,10 @@
 >
 > During delivery, I run a monthly internal account review — sales, delivery, finance in one room. Commercial health, delivery status, renewal pipeline, any pending change orders. Alignment comes from shared visibility. When everyone is looking at the same scorecard, the conversation is about solutions, not whose fault it is."
 
+**Alternatively:**
+
+> On a workers' comp carrier mid-implementation, the sales team began pursuing an adjacent BillingCenter deal with the same carrier — without looping me in. The carrier's VP mentioned it to me before my own sales team did. I immediately called an internal account alignment session, established a one-team message to the client, and put a rule in place: no client-facing conversations on new scope without Client Partner visibility. It was a near-miss that reshaped our internal operating model.
+
 ---
 
 **Q22. Describe a time you had to influence a decision at the client's senior leadership level without formal authority.**
@@ -90,6 +109,16 @@
 >
 > He reversed his position based on the analysis. The key: I didn't challenge his judgment, I gave him better information. When you show a technical executive that you've done the work, they respect it. Influence without authority is earned through evidence, not argument."
 
+**Or frame it as (personal lines context):**
+
+> *Situation:* A personal lines carrier's CIO had decided to implement Guidewire PolicyCenter as a big-bang replacement — all lines of business simultaneously. The delivery team and I both assessed this as extremely high risk, but I had no authority to override the client's decision.
+>
+> *Task:* Shift the CIO's position without creating an adversarial dynamic or damaging the relationship.
+>
+> *Action:* I built the risk case with data — pulled implementation outcome data on big-bang versus phased approaches, showing phased had materially higher on-time delivery rates. I then engaged the CFO, not just the CIO, reframing the conversation around capital risk: a big-bang delay would impact 24 months of IT budget planning. I presented a phased alternative that preserved their timeline goal — personal auto first, homeowners second — net same delivery horizon, dramatically lower risk. I also brought in a Guidewire reference client who had been through the same decision and chosen phased.
+>
+> *Result:* The CIO agreed to a phased approach after the CFO conversation shifted the framing from delivery preference to financial risk management. The personal auto go-live was delivered on time. The CIO later told me: 'You were right, and I'm glad you pushed.' That earned credibility opened every subsequent strategic conversation.
+
 ---
 
 **Q23. How do you mentor and develop junior client services team members?**
@@ -98,9 +127,21 @@
 >
 > I don't mentor through advice — I mentor through opportunity. I give junior team members stretch assignments: run the client workshop, own the steering committee deck, lead the retrospective. They might need coaching before and debrief after, but they do it themselves.
 >
-> Structured piece: I assign every junior team member a development goal for each 6-month period — a certification, a skill, a leadership experience. We track it in our 1:1s. At EY I ran a Guidewire certification program that put 12 engineers through ACE certification in 18 months. That was about more than credentials — it built confidence and client credibility for people who were still early in their careers.
+> Structured piece: I assign every junior team member a development goal for each 6-month period — a certification, a skill, a leadership experience. We track it in our 1:1s. At EY I ran a Guidewire certification program that put 12 engineers through Guidewire credentials in 18 months. That was about more than credentials — it built confidence and client credibility for people who were still early in their careers.
 >
 > I also make feedback frequent and specific. Not 'good job' — 'the way you handled the client's scope question in today's call was exactly right: you acknowledged it, offered the RFC process, and didn't get defensive. That's the move.' Specific feedback compounds faster than general praise."
+
+**Alternatively (three-component model):**
+
+> "My development model has three components: shadowing with debrief, stretch assignments, and domain investment.
+>
+> Shadowing: junior team members join my client calls for 90 days, and we debrief for 20 minutes after every call — what did I pick up on, what questions did I ask, what was I watching for. That's where the invisible work of client management becomes visible.
+>
+> Stretch assignments: I give people ownership of a real workstream with coaching guardrails — running a QBR, leading a carrier onboarding, owning a Guidewire module delivery. Not shadow work — real accountability with me available.
+>
+> Domain investment: everyone on an insurance account completes structured learning on the platform we're delivering. You can't advise a carrier on their PolicyCenter product model if you've never seen one configured.
+>
+> *Result example:* A junior team member on my team was managing a personal lines carrier's post-go-live account. She was reactive — only responding when clients called. I coached her through her first proactive QBR, helped her build an account health score, and challenged her to identify one expansion opportunity. Six months later, she brought in a $450K optimization engagement independently. That outcome is what I measure my own performance on."
 
 ---
 
@@ -113,6 +154,16 @@
 > That was a moment that could have ended the relationship. Instead, by responding in 4 hours, fixing in 24, and providing a complete RCA in 48 — with specific process changes to prevent recurrence — I turned the incident into a demonstration of what a real partner looks like.
 >
 > The CIO's words afterward: 'Most vendors would have deflected or minimized. You took ownership and fixed it.' He became our strongest reference carrier. Renewed Managed Services, expanded scope, and personally introduced us to two other carriers in his network."
+
+**Or frame it as (homeowners carrier context — STAR):**
+
+> *Situation:* A homeowners insurance carrier was 6 months post-go-live on Guidewire PolicyCenter and had filed a formal complaint with EY's leadership. Their new business issuance process had a 12% error rate — agents were submitting incomplete applications that PolicyCenter was incorrectly accepting, creating significant rework downstream. The account was at churn risk.
+>
+> *Task:* Restore the relationship, solve the root cause, and prevent losing a $1.8M annual account.
+>
+> *Action:* I flew on-site within 48 hours and ran a structured listening session — no defensiveness, just diagnosis. I identified that the validation rules in PolicyCenter's personal lines product model were not configured to match the carrier's underwriting guidelines — a configuration gap, not a platform defect. I assembled a tiger team: one PolicyCenter senior configurator and one business analyst with homeowners underwriting experience. We rebuilt 23 validation rules over 3 weeks in UAT, then ran a joint validation session with the carrier's underwriting team before re-deploying. I implemented a monthly System Quality Review post-fix to catch any future drift.
+>
+> *Result:* Error rate dropped from 12% to 0.8% within 45 days. The carrier's Chief Underwriting Officer — who had been the loudest critic — became a reference client for EY's personal lines practice. They expanded to a Guidewire BillingCenter implementation 8 months later. The relationship recovery became a case study in how to re-earn trust.
 
 ---
 

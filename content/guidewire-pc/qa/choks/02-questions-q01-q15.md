@@ -10,11 +10,18 @@
 
 > "Three things: delivery outcomes, client health, and team retention. A program that goes live on time but leaves the client relationship damaged is not a success. A client relationship that's warm but the delivery is late is not a success either. And if I'm burning out my team to hit both, that's not sustainable. I measure success by: are my clients renewing and expanding? Are my deliveries on-time and within budget? Are my people growing and staying? If all three are green, I'm doing my job."
 
+**Alternatively (Guidewire-specific example):**
+
+> *Situation:* At Nationwide Personal Lines, we were 2 months post go-live on PolicyCenter. The business team was still relying on workarounds for endorsements.
+> *Task:* Success for me wasn't the go-live — it was the carrier operating independently.
+> *Action:* I ran weekly enablement sessions with the carrier's product team on PolicyCenter configuration, stayed through hypercare, and handed over a documented runbook.
+> *Result:* Within 60 days of go-live, the carrier's product team launched a new homeowners endorsement in PolicyCenter with zero escalation to us. That self-sufficiency moment was the real success signal.
+
 ---
 
 **Q2. Describe your approach to building and scaling a client services practice.**
 
-> "I've done this at EY within the Guidewire practice. Three steps: first, define the delivery model — what's the team structure for a typical engagement, what's onshore vs. offshore, what are the standard roles. Second, build reusable IP — estimation templates, RACI frameworks, integration patterns, QA checklists that teams can apply without reinventing on every engagement. Third, develop the people — I built a Guidewire certification program at EY that put 12 engineers through ACE certification in 18 months. Once you have a repeatable model and certified practitioners, you can scale without quality degrading."
+> "I've done this at EY within the Guidewire practice. Three steps: first, define the delivery model — what's the team structure for a typical engagement, what's onshore vs. offshore, what are the standard roles. Second, build reusable IP — estimation templates, RACI frameworks, integration patterns, QA checklists that teams can apply without reinventing on every engagement. Third, develop the people — I run structured learning programs tied to real engagement work, not classroom theory. At EY I built a team certification track across AI platforms and cloud technologies — tracking completion the same way I track delivery milestones. Once you have a repeatable model and practitioners who keep growing, you can scale without quality degrading."
 
 ---
 
@@ -26,6 +33,10 @@
 >
 > The methodology: deliver well, listen actively, bring a solution before they issue an RFP, and use your delivery track record as the proposal. Clients don't want to run a procurement process if they already trust you."
 
+**Alternatively:**
+
+> My methodology is always: deliver first, expand second. But I'm always listening. On a workers' comp carrier that was live on PolicyCenter but managing billing manually — I heard the CIO mention billing exceptions in a steering committee. I didn't pitch that day. I came back two weeks later with a business case mapping their stated billing pain to a BillingCenter implementation. That conversation led to a $2.4M expansion that closed within 6 months.
+
 ---
 
 **Q4. How do you balance short-term client firefighting with long-term relationship development?**
@@ -35,6 +46,10 @@
 > I time-block my week. The first 30 minutes of every day is for operational triage — what's on fire, what needs my attention today. That's firefighting time. The rest of the day is protected for strategic work: client stakeholder meetings, team development, account planning.
 >
 > More importantly: I build a delivery team that doesn't need me for day-to-day escalations. If every P2 issue requires me personally, I haven't built the right team. My delivery leads own the operational layer. I own the relationship layer. When those lines blur is when you lose both."
+
+**Alternatively:**
+
+> During a live ClaimCenter rollout for a personal auto carrier, we hit a data migration defect that blocked adjuster workflows for 48 hours. I activated the incident bridge, delegated recovery to the PM, and used the window to schedule an executive debrief with the carrier's COO — turning a fire into a roadmap conversation about long-term claims transformation strategy.
 
 ---
 
@@ -49,6 +64,10 @@
 > Recognition: I make it public and specific. When a developer solves a hard problem, the carrier's CIO hears their name. That creates loyalty money can't replicate.
 >
 > On retention specifically: I run stay interviews quarterly — not exit interviews. I ask directly: what would make you consider leaving? What would make you want to stay three more years? That gives me runway to act before it's too late."
+
+**Alternatively:**
+
+> At EY on a personal lines Guidewire account, I introduced a 'Domain Depth' program where team members shadowed implementation workshops alongside carrier business analysts — not just delivering to them, but learning alongside them. Attrition on that team dropped significantly because people felt they were growing, not just executing.
 
 ---
 
@@ -80,6 +99,10 @@ The key to managing complexity at that scale is not being everywhere — it's bu
 >
 > The relationship recovered completely. The CIO renewed our Managed Services contract 6 months later and expanded scope. His feedback: the response was exactly what a strategic partner should look like."
 
+**Or frame it as (WC context):**
+
+> A workers' comp carrier was 9 months into a PolicyCenter implementation when their business analysts felt overwhelmed by configuration requirement documentation and escalated that EY wasn't providing enough hands-on enablement. I flew on-site within 48 hours, ran separate listening sessions with their IT director, BA team, and business owner to triangulate root causes, and proposed a 6-week Configuration Coaching model — embedding an EY senior consultant to work alongside their BAs, not just deliver to them. The carrier completed go-live 2 months later and expanded to BillingCenter for WC premium billing — a $1.1M add-on.
+
 ---
 
 **Q8. How do you identify upsell and cross-sell opportunities without being perceived as pushy?**
@@ -89,6 +112,10 @@ The key to managing complexity at that scale is not being everywhere — it's bu
 > The signal is usually a throwaway comment in a steering committee — 'we've always struggled with our reporting layer' or 'the legacy billing system is a nightmare.' I note it, I don't pursue it in that meeting. I come back in the next 1:1 with the IT lead and say: 'You mentioned your reporting layer a few weeks ago — I've been thinking about that. Would it be helpful if I shared how we've approached that for other carriers?'
 >
 > That's a very different conversation from a sales pitch. It's advisory. And when clients trust your delivery, they want your advice on what to do next. The ask becomes pull, not push."
+
+**Alternatively:**
+
+> A personal auto carrier was live on PolicyCenter. In a QBR, their Chief Actuary mentioned their loss ratio was trending above plan and they couldn't isolate causal factors. I recognized that as a data and analytics gap, not a Guidewire gap. I introduced the idea of a ClaimCenter implementation that would give them structured claims data feeding their actuarial models. The conversation started with their loss ratio pain — not a product catalog.
 
 ---
 
@@ -112,6 +139,10 @@ The key to managing complexity at that scale is not being everywhere — it's bu
 >
 > Trust is rebuilt through consistency, not promises. It usually takes about 90 days of steady delivery before a skeptical client starts relaxing."
 
+**Alternatively:**
+
+> On a homeowners carrier that came to EY after a failed PolicyCenter implementation with a prior SI — their data migration had been botched, leaving 40,000 policies in a broken state. My first action before any contract conversation: I commissioned a free 2-week data quality assessment by our migration team and presented the findings with a remediation plan at no charge. That investment before the contract was signed rebuilt confidence faster than any SLA commitment.
+
 ---
 
 **Q11. What metrics do you use to measure client satisfaction and health?**
@@ -125,6 +156,8 @@ The key to managing complexity at that scale is not being everywhere — it's bu
 > Commercial health: scope change log, contract renewal status, time-to-invoice, margin vs. plan.
 >
 > Team health: utilization, attrition rate, certification completion.
+>
+> I also track adoption health post-go-live — PolicyCenter login frequency, policy issuance straight-through processing rates, ClaimCenter adjuster workflow utilization. On a personal lines carrier post-PolicyCenter go-live, when STP dropped below 70% in month 2, I proactively scheduled targeted re-training before the carrier noticed it in their own KPIs.
 >
 > I roll this into a single-page account health scorecard I share with my delivery lead and the engagement partner monthly. Green/yellow/red by category. If anything goes yellow, we have a remediation conversation before the client notices."
 
@@ -146,7 +179,7 @@ The key to managing complexity at that scale is not being everywhere — it's bu
 
 **Q13. How familiar are you with Guidewire, Duck Creek, or similar insurance platforms? How have they come up in your client conversations?**
 
-> "Guidewire is my primary platform — PolicyCenter, BillingCenter, ClaimCenter — across multiple major carrier implementations. I'm ACE-level familiar with configuration, Gosu customization, integration architecture, and the cloud migration pathway.
+> "Guidewire is my primary platform — PolicyCenter, BillingCenter, ClaimCenter — across multiple major carrier implementations. I'm deep in configuration, Gosu customization, integration architecture, and the cloud migration pathway.
 >
 > Duck Creek comes up primarily in competitive situations. I've had clients ask me to compare Guidewire vs. Duck Creek as part of platform selection. My honest answer to them: Guidewire has a stronger ecosystem, broader partner network, and a more mature cloud offering. Duck Creek is a credible alternative, particularly for mid-market carriers who want faster time-to-value on simpler lines of business.
 >
@@ -164,7 +197,9 @@ The key to managing complexity at that scale is not being everywhere — it's bu
 >
 > Peer network: I stay in contact with CIOs and CTOs from my carrier clients. Those conversations are more valuable than any analyst report because they tell me what's actually happening in production, not what's trending in a whitepaper.
 >
-> Hands-on work: The GenAI POCs I've been running at EY are the most current thing I can point to. Real AI implementations in insurance workflows — not sandbox experiments. That practical exposure keeps my thinking grounded in what actually works vs. what sounds good on a slide."
+> Hands-on work: The GenAI POCs I've been running at EY are the most current thing I can point to. Real AI implementations in insurance workflows — not sandbox experiments. That practical exposure keeps my thinking grounded in what actually works vs. what sounds good on a slide.
+>
+> The trend I'm tracking most closely right now: AI-driven underwriting and claims triage. Carriers running Guidewire ClaimCenter are asking how to layer AI on top of FNOL data to auto-route low-complexity claims. That's not a ClaimCenter replacement conversation — it's an analytics and AI layer conversation. I frame it that way deliberately, because it keeps the implementation team in the solution set and opens a new workstream."
 
 ---
 
@@ -174,7 +209,7 @@ The key to managing complexity at that scale is not being everywhere — it's bu
 >
 > First, understand the 'why' — what's driving modernization? Aging platform, cloud cost pressure, speed to market, compliance? The answer shapes everything that follows.
 >
-> Second, current state assessment — I want to understand their existing system's footprint: lines of business, integration dependencies, data quality, customization level, and team capability. A carrier with 300 integrations and 15-year-old data has a very different migration profile than a startup on a clean slate.
+> Second, current state assessment — for personal lines carriers specifically, I want to establish: which states they're licensed and serving, written premium versus earned, return premium exposure, unpaid premium aging, and loss ratios by line. Then I add the technical layer: integration dependencies, data quality, customization depth, and team capability. That financial diagnostic shapes everything — it tells me where the migration risk is before we've drawn a single architecture diagram.
 >
 > Third, platform selection — if they're open to it, I run a structured evaluation: Guidewire, Duck Creek, or others against their specific requirements. I've run these comparisons before and the criteria always come back to: line of business complexity, cloud readiness, total cost of ownership, and implementation partner ecosystem.
 >
