@@ -1,10 +1,11 @@
 'use client'
 
-import { useState, useMemo, useEffect, useLayoutEffect } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
 import rehypeHighlight from 'rehype-highlight'
+import rehypeRaw from 'rehype-raw'
 import { rehypeGlossary } from '@/lib/rehype-glossary'
 import GlossaryModal from '@/components/GlossaryModal'
 import glossaryData from '@/content/glossary.json'
@@ -64,70 +65,29 @@ export default function FileViewer({
 }: Props) {
   const [modalTerm, setModalTerm] = useState<string | null>(null)
 
-  // useLayoutEffect runs synchronously after React commits DOM — ReactMarkdown output
-  // is guaranteed to be in the DOM, no timing race possible
-  useLayoutEffect(() => {
-    const container = document.querySelector<HTMLElement>('[data-prose-content]')
-    if (!container) return
-
-    // Remove previous highlights
-    container.querySelectorAll('mark[data-search]').forEach(mark => {
-      const parent = mark.parentNode
-      if (parent) {
-        parent.replaceChild(document.createTextNode(mark.textContent || ''), mark)
-        parent.normalize()
-      }
-    })
-
+  // Pre-process content: inject <mark> tags around search matches before ReactMarkdown renders.
+  // This keeps highlights in React's virtual DOM so they survive re-renders.
+  const displayContent = useMemo(() => {
     const term = searchQuery?.trim()
-    if (!term || isEditing || loading) return
-
+    if (!term || isEditing || loading) return content
     const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
     const flags = matchCase ? 'g' : 'gi'
-    const regex = new RegExp(`(${escaped})`, flags)
+    // Replace only inside text — skip fenced code blocks (``` ... ```) and inline code (` ... `)
+    // Strategy: split on code fences/spans, only replace in non-code segments
+    const parts = content.split(/(```[\s\S]*?```|`[^`\n]+`)/g)
+    return parts.map((part, i) =>
+      i % 2 === 0
+        ? part.replace(new RegExp(escaped, flags), m => `<mark data-search class="bg-yellow-200 text-yellow-900 rounded-sm px-0.5">${m}</mark>`)
+        : part
+    ).join('')
+  }, [content, searchQuery, matchCase, isEditing, loading])
 
-    const textNodes: Text[] = []
-    const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
-      acceptNode(node) {
-        const tag = node.parentElement?.tagName.toLowerCase() ?? ''
-        return ['script', 'style', 'mark', 'code'].includes(tag)
-          ? NodeFilter.FILTER_REJECT
-          : NodeFilter.FILTER_ACCEPT
-      },
-    })
-    let n: Node | null
-    while ((n = walker.nextNode())) textNodes.push(n as Text)
-
-    let firstMark: HTMLElement | null = null
-
-    for (const textNode of textNodes) {
-      const text = textNode.textContent || ''
-      if (!regex.test(text)) { regex.lastIndex = 0; continue }
-      regex.lastIndex = 0
-
-      const frag = document.createDocumentFragment()
-      let last = 0
-      let match: RegExpExecArray | null
-      while ((match = regex.exec(text)) !== null) {
-        if (match.index > last) frag.appendChild(document.createTextNode(text.slice(last, match.index)))
-        const mark = document.createElement('mark')
-        mark.setAttribute('data-search', '1')
-        mark.className = 'bg-yellow-200 text-yellow-900 rounded-sm px-0.5'
-        mark.textContent = match[0]
-        if (!firstMark) firstMark = mark
-        frag.appendChild(mark)
-        last = regex.lastIndex
-      }
-      if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)))
-      textNode.parentNode?.replaceChild(frag, textNode)
-    }
-
-    // Scroll after paint (useLayoutEffect runs before paint, so defer scroll)
-    if (firstMark) {
-      const el = firstMark
-      requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth', block: 'center' }))
-    }
-  }, [searchQuery, matchCase, content, isEditing, loading])
+  // Scroll to first highlight after render
+  useEffect(() => {
+    if (!searchQuery?.trim() || isEditing || loading) return
+    const first = document.querySelector<HTMLElement>('mark[data-search]')
+    if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }, [displayContent, searchQuery, isEditing, loading])
 
   // Custom components: intercept glossary-term spans, file path links, external links
   const mdComponents = useMemo(() => ({
@@ -181,10 +141,8 @@ export default function FileViewer({
     ),
   }), [onFileNavigate])
 
-  // Pass [rehypeGlossary, glossaryData] so unified calls rehypeGlossary(glossaryData)
-  // itself and receives the transformer — not the pre-called result
   const rehypePlugins = useMemo(
-    () => [rehypeHighlight, [rehypeGlossary, glossaryData]] as any,
+    () => [rehypeRaw, rehypeHighlight, [rehypeGlossary, glossaryData]] as any,
     [],
   )
 
@@ -319,8 +277,8 @@ export default function FileViewer({
       ) : (
         <div className="flex-1 overflow-y-auto">
           <div className="max-w-4xl mx-auto px-8 py-8">
-            <div className="prose prose-slate max-w-none" data-prose-content>
-              <MdContent source={content} />
+            <div className="prose prose-slate max-w-none">
+              <MdContent source={displayContent} />
             </div>
           </div>
         </div>

@@ -5,6 +5,17 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — Fix: search highlight — rewrite as markdown pre-processing
+
+**Fixed: highlights wiped on any re-render** — `components/FileViewer.tsx`
+- Root cause: DOM manipulation via TreeWalker/useLayoutEffect inserted `<mark>` tags outside React's virtual DOM — any re-render (glossary click, state change) caused React reconciliation to wipe them
+- Rewrite: `displayContent` memo pre-processes the markdown string before ReactMarkdown sees it, injecting `<mark data-search>` tags around matches (code blocks/spans excluded)
+- Added `rehype-raw` plugin so ReactMarkdown renders the injected HTML marks as real elements
+- Highlights now live in React's virtual DOM and survive re-renders
+- `useEffect` scrolls to first mark after render
+
+---
+
 ## 2026-03-26 — Fix: search highlight timing — switch to useLayoutEffect
 
 **Fixed: yellow highlights still not appearing** — `components/FileViewer.tsx`
