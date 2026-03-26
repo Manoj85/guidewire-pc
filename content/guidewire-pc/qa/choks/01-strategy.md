@@ -49,7 +49,7 @@ This immediately:
 
 *The full picture of who you are. Too long to say in one go — use it to know your own story cold, then let the 60-second version and Choks's follow-ups surface the detail.*
 
-> "Seventeen years in technology delivery — the last six focused on P&C insurance, all of it hands-on, from architecture to production. You know the Guidewire footprint: PolicyCenter, BillingCenter, and ClaimCenter implementations for Nationwide, Alfa, and CompSource across personal lines and workers compensation. The largest single program was $8.5M — the Nationwide personal lines implementation — with teams of 50+ split across onshore and offshore, SAFe with a Release Train Engineer function, and an 18-month run from architecture through go-live and into Managed Services.
+> "Seventeen years in technology delivery — the last four focused on P&C insurance, all of it hands-on, from architecture to production. You know the Guidewire footprint: PolicyCenter, BillingCenter, and ClaimCenter implementations for Nationwide, Alfa, and CompSource across personal lines and workers compensation. The largest single program was $8.5M — the Nationwide personal lines implementation — with teams of 50+ split across onshore and offshore, SAFe with a Release Train Engineer function, and an 18-month run from architecture through go-live and into Managed Services.
 >
 > On personal lines engagements I go deep on the carrier's current state before any configuration work starts — states they're licensed and serving, written premium versus earned, return premium exposure, unpaid premium aging, and loss ratios by line. That diagnostic discipline is what separates a clean implementation from one that surprises you at go-live.
 >
@@ -193,7 +193,7 @@ Choks will read your resume and pick specific bullets. Anticipate these:
 
 *Hits every major JD requirement in one pass. Choks hears the role reflected back at him. Let him direct from here.*
 
-> "Seventeen years in technology delivery — the last six focused on P&C insurance. Guidewire across PolicyCenter, BillingCenter, and ClaimCenter for personal lines and workers compensation carriers. Full lifecycle: solution architecture, feasibility, estimations, planning, through go-live and into Managed Services. I've run these on SAFe, Agile, and Waterfall — whatever the carrier's model requires.
+> "Seventeen years in technology delivery — the last four focused on P&C insurance. Guidewire across PolicyCenter, BillingCenter, and ClaimCenter for personal lines and workers compensation carriers. Full lifecycle: solution architecture, feasibility, estimations, planning, through go-live and into Managed Services. I've run these on SAFe, Agile, and Waterfall — whatever the carrier's model requires.
 >
 > At EY I owned SLA governance, led solution architecture decisions, and managed global delivery teams of 50+ across onshore and offshore. I've also built the teams — hiring, onboarding, career development, and certification planning — not just inherited them.
 >
