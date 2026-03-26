@@ -193,11 +193,17 @@ Choks will read your resume and pick specific bullets. Anticipate these:
 
 *Hits every major JD requirement in one pass. Choks hears the role reflected back at him. Let him direct from here.*
 
-> "Seventeen years in technology delivery — the last four focused on P&C insurance. Guidewire across PolicyCenter, BillingCenter, and ClaimCenter for personal lines and workers compensation carriers. Full lifecycle: solution architecture, feasibility, estimations, planning, through go-live and into Managed Services. I've run these on SAFe, Agile, and Waterfall — whatever the carrier's model requires.
+> " Seventeen years in technology delivery — the last four focused on P&C insurance, specifically Guidewire transformations across PolicyCenter, BillingCenter, and ClaimCenter for Tier-1 carriers across personal and workers compensation lines. 
+> I've led cross-functional teams of 50+, managed $10M+ engagement portfolios, and run the full lifecycle from architecture through production release and into Managed Services. 
+> I've run these on SAFe, Agile, and Waterfall — whatever the carrier's model requires.
 >
 > At EY I owned SLA governance, led solution architecture decisions, and managed global delivery teams of 50+ across onshore and offshore. I've also built the teams — hiring, onboarding, career development, and certification planning — not just inherited them.
 >
 > Beyond delivery: I've run POCs on AI adoption in insurance workflows, which is where I see carriers investing next. And I've been the one advising practice leadership on how to get there.
+>
+> Beyond the P&C core: at EY I carried dual AI Advisor roles — for the Insurance practice, where I architected an AI-powered claims triage solution for Nationwide that reduced manual effort by 30–40%, and for the Quality Engineering practice, where I led the AI strategy behind our TestAI offering.
+>
+> My engineering background spans full-stack development, cloud-native delivery on AWS and Azure, mobile across Android and iOS, generative and agentic AI, and blockchain. I hold certifications in AWS, Azure AI Fundamentals, Google GAIL, and agentic AI — and I stay current: I'm always in a course and I mentor my teams on what I'm learning.
 >
 > That's the combination I bring — delivery execution, team leadership, and a forward lean on what's coming in P&C technology. Happy to go wherever you'd like to start."
 
