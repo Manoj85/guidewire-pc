@@ -5,6 +5,14 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — Fix: Kafka reference removed from AVP prep
+
+**Fixed: language rule violation** — `qa/AVP-interview-prep.md`
+- Q11 integration middleware answer: removed "and Kafka for event-driven data streaming"
+- Kafka is not part of Manoj's stated toolkit per language rules; MuleSoft is the integration reference
+
+---
+
 ## 2026-03-26 — Q&A deep detail blocks: Q22–Q24
 
 **Enriched: Q22–Q24** — `qa/choks/03-questions-q16-q42.md`

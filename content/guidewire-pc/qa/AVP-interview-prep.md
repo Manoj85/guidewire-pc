@@ -181,7 +181,7 @@
 >
 > **Document Composition:** SmartCOMM — I've integrated it directly into Guidewire ClaimCenter for EOB and correspondence generation. It's the closest analog to Exstream, which is also referenced in your JD. Both platforms handle template management, output channel routing, and carrier-level document governance.
 >
-> **Integration Middleware:** MuleSoft for API orchestration in Guidewire implementations — policy data syndication, billing feeds, ISO/Verisk rating lookups. Also direct REST/API integration using AWS API Gateway and Kafka for event-driven data streaming.
+> **Integration Middleware:** MuleSoft for API orchestration in Guidewire implementations — policy data syndication, billing feeds, ISO/Verisk rating lookups. Also direct REST/API integration using AWS API Gateway.
 >
 > **Cloud Infrastructure:** AWS (certified Solutions Architect) and Azure. Terraform for IaC, Kubernetes and Docker for container orchestration.
 >
