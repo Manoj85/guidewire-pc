@@ -22,6 +22,7 @@ interface Props {
   saving: boolean
   canEdit: boolean
   onSettingsOpen: () => void
+  onFileNavigate?: (path: string) => void
 }
 
 const FOLDER_LABELS: Record<string, string> = {
@@ -29,23 +30,39 @@ const FOLDER_LABELS: Record<string, string> = {
   qa: 'Interview Q&A',
   resume: 'Resume Notes',
   research: 'Research',
+  sources: 'Sources',
 }
 
 function breadcrumb(filePath: string) {
-  const [folder, file] = filePath.split('/')
+  if (filePath === '__changelog__') {
+    return { folder: 'Repo', file: 'Changelog' }
+  }
+  const parts = filePath.split('/')
+  const file = parts[parts.length - 1]
+  const folder = parts[0]
   return {
     folder: FOLDER_LABELS[folder] ?? folder,
     file: (file ?? '').replace(/\.md$/, '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
   }
 }
 
+// Detect topic-relative file paths in inline code spans (e.g. `qa/choks/01-strategy.md`)
+const FILE_PATH_RE = /^([\w-]+\/)*[\w-]+\.(md|tsx?|json)$/
+
+function resolveFilePath(raw: string): string | null {
+  // Strip leading content/<topic>/ if present
+  const stripped = raw.replace(/^content\/[\w-]+\//, '')
+  return FILE_PATH_RE.test(stripped) ? stripped : null
+}
+
 export default function FileViewer({
   filePath, content, loading, isEditing, editContent,
   onEditContentChange, onEdit, onSave, onCancel, saving, canEdit, onSettingsOpen,
+  onFileNavigate,
 }: Props) {
   const [modalTerm, setModalTerm] = useState<string | null>(null)
 
-  // Custom components: intercept glossary-term spans
+  // Custom components: intercept glossary-term spans, file path links, external links
   const mdComponents = useMemo(() => ({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     span: ({ children, ...props }: any) => {
@@ -64,12 +81,38 @@ export default function FileViewer({
       }
       return <span {...props}>{children}</span>
     },
-    // Open all links in new tab
+    // Inline code: detect file paths and render as clickable links
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    code: ({ children, className }: any) => {
+      // Only intercept inline code (no className = not a fenced block)
+      if (!className && onFileNavigate && typeof children === 'string') {
+        const resolved = resolveFilePath(children.trim())
+        if (resolved) {
+          return (
+            <button
+              onClick={() => onFileNavigate(resolved)}
+              className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-xs
+                         font-mono bg-amber-50 text-amber-700 border border-amber-200
+                         hover:bg-amber-100 hover:border-amber-300 transition-colors cursor-pointer"
+              title={`Open ${resolved}`}
+            >
+              <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              {children}
+            </button>
+          )
+        }
+      }
+      return <code className={className}>{children}</code>
+    },
+    // Open all external links in new tab
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     a: ({ href, children }: any) => (
       <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
     ),
-  }), [])
+  }), [onFileNavigate])
 
   // Pass [rehypeGlossary, glossaryData] so unified calls rehypeGlossary(glossaryData)
   // itself and receives the transformer — not the pre-called result

@@ -90,10 +90,28 @@ function AppContent() {
     setLoading(false)
   }, [router, selectedTopic])
 
+  const loadChangelog = useCallback(async () => {
+    setLoading(true)
+    setIsEditing(false)
+    setSelectedFile('__changelog__')
+    router.push('?file=__changelog__', { scroll: false })
+    try {
+      const r = await fetch('/api/changelog')
+      const data = await r.json()
+      setContent(data.content ?? '')
+    } catch {
+      setContent('# Error\n\nCould not load changelog.')
+    }
+    setLoading(false)
+  }, [router])
+
   // Restore selected file from URL on first load
   useEffect(() => {
     const fileParam = searchParams.get('file')
-    if (fileParam && fileParam !== selectedFile) {
+    if (!fileParam || fileParam === selectedFile) return
+    if (fileParam === '__changelog__') {
+      loadChangelog()
+    } else {
       loadFile(fileParam)
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -142,6 +160,7 @@ function AppContent() {
         onSearchChange={setSearchQuery}
         onFileSelect={path => { setSearchQuery(''); loadFile(path) }}
         searchResults={searchResults}
+        onChangelogOpen={loadChangelog}
       />
       <FileViewer
         filePath={selectedFile}
@@ -156,6 +175,7 @@ function AppContent() {
         saving={saving}
         canEdit={canEdit}
         onSettingsOpen={() => setSettingsOpen(true)}
+        onFileNavigate={loadFile}
       />
       <SettingsModal
         open={settingsOpen}

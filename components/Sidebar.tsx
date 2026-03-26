@@ -116,11 +116,13 @@ interface Props {
   onSearchChange: (q: string) => void
   onFileSelect: (path: string) => void
   searchResults: SearchResult[]
+  onChangelogOpen: () => void
 }
 
 export default function Sidebar({
   topics, selectedTopic, onTopicChange, topicSettings,
   fileTree, selectedFile, searchQuery, onSearchChange, onFileSelect, searchResults,
+  onChangelogOpen,
 }: Props) {
   const isSearching = searchQuery.trim().length > 0
   const currentTopic = topics.find(t => t.id === selectedTopic)
@@ -274,8 +276,22 @@ export default function Sidebar({
       </div>
 
       {/* Footer */}
-      <div className="px-4 py-3 border-t border-slate-800">
+      <div className="px-4 py-3 border-t border-slate-800 flex items-center justify-between">
         <p className="text-xs text-slate-700">Prep Hub · {new Date().getFullYear()}</p>
+        <button
+          onClick={onChangelogOpen}
+          title="View changelog"
+          className={`flex items-center gap-1.5 px-2 py-1 rounded text-xs transition-colors
+            ${selectedFile === '__changelog__'
+              ? 'text-amber-400 bg-slate-800'
+              : 'text-slate-600 hover:text-amber-400 hover:bg-slate-800'}`}
+        >
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Changelog
+        </button>
       </div>
     </aside>
   )
