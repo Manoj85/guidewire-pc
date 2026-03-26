@@ -5,6 +5,16 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — System prompt: content fidelity rules to prevent stripping
+
+**Updated: `qa/choks/00-claude-ai-system-prompt.md`**
+- Added Rule 2 (CONTENT FIDELITY): explicit prohibition on removing numbers, names, clients, metrics, condensing sentences, or substituting vague language — specific phrases like "$2.4M" and "28%→11%" must appear verbatim
+- Added Rule 4: 150-word target applies ONLY to synthesized answers — prep answers delivered in full regardless of length
+- Added Rule 5: deep detail blocks are study context only — not included in spoken answers unless Choks explicitly asks for more depth
+- Renumbered rules 4–11 accordingly
+
+---
+
 ## 2026-03-26 — Fix: search highlight — rewrite as markdown pre-processing
 
 **Fixed: highlights wiped on any re-render** — `components/FileViewer.tsx`
