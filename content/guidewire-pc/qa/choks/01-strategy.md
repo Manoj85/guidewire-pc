@@ -45,6 +45,22 @@ This immediately:
 
 ---
 
+## MASTER INTRODUCTION — STUDY THIS, NOT VERBATIM
+
+*The full picture of who you are. Too long to say in one go — use it to know your own story cold, then let the 60-second version and Choks's follow-ups surface the detail.*
+
+> "Seventeen years in P&C insurance technology delivery — all of it hands-on, from architecture to production. You know the Guidewire footprint: PolicyCenter, BillingCenter, and ClaimCenter implementations for Nationwide, Alfa, CompSource, and Canal across personal lines, commercial lines, and workers compensation. The largest single program was $8.5M — the Nationwide personal lines implementation — with teams of 50+ split across onshore and offshore, SAFe with a Release Train Engineer function, and an 18-month run from architecture through go-live and into Managed Services.
+>
+> At EY I served as AI Advisor for two practices simultaneously. For the Insurance practice at Nationwide, I architected an AI-powered claims triage solution — FNOL documents classified via ML and NLP, ClaimCenter fields pre-populated with a confidence score, human-in-the-loop for handler review — which delivered a 30–40% reduction in manual effort and cost. For the Quality Engineering practice, I led AI strategy for TestAI: an agentic AI solution built on OpenAI and Playwright that generates test cases from user stories and executes them end-to-end, cutting test generation time by 60–70%.
+>
+> My engineering background is broad and intentional: full-stack development, cloud-native architecture on AWS and Azure, mobile across Android and iOS, integration via MuleSoft and Kafka, document composition via SmartCOMM, data pipelines with Snowflake and dbt, RAG architectures using LangChain and Azure OpenAI, and proof-of-concept blockchain work. I write Gosu when the engagement calls for it.
+>
+> Certifications: AWS Solutions Architect, Azure AI Fundamentals, Google GAIL, GitHub Copilot, and agentic AI. I built and ran the Guidewire ACE certification program at EY — 12 engineers certified in 18 months. I'm always in a course. I mentor my teams the same way — continuous learning is how I retain strong engineers.
+>
+> I stay technical on purpose. The best delivery leaders I've seen can walk into an architecture conversation and hold their own. That's the leader I am."
+
+---
+
 ## RESUME BULLET DEFENSE — BE READY FOR THESE
 
 Choks will read your resume and pick specific bullets. Anticipate these:
