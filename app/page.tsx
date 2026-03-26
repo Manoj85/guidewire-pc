@@ -121,7 +121,7 @@ function AppContent() {
 
   // Debounced search
   useEffect(() => {
-    if (!searchQuery.trim()) { setSearchResults([]); return }
+    if (!searchQuery.trim()) { setSearchResults([]); setHighlightQuery(''); return }
     const timer = setTimeout(async () => {
       const r = await fetch(`/api/search?topic=${selectedTopic}&q=${encodeURIComponent(searchQuery)}&matchCase=${matchCase}`)
       const data = await r.json()
@@ -163,9 +163,8 @@ function AppContent() {
         matchCase={matchCase}
         onMatchCaseChange={setMatchCase}
         onFileSelect={path => {
-          // If clicking from search results, preserve query for highlighting
+          // Keep search query so results stay visible for clicking other matches
           setHighlightQuery(searchQuery.trim())
-          setSearchQuery('')
           loadFile(path)
         }}
         searchResults={searchResults}

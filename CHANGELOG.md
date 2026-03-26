@@ -5,6 +5,15 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — Fix: search box stays populated after clicking a result
+
+**Fixed: search cleared on file open** — `app/page.tsx`
+- Removed `setSearchQuery('')` from file select handler — search results stay visible after opening a file
+- Can now click multiple results in sequence without retyping the query
+- Clearing the search box (× button) also clears the in-viewer highlights
+
+---
+
 ## 2026-03-26 — Fix: remove ACE certification mentions from answer files
 
 **Fixed: ACE references in answer-context files** (would surface in claude.ai responses)
