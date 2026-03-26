@@ -5,6 +5,15 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — Fix: search highlight timing — switch to useLayoutEffect
+
+**Fixed: yellow highlights still not appearing** — `components/FileViewer.tsx`
+- `requestAnimationFrame` inside `useEffect` was unreliable — multiple re-renders during file load could cancel the frame before it fired
+- Replaced with `useLayoutEffect` which runs synchronously after React commits DOM, before browser paint — ReactMarkdown output is guaranteed in DOM with no race possible
+- Scroll-into-view deferred to a single RAF (since scrolling requires a painted layout)
+
+---
+
 ## 2026-03-26 — Fix: search highlight missing after opening a file
 
 **Fixed: yellow highlights not appearing in viewer** — `components/FileViewer.tsx`
