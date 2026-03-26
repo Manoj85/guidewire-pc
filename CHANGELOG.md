@@ -5,6 +5,14 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — Fix: search highlight missing after opening a file
+
+**Fixed: yellow highlights not appearing in viewer** — `components/FileViewer.tsx`
+- Root cause: `useEffect` ran synchronously after React state change but before ReactMarkdown had painted new DOM — TreeWalker found no text nodes
+- Fix: wrapped DOM walk in `requestAnimationFrame` so it executes after browser paint; cleanup cancels the frame on re-render
+
+---
+
 ## 2026-03-26 — Fix: search box stays populated after clicking a result
 
 **Fixed: search cleared on file open** — `app/page.tsx`
