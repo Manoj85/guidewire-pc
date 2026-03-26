@@ -189,15 +189,29 @@ Choks will read your resume and pick specific bullets. Anticipate these:
 
 ---
 
-## OPENING 60 SECONDS
+## OPENING 60 SECONDS — JD-ANCHORED ← USE THIS ONE
 
-After the referral mention:
+*Hits every major JD requirement in one pass. Choks hears the role reflected back at him. Let him direct from here.*
 
-> "You've seen the P&C and Guidewire side of my background — 17 years, PolicyCenter, BillingCenter, ClaimCenter, personal lines through commercial and workers comp, teams of 50+, programs from architecture through go-live and Managed Services. I want to give you the broader picture beyond that.
+> "Seventeen years delivering P&C insurance technology programs — Guidewire across PolicyCenter, BillingCenter, and ClaimCenter for personal lines and workers compensation carriers. Full lifecycle: solution architecture, feasibility, estimations, planning, through go-live and into Managed Services. I've run these on SAFe, Agile, and Waterfall — whatever the carrier's model requires.
 >
-> At EY I held dual AI Advisor roles — for the Insurance practice at Nationwide, where I architected an AI-powered claims triage solution that cut manual effort by 30–40%, and for the Quality Engineering practice, where I led the AI strategy behind our TestAI offering built on OpenAI and agentic AI.
+> At EY I owned SLA governance, led solution architecture decisions, and managed global delivery teams of 50+ across onshore and offshore. I've also built the teams — hiring, onboarding, career development, and certification planning — not just inherited them.
 >
-> My engineering background goes further — full-stack development, cloud-native on AWS and Azure, mobile across Android and iOS, generative and agentic AI, and proof-of-concept blockchain work. I hold certifications in AWS, Azure AI Fundamentals, Google GAIL, and agentic AI. I stay active — I'm always in a course and I mentor my teams the same way.
+> Beyond delivery: I've run POCs on AI adoption in insurance workflows, which is where I see carriers investing next. And I've been the one advising practice leadership on how to get there.
+>
+> That's the combination I bring — delivery execution, team leadership, and a forward lean on what's coming in P&C technology. Happy to go wherever you'd like to start."
+
+---
+
+## OPENING 60 SECONDS — TECH BREADTH VERSION
+
+*Use this if Choks opens with "tell me about yourself beyond the resume" or if he's already satisfied on delivery and wants the broader picture.*
+
+> "You've seen the P&C and Guidewire delivery side of my background. I want to give you the broader picture beyond that.
+>
+> At EY I held dual AI Advisor roles — for the Insurance practice, where I worked on AI-powered claims automation, and for the Quality Engineering practice, where I led the AI strategy for an agentic test automation solution. Both involved real production use cases with measurable outcomes.
+>
+> My engineering background goes further — full-stack, cloud-native on AWS and Azure, mobile across Android and iOS, generative and agentic AI. I hold certifications in AWS, Azure AI Fundamentals, Google GAIL, and agentic AI. I'm always in a course and I mentor my teams the same way.
 >
 > I wanted to lay that out so you can take the conversation wherever you'd like to go."
 
