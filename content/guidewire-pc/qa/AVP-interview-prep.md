@@ -8,7 +8,7 @@
 
 ## POSITIONING STATEMENT (Use as opener or when asked "Tell me about yourself")
 
-> "I'm a Senior Manager at EY with 17+ years delivering P&C insurance technology programs — specifically Guidewire transformations across PolicyCenter, BillingCenter, and ClaimCenter for Tier-1 carriers across personal, commercial, and workers compensation lines. I've led cross-functional teams of 50+, managed $10M+ engagement portfolios, and run the full lifecycle from architecture through production release and into Managed Services.
+> "I'm a Senior Manager at EY with 17 years in technology delivery — the last six focused on P&C insurance, specifically Guidewire transformations across PolicyCenter, BillingCenter, and ClaimCenter for Tier-1 carriers across personal and workers compensation lines. I've led cross-functional teams of 50+, managed $10M+ engagement portfolios, and run the full lifecycle from architecture through production release and into Managed Services.
 >
 > Beyond the P&C core: at EY I carried dual AI Advisor roles — for the Insurance practice, where I architected an AI-powered claims triage solution for Nationwide that reduced manual effort by 30–40%, and for the Quality Engineering practice, where I led the AI strategy behind our TestAI offering. My engineering background spans full-stack development, cloud-native delivery on AWS and Azure, mobile across Android and iOS, generative and agentic AI, and blockchain. I hold certifications in AWS, Azure AI Fundamentals, Google GAIL, and agentic AI — and I stay current: I'm always in a course and I mentor my teams on what I'm learning.
 >
