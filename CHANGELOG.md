@@ -5,6 +5,17 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — CLAUDE.md and memory sync
+
+**Updated: CLAUDE.md** — brought in line with actual repo state and all standing rules
+- Project structure updated to reflect `content/guidewire-pc/` multi-topic layout and `sources/` folder
+- Added language rules section: present tense, no Build/Grow/Run, no ACE, MuleSoft-only, no commercial lines
+- Added interview prep rules: STAR format, personal lines financial diagnostic, coverage-check-first
+- Added CHANGELOG update rule: update with every commit using topic-relative backtick paths
+- Fixed Choks system prompt path: `content/guidewire-pc/qa/choks/00-claude-ai-system-prompt.md`
+
+---
+
 ## 2026-03-26 — Changelog UI + experience framing fix + EY source file
 
 **Added: Changelog view in the app**
