@@ -5,6 +5,19 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-26 — Glossary: 33 missing tooltip terms added
+
+**Added: 33 terms to `content/glossary.json`** — all were used in Q&A files but had no tooltip
+- **Account metrics:** ARR, NRR
+- **Insurance domain:** STP, NCCI, GWP, PAS, NSF, IASA
+- **Guidewire platform:** APD, Jutro, CDA, GW
+- **Roles (client-side):** CFO, COO, CTO, CEO, VP, CUO
+- **Roles (delivery-side):** BA, PM, QA, PMO, CSM, RTE, SI, SoS
+- **Delivery process:** RCA, KT, TCO, WIP, P1, P2
+- **Company names:** EY, VM
+
+---
+
 ## 2026-03-26 — Q&A enrichment: Q1–Q15 spoken answers tightened + deep details added
 
 **Enriched: Q1–Q15** — `qa/choks/02-questions-q01-q15.md`
