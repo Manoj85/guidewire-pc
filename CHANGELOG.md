@@ -5,6 +5,24 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-03-31 — In-person Piscataway leadership interview prep + VM leadership expansion
+
+**Created: `qa/in-person-piscataway.md`**
+- Full in-person leadership round prep (AVP/VP/SVP panel at Piscataway HQ)
+- Covers: who you'll likely meet, what this round evaluates, lessons from Choks interview
+- Fixes for the three Choks fumbles: APD vs SPD, "Digital"/BFF/TOC, ClaimCenter vendor scope
+- 10 high-probability leadership questions with full STAR answers
+- What NOT to say table, walk-in-the-room checklist, questions to ask by interviewer
+- Positioning statement for this level audience
+
+**Updated: `research/valuemomentum.md`**
+- Expanded leadership section from 8 to 30+ names across SVP, VP, and AVP tiers
+- Added Raghu Aithal (SVP Claims/AI), Alok Dhagat (VP Delivery), Avdhut Nadkarni (VP Client Partner)
+- Added VS Prasad Guntupalli (AVP Core Platforms, ex-EY 2014–2019) — direct peer connection
+- Added interview insights for Piscataway-based leaders in the delivery/client chain
+
+---
+
 ## 2026-03-26 — Mobile responsiveness + system prompt opening rule
 
 **Updated: `app/page.tsx`, `components/Sidebar.tsx`, `components/FileViewer.tsx`**
