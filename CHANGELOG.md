@@ -5,6 +5,22 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-04-01 — In-person Piscataway prep v2 + glossary additions
+
+**Updated: `qa/in-person-piscataway.md`**
+- Updated for confirmed meeting format: Choks introduces to Naren (COO) + other leaders
+- Added explicit client-name rules: no CIO/COO/VP names from Nationwide/Alfa/Canal; CompSource is the exception (Sanjay connection)
+- Added vocabulary guide for Guidewire platform terms (SPD, APD, BFF, TOC, SKI) + business terms for COO conversations
+- Added GenAI/full-stack positioning guidance: frame as AI-enabled delivery, not practice expansion
+- Rewrote "Tell me about yourself" for Naren/COO level (drops technical detail, leads with business outcomes)
+- Added 6 new Q&As tailored to COO/VP audience
+- Updated "what not to say" table with client name rules
+
+**Updated: `content/glossary.json`**
+- Added SPD (Service Portal Digital), BFF (Backend for Frontend), TOC (Top of Content), SKI (Guidewire cloud release naming), CSAT
+
+---
+
 ## 2026-03-31 — In-person Piscataway leadership interview prep + VM leadership expansion
 
 **Created: `qa/in-person-piscataway.md`**

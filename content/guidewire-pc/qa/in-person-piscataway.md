@@ -1,7 +1,7 @@
 # In-Person Leadership Interview — Piscataway, NJ
 ## ValueMomentum AVP Client Services
 
-**Purpose:** Prepare for in-person panel with AVP, VP, and SVP-level leaders at Piscataway HQ.
+**Purpose:** In-person panel — Choks introduces you to Naren (COO) and other leaders at Piscataway HQ.
 **This is not a technical interview.** This is a leadership, cultural fit, and executive judgment round.
 
 ---
@@ -10,183 +10,216 @@
 
 They passed you through Choks because you have the delivery credentials. This round is about five things:
 
-1. **Executive presence** — Do you carry yourself as a peer to their leadership team?
-2. **Cultural fit** — Are you a fit for VM's culture (specialist, insurance-first, client-on-site, lean delivery)?
+1. **Executive presence** — Do you carry yourself as a peer to their COO and VP leadership?
+2. **Cultural fit** — Are you a fit for VM's culture (P&C-specialist, client-on-site, lean delivery)?
 3. **Leadership philosophy** — How do you lead teams, manage clients, and handle adversity?
 4. **Strategic thinking** — Can you think about the practice, the portfolio, and the market — not just a single program?
 5. **Self-awareness** — Do you know your gaps and handle them with honesty?
 
 ---
 
-## WHO YOU ARE LIKELY TO MEET (Piscataway-based leaders)
+## WHO YOU ARE MEETING
+
+### Confirmed
+
+| Name | Title | What they care about |
+|---|---|---|
+| **Choks Kandaswamy** | Delivery Officer | Not interviewing — introducing you. Acknowledge the earlier conversation warmly. |
+| **Naren Sivakumar** | COO | Operational efficiency, delivery quality, how you drive client success at scale |
+
+> **Note on Naren:** Choks told you Naren is COO. Treat him as the most senior person in the room. His primary lens as COO in a P&C services firm: **are you someone who can hold client relationships, keep delivery on track, and grow accounts without burning the team?** He is not there to quiz you on Guidewire — he will probe leadership judgment, executive composure, and how you think about the business.
+
+### Possible additional attendees
 
 | Name | Title | What they care about |
 |---|---|---|
 | **Alok Dhagat** | VP, Delivery | How you run delivery — cadence, escalation, team management |
 | **Avdhut "AV" Nadkarni** | VP, Client Partner, Insurance | How you grow and protect client relationships |
-| **Swarup Ghosh** | COO | Operational discipline, portfolio health, VM-wide impact |
 | **Wayne Rodrigues** | SVP, Market Success – NA | Revenue, account growth, pre-sales partnership |
-| **Raghu Aithal** | SVP, Head of P&C Claims | Claims transformation, AI in delivery |
-
-> You may meet some or all of these. The COO (Swarup Ghosh) may or may not be in the panel — depends on how formal the round is. Prepare as if he will be.
 
 ---
 
-## LESSONS FROM THE CHOKS INTERVIEW — APPLY THESE NOW
+## HOW TO OPEN WITH CHOKS IN THE ROOM
 
-### Fix #1: APD vs. SPD
+Choks knows you. He vouched for you. Don't ignore him, but don't lean on him either.
 
-**What happened:** Choks asked if the Nationwide digital front end was APD or SPD. You said APD. He pushed back with "why not SPD?"
+> "Choks — good to see you again. I appreciated the depth of the last conversation. I've done a lot of thinking since then and I'm looking forward to this."
 
-**What these mean in Guidewire context:**
-- **APD = AccountPortal Digital** — designed for insurance agents and CSRs who manage accounts on behalf of policyholders
-- **SPD = ServicePortal Digital** — a policyholder-facing self-service portal where end customers initiate transactions directly
-
-**The answer for Nationwide:** The React front end on Nationwide was policyholder-facing (end customers doing self-service), which makes it **SPD**. APD would have been the agent/CSR-facing portal.
-
-**If this comes up again:**
-> "To clarify something I wasn't sharp on in the earlier conversation — the front end layer on Nationwide was an SPD implementation, a policyholder self-service portal built on React with a BFF pattern sitting between the front end and PolicyCenter APIs. I had referenced APD incorrectly and want to own that correction."
+This is one sentence. It signals confidence, continuity, and respect. Then redirect to Naren.
 
 ---
 
-### Fix #2: "Digital" in Guidewire context
+## WHAT TO SAY — AND WHAT NOT TO SAY — ABOUT CLIENT NAMES
 
-**What happened:** When Choks asked about "digital," you got confused and started talking about React.
+### RULE: Do not volunteer CIO or COO names from Nationwide, Alfa, or Canal
 
-**What "Guidewire Digital" means:**
-Guidewire Digital is a specific product tier — the portal layer on top of the core suite:
-- **The BFF pattern (Backend for Frontend):** A dedicated Node/API service that sits between the React front end and PolicyCenter's REST APIs. It aggregates, transforms, and secures API calls so the front end doesn't hit core directly.
-- **TOC component:** The top-of-content navigation bar in Guidewire Digital portals — controls what is rendered and in what order based on user role.
-- **React front end:** The Guidewire Digital UI layer — configurable, but React-based by default.
+These are confidential EY client relationships. In an executive conversation, name-dropping client contacts you worked with at a previous firm sounds either like a credibility prop or a confidentiality risk. Neither is good.
 
-**How to talk about it:**
-> "The digital layer on Nationwide included the SPD portal — policyholder-facing React front end, BFF layer for API aggregation, and standard TOC component configuration. My role was delivery management, not UI development, but I was accountable for the digital workstream delivery and coordinated with the UX lead and the BFF developers on sprint delivery and integration testing."
+**Do this instead — describe the level, not the name:**
+> "The program sponsor at Nationwide was the VP of IT for Personal Lines — I managed that relationship directly through go-live and into managed services."
 
----
+> "At Alfa Insurance, after the delivery reset, I briefed the program director weekly. By the end, her assessment was that the turnaround was the most transparent recovery she had seen on a program of this scale."
 
-### Fix #3: ClaimCenter not in scope (Nationwide)
-
-**What happened:** You said you did PolicyCenter and BillingCenter at Nationwide — Choks asked why not ClaimCenter.
-
-**The right answer:** ClaimCenter at Nationwide was delivered by a separate vendor. Your scope was PC + BC. This is a legitimate scope answer — large carriers routinely split workstreams across multiple vendors.
-
-**How to say it going forward:**
-> "At Nationwide, my scope was PolicyCenter and BillingCenter transformation. ClaimCenter was handled by a separate vendor on a parallel track. This is common on large programs — carriers split system integrators by domain. I coordinated with that vendor at the integration boundary but was not accountable for ClaimCenter delivery."
+You get the story across. You show you operate at executive level. You don't leak a name.
 
 ---
 
-### Fix #4: Choks confirmed your cloud experience is migration planning — own that scope accurately
+### RULE: CompSource is the exception — you can be specific
 
-**What Choks clarified:** Your Guidewire Cloud experience is rationalization and migration planning, not a full greenfield GWCP implementation end-to-end.
+Sanjay Venkateshamurthy (your referral into VM) worked with you on the CompSource Mutual engagement. Sanjay already told VM leadership about CompSource. This engagement is on the table — you can name it, describe it, and reference the relationship chain.
 
-**How to position this correctly going forward:**
-> "My Guidewire Cloud experience is in migration strategy and cloud-readiness assessment — evaluating on-prem configurations for cloud compatibility, identifying customization debt, and building migration roadmaps. I have not led a full greenfield GWCP implementation, but I understand the architecture, the deployment model, and the gaps carriers commonly hit in migration planning. The team I would be leading at VM likely has that hands-on GWCP delivery experience, and I know how to lead delivery, not just do it myself."
+**What you can say about CompSource:**
+> "CompSource Mutual — workers' comp mono-line carrier in Oklahoma. I led the ClaimCenter engagement and the GW cloud upgrade pathway: GW8 → GW9 → GW10 Cloud (Dobson). Sanjay was on that engagement with me — he's the connection that brought me into this conversation."
+
+If asked who you worked with at CompSource: you can reference Sanjay naturally. Do not name CompSource carrier-side contacts unless Sanjay has specifically told you those names are safe to use in this context.
 
 ---
 
-## YOUR OPENING — "TELL ME ABOUT YOURSELF" FOR THIS AUDIENCE
+## VOCABULARY GUIDE — SPEAK THIS LANGUAGE CONFIDENTLY
 
-This is not a technical summary. This is your leadership story. Keep it to 90 seconds.
+These terms will come up naturally in conversation. Use them correctly; don't over-explain them unless asked.
 
-> "I'm Manoj — I've spent 17 years in technology delivery, the last several focused on P&C insurance transformation. At EY I've led Guidewire implementations for Tier-1 carriers: PolicyCenter and BillingCenter for Nationwide Personal Lines, a turnaround on a troubled PolicyCenter program at Alfa Insurance, and a ClaimCenter go-live at CompSource Mutual. I manage cross-functional teams, carrier CIO relationships, and multi-million-dollar delivery P&Ls.
+### Guidewire Platform Terms
+
+| Term | One-line definition (in conversation) |
+|---|---|
+| **SPD** | "Policyholder self-service portal — the React front end that end customers use directly." |
+| **APD** | "Advanced Product Designer — Guidewire's cloud-native tool for defining insurance product models on GWCP, replacing hand-coded XML." |
+| **BFF** | "The API layer between the digital portal and PolicyCenter — it keeps the front end from hitting core directly." |
+| **TOC** | "The top-of-content navigation in a Guidewire Digital portal — controls what's rendered based on user role." |
+| **SKI releases** | "Guidewire's ski-resort-named cloud release series — Dobson, Elysian, Flaine, and so on. Carriers on GWCP are expected to stay within the supported release window." |
+| **GWCP** | "Guidewire Cloud Platform — the SaaS version of InsuranceSuite. Where all new implementations and most upgrades are headed." |
+| **InsuranceSuite** | "The three products together — PolicyCenter, ClaimCenter, BillingCenter." |
+| **Jutro** | "Guidewire's modern React UI framework for cloud, replacing PCF." |
+
+> **On SKI releases specifically:** If Naren or someone asks about the current SKI release: "I know the naming convention — Guidewire uses ski resort names for the GWCP release series. I'd want to verify the current active release name rather than state it incorrectly — I'm current on the architecture, not always on the latest release label." This is honest. Choks already confirmed this is acceptable.
+
+---
+
+### Business Vocabulary (for Naren/COO conversations)
+
+| Term | How to use it |
+|---|---|
+| **CSAT** | "Client satisfaction score — one of the three dimensions Choks described for this role: client CSAT, internal delivery execution, and people development." |
+| **AMS** | "Application Managed Services — post-go-live support. Converting a delivery engagement to AMS is how you protect ARR and deepen the account." |
+| **ARR** | "Annual Recurring Revenue from an account — the signal of a healthy, expanding client relationship." |
+| **NRR** | "Net Revenue Retention — how much of last year's revenue is retained and grown this year across the portfolio." |
+| **portfolio health** | "The aggregate delivery status across all active engagements — RAG-rated, reviewed weekly." |
+| **bench** | "Unallocated team members — a cost the firm absorbs. Managing bench through pipeline alignment is part of the AVP function." |
+| **land and expand** | "Win the initial engagement, then earn the right to grow — AMS, additional modules, new LOBs." |
+
+---
+
+## YOUR OPENING — "TELL ME ABOUT YOURSELF" FOR NAREN/COO LEVEL
+
+This is **not** the Choks version. Drop the technical detail. Lead with business outcomes, then tie to VM's future.
+
+> "I'm Manoj — 17 years in technology delivery, the last several years focused on P&C insurance transformation. At EY I've led Guidewire programs for some of the largest regional carriers in the country — personal lines, workers' compensation — managing delivery teams, multi-million-dollar P&Ls, and the carrier executive relationships that keep those programs on track.
 >
-> Beyond the P&C delivery work — I carry AI advisory responsibility at EY, both for the Insurance practice and for our Quality Engineering practice. I've run AI POCs in production environments, and I understand how to have a credible conversation with carrier CIOs about where AI is practical today versus where it's still aspirational.
+> Over the last two years I've also carried a dual AI advisory role at EY — helping the Insurance practice and the Quality Engineering practice define where AI is practical in a P&C context today and building the offerings to prove it. I've run GenAI proofs of concept in claims intake and test automation that went from POC to production.
 >
-> I'm here because ValueMomentum is the best place in the market to do this work. Pure-play P&C, deep Guidewire practice, and a client-first culture. I want to bring what I've built at EY into an environment where this is the entire business — not one vertical among many."
+> I'm here because I want to operate in an environment where P&C is the entire business. ValueMomentum is the most specialized firm in this market. I want to bring the delivery depth, the carrier relationships, and the AI experience into an organization where all three of those things are directly additive to what you're already building."
+
+**Keep it to 90 seconds. Stop there. Let them ask.**
+
+---
+
+## ON YOUR FULL-STACK / CLOUD / GENAI BACKGROUND — HOW TO USE IT SUBTLY
+
+### Is this a good thing to bring up at VM?
+
+Yes — but frame it correctly. Here is the risk and the opportunity:
+
+**The risk:** VM is a pure-play P&C/Guidewire firm. If you say "I also do full-stack development, cloud architecture, mobile apps" — it sounds like you want to change what VM is. That's a culture misfit signal.
+
+**The opportunity:** VM's September 2025 rebrand was explicitly **AI-first**. They already have iFoundry. They already have GenAI use cases in claims and underwriting. The gap they have — and the reason Raghu Aithal (SVP Claims) and the AI-first rebrand exist — is that they need people who can **bring AI into Guidewire delivery credibly**, not just talk about it.
+
+### The correct frame: AI as an accelerant to what VM already does
+
+> "One thing I'd bring to VM that may not be obvious from the resume — I've run GenAI proofs of concept inside actual Guidewire delivery programs. Not as a separate innovation track, but as part of the delivery itself. At Nationwide, the claims triage AI was built alongside the ClaimCenter implementation, integrated into the FNOL workflow. That's where I see the opportunity for VM: not as a separate AI practice, but as AI-enabled delivery that makes your Guidewire implementations faster, smarter, and more valuable to carriers."
+
+This lands three things at once:
+1. You're not trying to change VM's focus
+2. You're adding to what VM already publicly says it does
+3. You're showing this isn't theoretical — you've actually done it
+
+### If they ask "can you help us expand beyond Guidewire?"
+
+Don't say yes. That's not what VM is. Say:
+
+> "I think the expansion opportunity is within Guidewire — not beyond it. The carriers running on GWCP need AI embedded in their operations: intelligent claims routing, underwriting automation, data quality tools feeding into the platform. That's where the next wave of value creation is for an SI like VM. My background lets me help build that from the delivery side."
 
 ---
 
 ## HIGH-PROBABILITY QUESTIONS AT THIS LEVEL
 
-### 1. "What kind of leader are you?"
+### 1. "Tell me about a time you managed a difficult client relationship."
 
-> "I lead by building trust up and down. With clients, I establish myself as a reliable voice early — I don't hide bad news, I surface it with a plan attached. With my team, I protect them from noise that doesn't need to reach them and amplify their work to the people who need to see it.
+**Use CompSource — production incident story:**
+
+> "Three weeks after the ClaimCenter go-live at CompSource, we had a production issue — claims records were displaying incorrectly for a subset of workers' comp claims. Not a data loss issue, but a visibility issue that the carrier's claims team spotted during morning operations.
 >
-> I'm direct. I have high standards. But I also take accountability seriously — when something goes wrong on my delivery, it went wrong on my watch, and I own that. At CompSource, we had a production issue three weeks after go-live where claims records were displaying incorrectly. I called the carrier's VP directly, not through email, explained exactly what happened, and committed to a 24-hour resolution. We fixed it in 18 hours. That relationship is stronger today than it was before the incident."
+> I called the VP of Claims directly that morning — not through the PM, not by email. I told him exactly what we knew, what we didn't know yet, and what we were doing about it. I gave him a 24-hour resolution commitment and told him I would personally call him when it was fixed.
+>
+> We resolved it in 18 hours. I called him at 7 PM with the root cause analysis and the fix confirmation.
+>
+> The relationship after that was stronger than before the incident. He told me later it was the most direct and honest production response he'd gotten from any vendor. That's what trust looks like in this business — not avoiding problems, but owning them fast."
 
 ---
 
-### 2. "Why are you leaving EY?"
+### 2. "How do you balance delivery execution with growing the account?"
 
-> "EY has been a great platform. But it's a 300,000-person generalist firm — insurance is one vertical among many. I've competed with ValueMomentum on deals and I've respected what you build. The difference is that every person at VM wakes up thinking about P&C problems. That specialization compounds. I want to operate in an environment where this work is the whole business, not a resource allocation fight with other verticals."
+> "They're not in tension — they're the same thing. The best account growth lever I have is a client who trusts that my team delivers what we said we would. That trust opens the door to the next conversation.
+>
+> My model: I run delivery tightly so I'm never in a reactive posture with the client. When I'm not in fire-fighting mode, I'm spending time on the relationship — understanding what's next on their roadmap, who else in the organization has a problem I can solve, and where the next engagement is coming from.
+>
+> On CompSource, we started with a ClaimCenter upgrade. Because that program ran well, we had the credibility to introduce the cloud migration conversation. That's land and expand working the right way — you earn the next scope, you don't sell it."
 
 ---
 
-### 3. "Why ValueMomentum — why not another P&C firm, or a carrier directly?"
+### 3. "What's your approach to people development — how do you build a delivery team?"
 
-> "I looked at both. Going to a carrier directly would be an interesting leadership move, but it would narrow my experience — one client, one platform, one set of problems. I've been on the implementation side my whole career because the variety makes you better. VM gives me that variety plus the specialization I want.
+> "I hire for learning velocity, not current skill. In the Guidewire space, the platform changes — SKI releases, APD replacing product XML, Jutro replacing PCF. Someone who learns fast will be more valuable in three years than someone who knows the current version cold but can't adapt.
 >
-> On why VM specifically: the Everest Group and ISG recognition, the six Guidewire specializations, the 75-plus carrier relationships, and the AI-first rebrand in 2025 — these tell me VM is not standing still. That's where I want to be."
+> What I do in practice: I have a direct conversation with every person on my team about where they want to go. I map their growth path to the work I need done. If someone wants to move from developer to solution architect, I don't wait for a formal rotation — I give them the integration design workstream with my oversight and let them build that credibility in front of the client.
+>
+> I lose people sometimes to other opportunities. That's fine. What I won't accept is losing people because they felt stuck or invisible."
 
 ---
 
-### 4. "This role requires being on-site at client locations frequently. How do you feel about that?"
+### 4. "How do you think about the Guidewire market in the next three years?"
 
-> "That's how I've always worked. My most successful engagements were the ones where I was physically present with the carrier team. When you're in the room, you hear things that never make it into a status report. You build trust faster. You see where the real friction is. I've managed programs where I was on-site three to four days a week — that's a personal investment I'm prepared to make."
+> "Three waves:
+>
+> First — the cloud migration wave is still early. Most mid-tier and regional carriers are still on on-prem versions. The upgrade-to-GWCP backlog is real, and it's multi-year work for firms like VM.
+>
+> Second — AI integration with GWCP is the next battleground. Carriers are going to want AI-assisted underwriting, claims routing, and document processing built into the Guidewire platform — not bolted on as a separate system. The SIs who can deliver that integration credibly will have a significant advantage.
+>
+> Third — the MGA and specialty market is growing fast. Many MGAs are first-time Guidewire clients — greenfield implementations, often policyholder self-service portals (SPD) on top of GWCP. VM's position in that market is interesting.
+>
+> VM's six specializations, including Cloud Platform, position you well for all three of these. That's part of why I'm here."
 
 ---
 
-### 5. "How do you manage a delivery that is going off-track?"
+### 5. "Why should we hire you over someone who has been at VM or a pure-play P&C firm their whole career?"
 
-**Use the Alfa Insurance STAR story:**
-
-> "At EY I inherited a PolicyCenter program at Alfa Insurance — it was four months behind, the delivery manager had just left, and the carrier's CIO had already told EY leadership that confidence was 'extremely low.'
+> "Someone who has spent their career inside one firm has deep institutional knowledge and relationships — that's real value. What I bring that's different is breadth of exposure: three different carriers across different lines of business, each with their own platform configuration, their own culture, their own definition of success.
 >
-> My first action was a two-day assessment — I reviewed all open backlog, mapped dependencies, interviewed every workstream lead one-on-one, and benchmarked team velocity against what was originally planned. What I found: the backlog had not been properly refined in three sprints, and a core technical assumption about the policy data migration had never been formally validated.
+> I've also had to sell work, not just deliver it. At EY I was involved in the commercial conversation — scoping, pricing, risk allocation. I understand what it takes to win a carrier's trust before the SOW is signed, not just after.
 >
-> I ran a reset session with the carrier's program director — here is what's real, here is what the path to go-live looks like, here is what I need from you. We extended the timeline by six weeks by formal agreement, rebaselined the backlog, and I put two senior developers on the data migration risk specifically.
->
-> We went live on the rebaselined schedule. The CIO's feedback at the end was that the turnaround was the most transparent and disciplined recovery she had seen on a program of this size."
+> And I've built something at EY that doesn't exist in most delivery organizations — a genuinely credible AI advisory capability inside a P&C delivery practice. That's not common. VM says you're AI-first. I've actually run that transition inside a Guidewire delivery context."
 
 ---
 
-### 6. "How do you develop and retain talent on delivery teams?"
+### 6. "How do you handle pressure from above — when leadership wants results faster than delivery can safely move?"
 
-> "I invest early and I make it visible. Early means: when someone joins my team, I have a direct conversation about where they want to go and what I need to invest in to get them there. Visible means: when they do strong work, I make sure the people above me know their name — not just mine.
+> "I've had this conversation more than once. My position is always the same: I'll tell you what's possible, and I'll tell you what the risk is if we go faster than that.
 >
-> On the retention side, I'm honest about what I can and can't control. What I can control is giving people work that stretches them, shielding them from unnecessary overhead, and advocating for them at performance time. What I can't control is compensation bands — but I can make sure the work is the kind that makes someone a more valuable professional.
+> At Alfa Insurance, the business sponsor was pushing hard to hit the original go-live date even after we identified the data migration gap. My recommendation was a six-week extension with a fully rebaselined plan. The pushback was real — the sponsor had already communicated the go-live date internally.
 >
-> In practice: on the CompSource engagement I had a mid-level developer who wanted to grow into solution architecture. I gave him the integration design workstream — end to end, with my oversight — and introduced him to the carrier's IT architect directly. He's now a lead SA at EY. That's what retention looks like to me."
-
----
-
-### 7. "How do you handle a client who is unhappy with the delivery team's performance?"
-
-> "I separate the emotion from the facts first. When a client is unhappy, there's usually a real underlying problem — and sometimes there's also a communication failure on top of it. I want to understand both.
+> I held the line. I showed the risk: if we go live on the original date with the migration gap unresolved, we'll have a production failure in the first week that will cost more time and credibility than the six-week delay. The sponsor accepted the extension.
 >
-> My first step is always a direct call or meeting — not through intermediaries, not over email. I want to hear it from the client in their own words. I listen without defending. Then I ask: is this a delivery issue, a communication issue, or an expectation gap?
->
-> Once I know which it is, the fix is different. Delivery issue: I take immediate action, give a timeline, and come back with the result. Communication issue: I change the cadence or the format or the person who owns the relationship. Expectation gap: I have a harder conversation about what was agreed and what is realistic.
->
-> I don't let unhappy clients stay unhappy for more than 48 hours without a response from me personally."
-
----
-
-### 8. "What is your vision for building the Client Services practice at VM?"
-
-> "Three things in the first year:
->
-> First, make delivery predictable. Clients don't need perfect — they need to know what's happening and trust that the team will tell them the truth. I'd build a portfolio health rhythm that surfaces risks early and resolves them before they become escalations.
->
-> Second, build the account base. Delivery quality is the best sales tool in this business. Happy clients extend, expand, and refer. My goal in year one is to convert at least two delivery engagements into AMS relationships and identify the expansion opportunities in the three largest accounts.
->
-> Third, invest in the team. VM's Guidewire depth is the product. I'd identify the high-potential delivery leads early, create stretch assignments, and make sure we're retaining the people clients trust. Turnover on delivery teams is a direct client satisfaction risk — it's not a back-office HR problem, it's a revenue risk."
-
----
-
-### 9. "You come from a Big 4 firm. Our culture is different. How do you adapt?"
-
-> "I've competed against VM. The difference I noticed from the outside was that VM's delivery teams have more direct accountability to the client and fewer layers between a problem and a decision. That's not a disadvantage — I think that's the right model. Big 4 culture has its value, but the thing I'll leave behind is the overhead that doesn't make delivery better: the large deck builds, the PMO reporting that exists for internal reporting rather than client value, the approval chains that slow decision-making.
->
-> What I bring that translates well: delivery discipline, structured governance, and the habit of making the work visible to senior stakeholders. VM's scale is 4,500 people — decisions can still move fast. I'll adapt to that. I won't try to rebuild EY here."
-
----
-
-### 10. "What do you do well that most delivery leaders don't?"
-
-> "I stay technically honest. Most delivery leaders at the AVP and above level lose touch with the detail and start managing by reports. I don't. I'm not going to write Gosu code — but I know what a well-structured PCF looks like, I understand the difference between configuration and extension in Guidewire, I can review an integration design and spot a problem before it becomes a sprint blocker.
->
-> That technical honesty gives me credibility with the delivery teams and with carrier IT leads. When I say something is achievable, the team believes me, because they know I've read the backlog. When I say something is a risk, clients take it seriously because I can back it up at a level of specificity that surprises them."
+> We went live on the rebaselined date. No production failures. I'd rather have that conversation once before go-live than three times after."
 
 ---
 
@@ -194,52 +227,55 @@ This is not a technical summary. This is your leadership story. Keep it to 90 se
 
 | Avoid | Why | Instead |
 |---|---|---|
-| Overclaiming GWCP greenfield experience | Choks already corrected this; leadership may follow up | "Migration planning and rationalization — not a full greenfield GWCP end-to-end. I want to build that experience at VM." |
-| Mentioning ACE certification | CLAUDE.md rule — do not mention | Silent on certs during prep; bring AWS, Azure AI, Google GAIL only if asked |
-| Duck Creek delivery experience | You have none — don't imply otherwise | "I haven't delivered on Duck Creek directly — I know the platform in context of client decisions. My delivery experience is Guidewire." |
-| Vague answers about "digital" | Shows the fumble again | Own the SPD/APD correction upfront if it comes up |
-| Underselling the team turnaround (Alfa) | This is one of your best stories | Use it fully — it shows crisis leadership |
-| Talking about MuleSoft internals or DataWeave | CLAUDE.md rule — architectural level only | "We used MuleSoft for the integration layer — the decision was based on the carrier's existing middleware investment and the need for a Canal-CompSource unified architecture." |
-| Speaking negatively about EY | Comes across poorly | "EY is an excellent firm. The reason I'm here is about where I want to go, not where I'm leaving." |
+| Naming CIO/COO/VP contacts from Nationwide, Alfa, Canal | These are confidential EY client relationships — sounds like a prop or a risk | Describe the level: "the VP of IT for Personal Lines" or "the program director" |
+| Volunteering CompSource carrier-side executive names | Only if Sanjay confirmed those names are safe | Reference the engagement, not the individual unless confirmed |
+| Overclaiming GWCP greenfield experience | Choks already corrected this | "Migration planning and rationalization — I want to build the full greenfield GWCP experience at VM." |
+| Saying "I want to expand VM beyond Guidewire" | Culture misfit — VM is a pure-play firm | "The expansion opportunity is inside Guidewire — AI-enabled delivery, deeper cloud capabilities." |
+| Mentioning ACE certification | CLAUDE.md rule | Pivot to AWS, Azure AI, LLM/Agentic certs only if asked |
+| Duck Creek delivery claims | You have none | "I haven't delivered on Duck Creek — my delivery experience is Guidewire." |
+| Mentioning MuleSoft internals/DataWeave | CLAUDE.md rule | "We used MuleSoft as the integration layer — architectural decision based on the carrier's existing middleware." |
+| Speaking negatively about EY | Comes across poorly | "EY is a great platform. I'm here because I want to go deeper in P&C, not broader." |
+| Using the word "I managed CIOs" or "I reported to the CIO" | Sounds like name-dropping a level | "I worked directly with the business and IT sponsors at the program level." |
 
 ---
 
 ## WHEN YOU WALK IN THE ROOM
 
-1. **Arrive 15 minutes early.** Ask reception who you'll be meeting with (confirms names and titles).
-2. **Bring printed copies of your resume** (one per interviewer, plus two extras).
-3. **Open with the room:** "I've done my homework on ValueMomentum — I'm impressed by the Everest Group recognition and what you're building on the AI side. I'm glad to be here in person."
-4. **Know the four delivery officers structure** Choks described: sales, verticals, technology solutions, and delivery. Know that Choks is one of four delivery officers.
-5. **Know VM's Piscataway NJ HQ** is the primary corporate location — Hyderabad, Pune, Coimbatore are offshore; Toronto and London are regional.
+1. **Arrive 15 minutes early.** Ask reception to confirm who you're meeting with.
+2. **Bring printed copies of your resume** — one per person plus two extras.
+3. **Greet Choks first, briefly** — he made this happen. One sentence, then move on.
+4. **With Naren:** firm handshake, direct eye contact, relaxed. He is evaluating composure as much as content.
+5. **Let them lead the agenda.** Don't launch into a pitch. Wait for the first question. Answer it. Listen.
+6. **Know VM's four-function structure** Choks described: sales, verticals, technology solutions, delivery. Choks is one of four delivery officers.
 
 ---
 
 ## QUESTIONS TO ASK THEM
 
-Choose 2–3 based on who is in the room:
+Choose 2–3 based on who is actually in the room. Don't ask all of them.
 
-**For a Delivery VP (Alok Dhagat):**
-> "What does a successful first 90 days for an AVP Client Services look like from your perspective — what would you want to see me prioritize?"
+**For Naren (COO):**
+> "How does the COO's view of client services differ from a delivery-first view — what does success for this function look like from your seat?"
 
-**For Client Partner VP (Avdhut Nadkarni):**
-> "How does the client services function coordinate with the client partner role today — where do the accountability lines sit for relationship ownership vs. delivery ownership?"
+> "You've grown to 75-plus carrier clients. As you scale the delivery function, where do you see the biggest operational challenges in the next two years?"
 
-**For COO (Swarup Ghosh):**
-> "VM has grown significantly in the last few years. As COO, where are the operational constraints you're focused on as the delivery practice scales further?"
+**For Alok Dhagat (VP Delivery):**
+> "What does a successful first 90 days look like for an AVP in this role — what would you want to see prioritized?"
 
-**For SVP Market Success (Wayne Rodrigues):**
-> "How far upstream do delivery leaders typically get involved in the pre-sales process — do you bring AVPs into pursuits before the SOW is signed?"
+**For Avdhut Nadkarni (VP Client Partner):**
+> "How do the client partner and client services functions divide accountability today — relationship ownership versus delivery ownership?"
 
-**Closing question (works for everyone):**
-> "I've prepared for this role and I'm confident about what I can bring. Is there anything about my background you'd want me to clarify or expand on before we wrap?"
+**For Wayne Rodrigues (SVP Market Success):**
+> "How far upstream does delivery leadership typically get involved in pre-sales — do you bring AVPs into pursuits before the SOW is signed?"
+
+**Closing question (works for any room):**
+> "I've prepared for this and I'm confident in what I can bring. Is there anything about my background or this role that I can clarify before we close?"
 
 ---
 
 ## YOUR POSITIONING IN ONE SENTENCE
 
-If they ask "why should we hire you?":
-
-> "Because I can lead the full conversation — with a carrier CIO about program health, with a delivery team about sprint execution, and with your leadership about practice growth — and I have the stories to back every one of those claims."
+> "I can lead the full conversation — with a carrier executive about relationship and outcomes, with a delivery team about execution, and with your leadership about practice growth — and I have real stories behind every one of those claims."
 
 ---
 
@@ -248,5 +284,6 @@ If they ask "why should we hire you?":
 - Detailed 30-60-90 day plan → `qa/AVP-30-60-90-day-plan.md`
 - Executive presence Q&A → `qa/AVP-executive-presence.md`
 - Practice building vision → `qa/AVP-practice-building.md`
-- VM company research → `research/valuemomentum.md`
+- VM company research + full leadership list → `research/valuemomentum.md`
 - Real-time scenario questions (Q18–Q23) → `qa/AVP-interview-prep.md` Section 8
+- Sanjay intel + CompSource + AI advisory narratives → `qa/choks/06-sanjay-intel.md`
