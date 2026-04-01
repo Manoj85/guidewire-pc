@@ -1,0 +1,17 @@
+Choks opened with an overview of ValueMomentum — the organizational structure, the four main functions of sales, verticals, technology solutions, and delivery, the four delivery officers including Choks himself, and the CSD role expectations across three stakeholder dimensions: client success and CSAT, internal delivery execution, and people development. Choks was clear that on-site client presence is a strong expectation.
+
+Choks then asked me to walk through my experience and how it maps to the CSD role. 
+I covered the three main Guidewire programs — Nationwide PolicyCenter and BillingCenter, Alfa Insurance PolicyCenter turnaround, and CompSource Mutual ClaimCenter — along with team sizes, engagement values, and outcomes.
+
+Choks drilled into Nationwide specifically — what the transformation was from and to. 
+Manoj clarified that ClaimCenter was not part of Nationwide — that was CompSource. 
+Manoj confirmed the team was approximately 30 people onshore and offshore, that estimates were already in place when the previous delivery manager left, and that hiring, onboarding, and training was a significant challenge mid-program.
+Choks asked about the different developer roles on a PolicyCenter program. Choks brought up the digital components, the BFF architecture pattern, and the front end application layer including the TOC component.
+Choks then corrected me on test automation — confirming automation was not implemented on the Nationwide program, that was a separate POC. I acknowledged and corrected that.
+Choks asked about the Guidewire version and clarified that my cloud experience is migration planning and rationalization, not a full GWCP greenfield implementation end to end.
+Choks shared his own background — 14 years at VM, starting as technical manager, growing to Delivery Officer. 
+
+My experience: Prior experience at Fidelity in financial services covering NLP, document ingestion, LLMs, agentic AI, and the API versus MCP pattern. AI advisory roles on two engagements.
+Choks asked about AI across the SDLC and confirmed GPT-3.5 was the starting point and GPT-4 was the meaningful quality upgrade on the development tooling.
+Choks asked about governance and reporting cadence, SmartCOMM, and the 30-60-90 day plan.
+Choks closed by asking about SKI releases — and I was honest that I'd want to verify the current specific SKI release name rather than state it incorrectly.

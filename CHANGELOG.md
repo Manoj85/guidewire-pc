@@ -5,6 +5,19 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-04-01 — Port fix, interview summary source, gitignore cleanup
+
+**Updated: `package.json`**
+- Dev and start scripts now use port 3002 (port 3000 occupied by another app)
+
+**Added: `sources/interview-summary-choks.txt`**
+- Raw notes from the Choks interview — reference material for in-person prep
+
+**Updated: `.gitignore`**
+- Added `tsconfig.tsbuildinfo` (TypeScript build artifact, not source)
+
+---
+
 ## 2026-04-01 — In-person Piscataway prep v2 + glossary additions
 
 **Updated: `qa/in-person-piscataway.md`**
