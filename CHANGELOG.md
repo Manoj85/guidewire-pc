@@ -5,6 +5,20 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-04-01 — In-person prep: cross-references + 12 new questions
+
+**Updated: `qa/in-person-piscataway.md`**
+- Mapped all 6 existing questions to source files with cross-reference links
+- Added 12 new questions with full answers across 5 sections:
+  - Section A (Your Story): A4 why hire you over insider, A5/A6 linked to existing files
+  - Section B (Delivery): B6 unhappy client, B7 first 30 days credibility, B8 onshore/offshore management, B9 delivery manager disagreement
+  - Section C (Growth/Strategy): C7 12-month success vision, C9 VM competitive position
+  - Section D (People): D4 retaining GW talent, D5 handling underperformance
+  - Section E (Self-awareness): E1 biggest weakness, E2 biggest failure (Canal rating engine), E3 readiness for step-up, E4 travel commitment, E5 scaling across multiple accounts
+- Added cross-reference table at bottom pointing to all prep files
+
+---
+
 ## 2026-04-01 — Port fix, interview summary source, gitignore cleanup
 
 **Updated: `package.json`**
