@@ -5,6 +5,18 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-04-01 — Audio transcriber feature (Telugu → English)
+
+**New: `app/api/transcribe/route.ts`** — POST endpoint using OpenAI Whisper `/audio/translations`; transcribes and translates Telugu audio to English in one call.
+
+**New: `components/AudioTranscriber.tsx`** — Modal UI for file upload, transcription, editable preview, and save to `sources/`.
+
+**Updated: `components/Sidebar.tsx`** — Added "Transcribe" button in footer (mic icon, violet) to open the transcriber modal.
+
+**Updated: `app/page.tsx`** — Wired `transcribeOpen` state; saved transcripts auto-navigate to the new file in `sources/`.
+
+---
+
 ## 2026-04-01 — In-person prep: cross-references + 12 new questions
 
 **Updated: `qa/in-person-piscataway.md`**

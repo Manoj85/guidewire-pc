@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import Sidebar from '@/components/Sidebar'
 import FileViewer from '@/components/FileViewer'
 import SettingsModal, { defaultSettings, type AllSettings } from '@/components/SettingsModal'
+import AudioTranscriber from '@/components/AudioTranscriber'
 import type { FileEntry, FileTree, SearchResult, Topic } from '@/lib/files'
 
 export type { FileEntry, FileTree, SearchResult }
@@ -30,7 +31,8 @@ function AppContent() {
   const [isEditing, setIsEditing]         = useState(false)
   const [editContent, setEditContent]     = useState('')
   const [saving, setSaving]               = useState(false)
-  const [settingsOpen, setSettingsOpen]   = useState(false)
+  const [settingsOpen, setSettingsOpen]     = useState(false)
+  const [transcribeOpen, setTranscribeOpen] = useState(false)
   const [allSettings, setAllSettings]     = useState<AllSettings>({})
   const [sidebarOpen, setSidebarOpen]     = useState(false)
 
@@ -179,6 +181,7 @@ function AppContent() {
         }}
         searchResults={searchResults}
         onChangelogOpen={loadChangelog}
+        onTranscribeOpen={() => setTranscribeOpen(true)}
       />
       <FileViewer
         filePath={selectedFile}
@@ -204,6 +207,12 @@ function AppContent() {
         topic={currentTopic}
         settings={allSettings}
         onSettingsChange={s => setAllSettings(s)}
+      />
+      <AudioTranscriber
+        open={transcribeOpen}
+        onClose={() => setTranscribeOpen(false)}
+        selectedTopic={selectedTopic}
+        onFileSaved={path => { setTranscribeOpen(false); loadFile(path) }}
       />
     </div>
   )

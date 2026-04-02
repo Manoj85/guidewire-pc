@@ -119,6 +119,7 @@ interface Props {
   onFileSelect: (path: string) => void
   searchResults: SearchResult[]
   onChangelogOpen: () => void
+  onTranscribeOpen: () => void
   isOpen: boolean
   onClose: () => void
 }
@@ -126,7 +127,7 @@ interface Props {
 export default function Sidebar({
   topics, selectedTopic, onTopicChange, topicSettings,
   fileTree, selectedFile, searchQuery, onSearchChange, matchCase, onMatchCaseChange,
-  onFileSelect, searchResults, onChangelogOpen, isOpen, onClose,
+  onFileSelect, searchResults, onChangelogOpen, onTranscribeOpen, isOpen, onClose,
 }: Props) {
   const isSearching = searchQuery.trim().length > 0
   const currentTopic = topics.find(t => t.id === selectedTopic)
@@ -307,20 +308,33 @@ export default function Sidebar({
       {/* Footer */}
       <div className="px-4 py-3 border-t border-slate-800 flex items-center justify-between">
         <p className="text-xs text-slate-700">Prep Hub · {new Date().getFullYear()}</p>
-        <button
-          onClick={onChangelogOpen}
-          title="View changelog"
-          className={`flex items-center gap-1.5 px-2 py-1 rounded text-xs transition-colors
-            ${selectedFile === '__changelog__'
-              ? 'text-amber-400 bg-slate-800'
-              : 'text-slate-600 hover:text-amber-400 hover:bg-slate-800'}`}
-        >
-          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          Changelog
-        </button>
+        <div className="flex items-center gap-1">
+          <button
+            onClick={onTranscribeOpen}
+            title="Transcribe Telugu audio"
+            className="flex items-center gap-1.5 px-2 py-1 rounded text-xs transition-colors text-slate-600 hover:text-violet-400 hover:bg-slate-800"
+          >
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+            </svg>
+            Transcribe
+          </button>
+          <button
+            onClick={onChangelogOpen}
+            title="View changelog"
+            className={`flex items-center gap-1.5 px-2 py-1 rounded text-xs transition-colors
+              ${selectedFile === '__changelog__'
+                ? 'text-amber-400 bg-slate-800'
+                : 'text-slate-600 hover:text-amber-400 hover:bg-slate-800'}`}
+          >
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Changelog
+          </button>
+        </div>
       </div>
     </aside>
   )
