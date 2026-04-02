@@ -156,6 +156,54 @@ What I do not see as a gap: running large programs, managing executive relations
 
 ---
 
+## Q9 — "How do you run a QBR? Walk me through the structure, outcomes, and next steps."
+
+**Why they ask (Sanjay):** QBRs are the primary governance mechanism on P&C transformation engagements. VM runs them for every strategic account. They want to see you own this format — not just attend it.
+
+**Answer:**
+
+A QBR has three jobs: look back at the quarter honestly, align on what matters for the next quarter, and surface decisions the client needs to make. It is not a status report. If it feels like a status report, you've lost the room.
+
+**Structure I use — four sections, 60–90 minutes total:**
+
+**1. Quarter in review (15 min)** — Delivery scorecard: milestones planned vs. delivered, open P1/P2 issues, SLA attainment if Managed Services. I show this before they ask. If we missed something, I state it plainly with the cause and what we did about it. Clients respect transparency here more than they respect a clean slide.
+
+**2. Value delivered (15 min)** — This is the section most vendors skip. What business outcomes moved because of our work? STP rate improvements, claims cycle time reduction, system adoption by role, processing cost per policy. Numbers where I have them; directional statements where I don't. The CIO sees delivery metrics; the program sponsor wants business impact.
+
+**3. Quarter ahead (20 min)** — Upcoming milestones, known risks, dependencies I need from the client side. I surface risks early here — not to alarm, but to get ahead of them together. If I need a decision from the client's steering committee, this is where I put it on the table with a deadline.
+
+**4. Strategic alignment (15 min)** — One or two forward-looking topics. Roadmap items, upcoming contract decisions, expansion opportunities, market trends relevant to their LOB. This is the section that separates a vendor QBR from a partner QBR. It signals that I'm thinking about their business, not just my engagement.
+
+**Outcomes I drive to:** Every QBR closes with three things documented — decisions made, open items with owners and dates, and the next QBR date confirmed. If we leave the room without those, the QBR didn't actually conclude.
+
+**In practice at CompSource:** I ran monthly delivery reviews with Matteo (IT Director) and quarterly business reviews with Mike Potter (CIO). The monthly was operational — sprint progress, blockers, staffing. The quarterly was strategic — program health, business readiness, roadmap. Keeping those two forums separate meant Mike Potter was never in the weeds and Matteo was never out of the details.
+
+---
+
+## Q10 — "How do you manage CSAT — how do you measure it, how often do you collect it, and what do you do when it's low?"
+
+**Why they ask (Sanjay):** CSAT is one of the three explicit CSD performance dimensions at VM (Choks confirmed: client success and CSAT, delivery execution, people development). They want to see you treat it as a managed metric, not a vanity survey.
+
+**Answer:**
+
+**How I collect it:** I use a structured approach — not a surprise survey at year-end. I have a standing CSAT touchpoint every quarter, aligned to the QBR cycle. The format: a short 5–7 question survey to 3–4 client stakeholders covering delivery quality, communication, responsiveness, and business value. Each question on a 1–5 scale. The survey goes out 1 week before the QBR so I can discuss results in the meeting rather than waiting for a separate conversation.
+
+Beyond the formal survey, I run informal pulse checks monthly — a direct question to the program sponsor: "On a scale of 1 to 10, how are we doing this month and what's the one thing we could do better?" That informal number tells me more in real time than any annual survey.
+
+**What a good score looks like:** I target a 4.2 or above on a 5-point scale. Anything 4.0 and above is healthy. 3.5–3.9 is yellow — something is bothering the client that they haven't raised formally. Below 3.5 is a recovery situation.
+
+**What I do when it's low:**
+
+First, I don't wait for the next survey cycle. I schedule a direct conversation with the program sponsor within 48 hours of seeing a low score. Not a defensive call — a listening call. "Walk me through what's driving this number. I want to hear it directly." The worst response to a low CSAT is distance.
+
+Second, I isolate the specific category. Is it delivery execution — we're missing milestones? Is it communication — they feel surprised by things? Is it responsiveness — tickets sitting too long? The category determines the fix. I don't run a generic improvement plan; I fix the specific failure.
+
+Third, I close the loop. Within two weeks, I come back to the client with a documented improvement plan — two or three specific changes, with owners and timelines. And I check back in at 30 days: "Are you seeing the difference?" That closing-the-loop step is what most vendors skip, and it's what converts a low CSAT into a recovery story.
+
+**Example:** On a personal lines carrier engagement, our Q2 CSAT dropped to 3.4. The driver was communication — the client felt they were hearing about issues after they had already escalated internally. I introduced a same-day issue notification policy: any P1 or P2 finding, the client program sponsor hears from me directly within 4 hours, before it surfaces anywhere else. By Q3 the communication score was back to 4.3.
+
+---
+
 ## QUICK REFERENCE — Metrics and Anchors
 
 | Topic | Number / Anchor |
@@ -177,9 +225,9 @@ What I do not see as a gap: running large programs, managing executive relations
 
 | Interviewer | Their lens | Lead with |
 |---|---|---|
-| **Naren (COO)** | Delivery quality, client success at scale, no burnout | Q1, Q5, Q6 |
+| **Naren (COO)** | Delivery quality, client success at scale, no burnout | Q1, Q5, Q6, Q10 |
 | **Vishy (EVP)** | Direct, blunt — will test executive presence | Q2, Q8 — be direct, own the gaps |
-| **Abhijeet (VP)** | Governance, delivery mechanics | Q3, Q6 |
-| **Alok Dhagat (VP Delivery)** | Cadence, escalation, team management | Q6, Q2 |
-| **AV Nadkarni (VP Client Partner)** | Relationship growth and protection | Q5, Q3 |
+| **Abhijeet (VP)** | Governance, delivery mechanics | Q3, Q9, Q10 |
+| **Alok Dhagat (VP Delivery)** | Cadence, escalation, team management | Q6, Q2, Q9 |
+| **AV Nadkarni (VP Client Partner)** | Relationship growth and protection | Q5, Q3, Q10 |
 | **Wayne Rodrigues (SVP Market)** | Revenue, pre-sales, account growth | Q5, Q7 |

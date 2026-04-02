@@ -63,3 +63,23 @@
 - Keep AI adoption discussion light but credible
 - Emphasize actual results and honest metrics
 - Use project examples that match realistic experience level
+
+---
+
+## Additional Points from Sanjay (2026-04-02)
+
+### Governance Cadence — QBR and Monthly Reviews
+- Understand how monthly and quarterly governance meetings are structured on P&C transformation engagements
+- Every quarter carriers conduct a **Quarterly Business Review (QBR)** — know the structure, what outcomes are expected, and what the next steps process looks like
+- Be prepared to walk through how you run a QBR: agenda, sections, decisions driven, how you close with documented owners and dates
+
+### CSAT — Process, Scores, and Recovery
+- Prepare on **how CSAT is calculated** and how often it is requested from the client
+- Know the **process to collect CSAT** — who is surveyed, what format, what cadence
+- Understand what constitutes a **good CSAT score vs. one that needs improvement**
+- Be ready to explain what actions you take as a Client Services leader when CSAT comes in low
+
+### SLA Management
+- Be prepared to discuss SLA management in the context of Managed Services delivery — how SLAs are defined, tracked, and reported
+
+*Note: QBR and CSAT answers added to `qa/executive-qa-prasad-sanjay.md` as Q9 and Q10.*

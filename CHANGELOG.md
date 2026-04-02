@@ -5,6 +5,16 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-04-02 — QBR and CSAT Q&A added from Sanjay's additional intel
+
+**Updated: `qa/executive-qa-prasad-sanjay.md`** — Added Q9 (QBR structure, outcomes, and next steps) and Q10 (CSAT process, scoring thresholds, and recovery actions). Persona guide updated.
+
+**Updated: `sources/Sanjay-Summary-Points-for-In-Person.md`** — Appended Sanjay's 2026-04-02 additional points on governance cadence, QBR, CSAT process, and SLA management.
+
+*Coverage check: SLA and QBR were mentioned in passing across Choks prep files but not answered as standalone topics. CSAT process (how to request, thresholds, recovery) was not covered anywhere — now added.*
+
+---
+
 ## 2026-04-02 — Choks interview summary added to sources
 
 **New: `sources/Choks-Interview-Summary.md`** — Notes from the Choks Kandaswamy interview: VM org structure, CSD role expectations, program deep-dives (Nationwide, Alfa, CompSource), AI advisory discussion, governance/cadence, and SKI releases.
