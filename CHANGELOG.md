@@ -5,6 +5,12 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-04-02 — Choks interview summary added to sources
+
+**New: `sources/Choks-Interview-Summary.md`** — Notes from the Choks Kandaswamy interview: VM org structure, CSD role expectations, program deep-dives (Nationwide, Alfa, CompSource), AI advisory discussion, governance/cadence, and SKI releases.
+
+---
+
 ## 2026-04-02 — Executive Q&A from Prasad & Sanjay intel
 
 **New: `qa/executive-qa-prasad-sanjay.md`** — 10 executive-level Q&A with STAR answers synthesized from Prasad's leadership capacity and stakeholder management advice and Sanjay's AI narrative, realistic sizing, and interview format guidance. Includes persona quick guide for Naren, Vishy, Abhijeet, Alok, AV, and Wayne.
