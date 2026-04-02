@@ -125,7 +125,19 @@ export function readFile(topicId: string, filePath: string): string {
 }
 
 export function writeFile(topicId: string, filePath: string, content: string): void {
-  fs.writeFileSync(safePath(topicId, filePath), content, 'utf-8')
+  const full = safePath(topicId, filePath)
+  fs.mkdirSync(path.dirname(full), { recursive: true })
+  fs.writeFileSync(full, content, 'utf-8')
+}
+
+export function renameFile(topicId: string, oldPath: string, newName: string): string {
+  const oldFull = safePath(topicId, oldPath)
+  const dir = path.dirname(oldPath)
+  const safeName = newName.replace(/[^a-z0-9-_]/gi, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')
+  const newPath = `${dir}/${safeName}.md`
+  const newFull = safePath(topicId, newPath)
+  fs.renameSync(oldFull, newFull)
+  return newPath
 }
 
 // ─── Search ───────────────────────────────────────────────────────────────────

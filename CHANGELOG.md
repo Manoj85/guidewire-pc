@@ -5,6 +5,22 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-04-02 — New file creator + rename + Claude chat cleanup
+
+**New: `app/api/claude/route.ts`** — POST endpoint using Claude Haiku; strips chat formatting and produces structured markdown with a Summary section.
+
+**New: `app/api/file/rename/route.ts`** — PATCH endpoint to rename a file within its current folder.
+
+**New: `components/NewFileModal.tsx`** — Create a markdown file in any folder; paste raw chat and hit "Clean up with Claude" to auto-summarize before saving.
+
+**New: `components/RenameModal.tsx`** — Inline rename modal with Enter/Escape keyboard support.
+
+**Updated: `components/Sidebar.tsx`** — `+` icon on folder header hover to open new file modal; pencil icon on file row hover to rename.
+
+**Updated: `lib/files.ts`** — Added `renameFile()` helper; `writeFile()` now creates missing directories.
+
+---
+
 ## 2026-04-01 — Audio transcriber feature (Telugu → English)
 
 **New: `app/api/transcribe/route.ts`** — POST endpoint using OpenAI Whisper `/audio/translations`; transcribes and translates Telugu audio to English in one call.

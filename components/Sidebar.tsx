@@ -42,29 +42,45 @@ function humanize(name: string) {
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
 
-function FileButton({ file, selected, onSelect }: { file: FileEntry; selected: boolean; onSelect: () => void }) {
+function FileButton({ file, selected, onSelect, onRename }: {
+  file: FileEntry; selected: boolean; onSelect: () => void; onRename: () => void
+}) {
   return (
-    <button
-      onClick={onSelect}
-      className={`w-full text-left px-4 py-1.5 flex items-center gap-2 text-sm
-        transition-colors group
-        ${selected ? 'bg-slate-700 text-white' : 'text-slate-500 hover:bg-slate-800 hover:text-slate-200'}`}
+    <div className={`flex items-center group
+      ${selected ? 'bg-slate-700' : 'hover:bg-slate-800'}`}
     >
-      <svg className="w-3.5 h-3.5 flex-shrink-0 ml-2 opacity-40 group-hover:opacity-60"
-        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-      <span className="truncate">{humanize(file.name)}</span>
-    </button>
+      <button
+        onClick={onSelect}
+        className={`flex-1 text-left px-4 py-1.5 flex items-center gap-2 text-sm transition-colors
+          ${selected ? 'text-white' : 'text-slate-500 group-hover:text-slate-200'}`}
+      >
+        <svg className="w-3.5 h-3.5 flex-shrink-0 ml-2 opacity-40 group-hover:opacity-60"
+          fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        <span className="truncate">{humanize(file.name)}</span>
+      </button>
+      <button
+        onClick={e => { e.stopPropagation(); onRename() }}
+        title="Rename"
+        className="pr-3 opacity-0 group-hover:opacity-100 transition-opacity text-slate-500 hover:text-amber-400"
+      >
+        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+        </svg>
+      </button>
+    </div>
   )
 }
 
-function GroupSection({ groupName, files, selectedFile, onFileSelect, dotClass }: {
+function GroupSection({ groupName, files, selectedFile, onFileSelect, onRenameFile, dotClass }: {
   groupName: string
   files: FileEntry[]
   selectedFile: string | null
   onFileSelect: (p: string) => void
+  onRenameFile: (p: string) => void
   dotClass: string
 }) {
   const [open, setOpen] = useState<boolean>(true)
@@ -84,20 +100,33 @@ function GroupSection({ groupName, files, selectedFile, onFileSelect, dotClass }
         </svg>
       </button>
       {open && files.map(file => (
-        <button
-          key={file.path}
-          onClick={() => onFileSelect(file.path)}
-          className={`w-full text-left pl-8 pr-4 py-1.5 flex items-center gap-2 text-sm
-            transition-colors group
-            ${selectedFile === file.path ? 'bg-slate-700 text-white' : 'text-slate-500 hover:bg-slate-800 hover:text-slate-200'}`}
+        <div key={file.path}
+          className={`flex items-center group
+            ${selectedFile === file.path ? 'bg-slate-700' : 'hover:bg-slate-800'}`}
         >
-          <svg className="w-3 h-3 flex-shrink-0 opacity-30 group-hover:opacity-50"
-            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-          <span className="truncate">{humanize(file.name)}</span>
-        </button>
+          <button
+            onClick={() => onFileSelect(file.path)}
+            className={`flex-1 text-left pl-8 pr-2 py-1.5 flex items-center gap-2 text-sm transition-colors
+              ${selectedFile === file.path ? 'text-white' : 'text-slate-500 group-hover:text-slate-200'}`}
+          >
+            <svg className="w-3 h-3 flex-shrink-0 opacity-30 group-hover:opacity-50"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span className="truncate">{humanize(file.name)}</span>
+          </button>
+          <button
+            onClick={e => { e.stopPropagation(); onRenameFile(file.path) }}
+            title="Rename"
+            className="pr-3 opacity-0 group-hover:opacity-100 transition-opacity text-slate-500 hover:text-amber-400"
+          >
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+            </svg>
+          </button>
+        </div>
       ))}
     </div>
   )
@@ -120,6 +149,8 @@ interface Props {
   searchResults: SearchResult[]
   onChangelogOpen: () => void
   onTranscribeOpen: () => void
+  onNewFile: (defaultFolder: string) => void
+  onRenameFile: (path: string) => void
   isOpen: boolean
   onClose: () => void
 }
@@ -127,7 +158,7 @@ interface Props {
 export default function Sidebar({
   topics, selectedTopic, onTopicChange, topicSettings,
   fileTree, selectedFile, searchQuery, onSearchChange, matchCase, onMatchCaseChange,
-  onFileSelect, searchResults, onChangelogOpen, onTranscribeOpen, isOpen, onClose,
+  onFileSelect, searchResults, onChangelogOpen, onTranscribeOpen, onNewFile, onRenameFile, isOpen, onClose,
 }: Props) {
   const isSearching = searchQuery.trim().length > 0
   const currentTopic = topics.find(t => t.id === selectedTopic)
@@ -276,12 +307,22 @@ export default function Sidebar({
 
             return (
               <div key={folderMeta.id} className="mb-3">
-                <div className="flex items-center gap-2 px-4 py-1.5">
+                <div className="flex items-center gap-2 px-4 py-1.5 group/folder">
                   <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${dotClass}`} />
                   <span className={`text-xs font-semibold uppercase tracking-wider ${textClass}`}>
                     {folderMeta.label}
                   </span>
-                  <span className="text-xs text-slate-700 ml-auto">{files.length}</span>
+                  <span className="text-xs text-slate-700 ml-auto group-hover/folder:hidden">{files.length}</span>
+                  <button
+                    onClick={() => onNewFile(folderMeta.id)}
+                    title={`New file in ${folderMeta.label}`}
+                    className="ml-auto hidden group-hover/folder:flex items-center justify-center
+                               w-4 h-4 rounded text-slate-500 hover:text-emerald-400 transition-colors"
+                  >
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                    </svg>
+                  </button>
                 </div>
                 {files.length === 0 ? (
                   <p className="px-7 py-1 text-xs text-slate-700 italic">Empty</p>
@@ -290,12 +331,13 @@ export default function Sidebar({
                     {rootFiles.map(file => (
                       <FileButton key={file.path} file={file}
                         selected={selectedFile === file.path}
-                        onSelect={() => onFileSelect(file.path)} />
+                        onSelect={() => onFileSelect(file.path)}
+                        onRename={() => onRenameFile(file.path)} />
                     ))}
                     {Object.entries(groups).map(([groupName, groupFiles]) => (
                       <GroupSection key={groupName} groupName={groupName}
                         files={groupFiles} selectedFile={selectedFile}
-                        onFileSelect={onFileSelect} dotClass={dotClass} />
+                        onFileSelect={onFileSelect} onRenameFile={onRenameFile} dotClass={dotClass} />
                     ))}
                   </>
                 )}
