@@ -5,6 +5,12 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-04-02 — Executive Q&A from Prasad & Sanjay intel
+
+**New: `qa/executive-qa-prasad-sanjay.md`** — 10 executive-level Q&A with STAR answers synthesized from Prasad's leadership capacity and stakeholder management advice and Sanjay's AI narrative, realistic sizing, and interview format guidance. Includes persona quick guide for Naren, Vishy, Abhijeet, Alok, AV, and Wayne.
+
+---
+
 ## 2026-04-02 — Edit modal via sidebar pencil icon; unified New/Edit modal
 
 **Updated: `components/NewFileModal.tsx`** — Now supports edit mode: pre-fills folder (locked), filename (editable = rename), and content. Amber accent in edit mode vs emerald for new. Save handles rename + content write in one step.
