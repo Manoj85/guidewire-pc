@@ -1,7 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Topic } from '@/lib/files'
+
+interface EditFile {
+  path: string      // e.g. "sources/my-file.md"
+  content: string
+}
 
 interface Props {
   open: boolean
@@ -9,16 +14,44 @@ interface Props {
   topic: Topic | null
   selectedTopic: string
   defaultFolder?: string
+  editFile?: EditFile          // when set → edit mode
   onFileSaved: (path: string) => void
 }
 
-export default function NewFileModal({ open, onClose, topic, selectedTopic, defaultFolder = 'sources', onFileSaved }: Props) {
-  const [folder, setFolder]       = useState(defaultFolder)
-  const [filename, setFilename]   = useState('')
-  const [content, setContent]     = useState('')
-  const [cleaning, setCleaning]   = useState(false)
-  const [saving, setSaving]       = useState(false)
-  const [error, setError]         = useState('')
+function parsePath(filePath: string) {
+  const parts = filePath.split('/')
+  const filename = (parts[parts.length - 1] ?? '').replace(/\.md$/, '')
+  const folder = parts[0] ?? 'sources'
+  return { folder, filename }
+}
+
+export default function NewFileModal({
+  open, onClose, topic, selectedTopic, defaultFolder = 'sources', editFile, onFileSaved,
+}: Props) {
+  const isEdit = !!editFile
+
+  const [folder, setFolder]     = useState(defaultFolder)
+  const [filename, setFilename] = useState('')
+  const [content, setContent]   = useState('')
+  const [cleaning, setCleaning] = useState(false)
+  const [saving, setSaving]     = useState(false)
+  const [error, setError]       = useState('')
+
+  // Sync state when modal opens or editFile changes
+  useEffect(() => {
+    if (!open) return
+    if (editFile) {
+      const parsed = parsePath(editFile.path)
+      setFolder(parsed.folder)
+      setFilename(parsed.filename)
+      setContent(editFile.content)
+    } else {
+      setFolder(defaultFolder)
+      setFilename('')
+      setContent('')
+    }
+    setError('')
+  }, [open, editFile, defaultFolder])
 
   if (!open) return null
 
@@ -48,31 +81,38 @@ export default function NewFileModal({ open, onClose, topic, selectedTopic, defa
     if (!filename.trim() || !content.trim()) return
     setSaving(true)
     setError('')
+
     const safeName = filename.trim().replace(/[^a-z0-9-_]/gi, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')
-    const path = `${folder}/${safeName}.md`
+    const newPath = `${folder}/${safeName}.md`
+
     try {
-      const res = await fetch('/api/file', {
+      // In edit mode: if the filename changed, rename the old file first
+      if (isEdit && editFile && newPath !== editFile.path) {
+        const renameRes = await fetch('/api/file/rename', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topic: selectedTopic, path: editFile.path, newName: safeName }),
+        })
+        const renameData = await renameRes.json()
+        if (!renameRes.ok) throw new Error(renameData.error ?? 'Rename failed')
+      }
+
+      // Write content to the (possibly renamed) path
+      const writeRes = await fetch('/api/file', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic: selectedTopic, path, content }),
+        body: JSON.stringify({ topic: selectedTopic, path: newPath, content }),
       })
-      const data = await res.json()
-      if (!res.ok) throw new Error(data.error ?? 'Save failed')
-      handleClose()
-      onFileSaved(path)
+      const writeData = await writeRes.json()
+      if (!writeRes.ok) throw new Error(writeData.error ?? 'Save failed')
+
+      onClose()
+      onFileSaved(newPath)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Unknown error')
     } finally {
       setSaving(false)
     }
-  }
-
-  const handleClose = () => {
-    setFolder(defaultFolder)
-    setFilename('')
-    setContent('')
-    setError('')
-    onClose()
   }
 
   const folderColor: Record<string, string> = {
@@ -82,20 +122,27 @@ export default function NewFileModal({ open, onClose, topic, selectedTopic, defa
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      <div className="absolute inset-0 bg-black/60" onClick={handleClose} />
+      <div className="absolute inset-0 bg-black/60" onClick={onClose} />
       <div className="relative z-10 bg-slate-900 border border-slate-700 rounded-xl w-full max-w-2xl shadow-2xl flex flex-col max-h-[90vh]">
 
         {/* Header */}
         <div className="flex items-center gap-3 px-5 py-4 border-b border-slate-800 flex-shrink-0">
-          <svg className="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-              d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          <svg className={`w-5 h-5 ${isEdit ? 'text-amber-400' : 'text-emerald-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {isEdit ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            )}
           </svg>
           <div>
-            <h2 className="text-white font-semibold text-sm">New File</h2>
-            <p className="text-slate-500 text-xs">Create a markdown file · paste chat to clean up with Claude</p>
+            <h2 className="text-white font-semibold text-sm">{isEdit ? 'Edit File' : 'New File'}</h2>
+            <p className="text-slate-500 text-xs">
+              {isEdit ? 'Edit content or rename · clean up with Claude' : 'Create a markdown file · paste chat to clean up with Claude'}
+            </p>
           </div>
-          <button onClick={handleClose} className="ml-auto text-slate-500 hover:text-slate-300 transition-colors">
+          <button onClick={onClose} className="ml-auto text-slate-500 hover:text-slate-300 transition-colors">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -111,8 +158,10 @@ export default function NewFileModal({ open, onClose, topic, selectedTopic, defa
               <select
                 value={folder}
                 onChange={e => setFolder(e.target.value)}
+                disabled={isEdit}
                 className="w-full bg-slate-800 border border-slate-700 rounded-md text-sm px-3 py-2
-                           text-slate-200 focus:outline-none focus:border-emerald-500"
+                           text-slate-200 focus:outline-none focus:border-emerald-500
+                           disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {folders.map(f => (
                   <option key={f.id} value={f.id}>{f.label}</option>
@@ -122,9 +171,10 @@ export default function NewFileModal({ open, onClose, topic, selectedTopic, defa
             <div className="flex-1">
               <label className="block text-xs text-slate-400 mb-1.5">
                 Filename <span className="text-slate-600">.md</span>
+                {isEdit && <span className="text-slate-600 ml-1">· editable to rename</span>}
               </label>
-              <div className="flex items-center bg-slate-800 border border-slate-700 rounded-md
-                              focus-within:border-emerald-500 transition-colors">
+              <div className={`flex items-center bg-slate-800 border rounded-md transition-colors
+                ${isEdit ? 'border-amber-700 focus-within:border-amber-500' : 'border-slate-700 focus-within:border-emerald-500'}`}>
                 <span className={`pl-3 text-xs font-mono flex-shrink-0 ${folderColor[folder] ?? 'text-slate-500'}`}>
                   {folder}/
                 </span>
@@ -175,10 +225,10 @@ export default function NewFileModal({ open, onClose, topic, selectedTopic, defa
               value={content}
               onChange={e => setContent(e.target.value)}
               rows={14}
-              placeholder="Paste chat messages here, or write markdown directly…"
-              className="w-full bg-slate-800 border border-slate-700 rounded-md text-sm text-slate-200
-                         px-3 py-2.5 resize-y focus:outline-none focus:border-emerald-500
-                         leading-relaxed placeholder-slate-600 font-mono"
+              placeholder={isEdit ? 'Edit content…' : 'Paste chat messages here, or write markdown directly…'}
+              className={`w-full bg-slate-800 border rounded-md text-sm text-slate-200
+                         px-3 py-2.5 resize-y focus:outline-none leading-relaxed placeholder-slate-600 font-mono
+                         ${isEdit ? 'border-slate-600 focus:border-amber-500' : 'border-slate-700 focus:border-emerald-500'}`}
             />
           </div>
 
@@ -197,7 +247,7 @@ export default function NewFileModal({ open, onClose, topic, selectedTopic, defa
         {/* Footer */}
         <div className="px-5 py-3 border-t border-slate-800 flex items-center justify-end gap-2 flex-shrink-0">
           <button
-            onClick={handleClose}
+            onClick={onClose}
             className="px-4 py-2 rounded-md text-sm text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-colors"
           >
             Cancel
@@ -205,11 +255,11 @@ export default function NewFileModal({ open, onClose, topic, selectedTopic, defa
           <button
             onClick={handleSave}
             disabled={!filename.trim() || !content.trim() || saving}
-            className="px-5 py-2 rounded-md text-sm font-medium transition-colors
-                       bg-emerald-600 hover:bg-emerald-500 text-white
-                       disabled:opacity-40 disabled:cursor-not-allowed"
+            className={`px-5 py-2 rounded-md text-sm font-medium transition-colors text-white
+                       disabled:opacity-40 disabled:cursor-not-allowed
+                       ${isEdit ? 'bg-amber-600 hover:bg-amber-500' : 'bg-emerald-600 hover:bg-emerald-500'}`}
           >
-            {saving ? 'Saving…' : 'Save file'}
+            {saving ? 'Saving…' : isEdit ? 'Save changes' : 'Save file'}
           </button>
         </div>
       </div>

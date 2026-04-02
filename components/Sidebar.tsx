@@ -93,9 +93,9 @@ function FileButton({ file, selected, onSelect, onRename, onDelete }: {
   )
 }
 
-function GroupFileRow({ file, selectedFile, onFileSelect, onRenameFile, onDeleteFile }: {
+function GroupFileRow({ file, selectedFile, onFileSelect, onEditFile, onDeleteFile }: {
   file: FileEntry; selectedFile: string | null
-  onFileSelect: (p: string) => void; onRenameFile: (p: string) => void; onDeleteFile: (p: string) => void
+  onFileSelect: (p: string) => void; onEditFile: (p: string) => void; onDeleteFile: (p: string) => void
 }) {
   const [confirming, setConfirming] = useState(false)
 
@@ -126,7 +126,7 @@ function GroupFileRow({ file, selectedFile, onFileSelect, onRenameFile, onDelete
         <span className="truncate">{humanize(file.name)}</span>
       </button>
       <div className="flex items-center pr-2 gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-        <button onClick={e => { e.stopPropagation(); onRenameFile(file.path) }} title="Rename"
+        <button onClick={e => { e.stopPropagation(); onEditFile(file.path) }} title="Rename"
           className="p-0.5 text-slate-500 hover:text-amber-400 transition-colors">
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -145,12 +145,12 @@ function GroupFileRow({ file, selectedFile, onFileSelect, onRenameFile, onDelete
   )
 }
 
-function GroupSection({ groupName, files, selectedFile, onFileSelect, onRenameFile, onDeleteFile, dotClass }: {
+function GroupSection({ groupName, files, selectedFile, onFileSelect, onEditFile, onDeleteFile, dotClass }: {
   groupName: string
   files: FileEntry[]
   selectedFile: string | null
   onFileSelect: (p: string) => void
-  onRenameFile: (p: string) => void
+  onEditFile: (p: string) => void
   onDeleteFile: (p: string) => void
   dotClass: string
 }) {
@@ -172,7 +172,7 @@ function GroupSection({ groupName, files, selectedFile, onFileSelect, onRenameFi
       </button>
       {open && files.map(file => (
         <GroupFileRow key={file.path} file={file} selectedFile={selectedFile}
-          onFileSelect={onFileSelect} onRenameFile={onRenameFile} onDeleteFile={onDeleteFile} />
+          onFileSelect={onFileSelect} onEditFile={onEditFile} onDeleteFile={onDeleteFile} />
       ))}
     </div>
   )
@@ -196,7 +196,7 @@ interface Props {
   onChangelogOpen: () => void
   onTranscribeOpen: () => void
   onNewFile: (defaultFolder: string) => void
-  onRenameFile: (path: string) => void
+  onEditFile: (path: string) => void
   onDeleteFile: (path: string) => void
   isOpen: boolean
   onClose: () => void
@@ -205,7 +205,7 @@ interface Props {
 export default function Sidebar({
   topics, selectedTopic, onTopicChange, topicSettings,
   fileTree, selectedFile, searchQuery, onSearchChange, matchCase, onMatchCaseChange,
-  onFileSelect, searchResults, onChangelogOpen, onTranscribeOpen, onNewFile, onRenameFile, onDeleteFile, isOpen, onClose,
+  onFileSelect, searchResults, onChangelogOpen, onTranscribeOpen, onNewFile, onEditFile, onDeleteFile, isOpen, onClose,
 }: Props) {
   const isSearching = searchQuery.trim().length > 0
   const currentTopic = topics.find(t => t.id === selectedTopic)
@@ -379,13 +379,13 @@ export default function Sidebar({
                       <FileButton key={file.path} file={file}
                         selected={selectedFile === file.path}
                         onSelect={() => onFileSelect(file.path)}
-                        onRename={() => onRenameFile(file.path)}
+                        onRename={() => onEditFile(file.path)}
                         onDelete={() => onDeleteFile(file.path)} />
                     ))}
                     {Object.entries(groups).map(([groupName, groupFiles]) => (
                       <GroupSection key={groupName} groupName={groupName}
                         files={groupFiles} selectedFile={selectedFile}
-                        onFileSelect={onFileSelect} onRenameFile={onRenameFile}
+                        onFileSelect={onFileSelect} onEditFile={onEditFile}
                         onDeleteFile={onDeleteFile} dotClass={dotClass} />
                     ))}
                   </>

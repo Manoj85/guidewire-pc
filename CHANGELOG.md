@@ -5,6 +5,18 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-04-02 — Edit modal via sidebar pencil icon; unified New/Edit modal
+
+**Updated: `components/NewFileModal.tsx`** — Now supports edit mode: pre-fills folder (locked), filename (editable = rename), and content. Amber accent in edit mode vs emerald for new. Save handles rename + content write in one step.
+
+**Updated: `components/Sidebar.tsx`** — Pencil icon on file hover opens the edit modal (loads latest content, supports rename + Claude cleanup). Removed dependency on `RenameModal`.
+
+**Removed: `components/RenameModal.tsx`** — Superseded by edit modal.
+
+**Updated: `app/page.tsx`** — `openEditModal()` helper; `onEditFile` in Sidebar fetches latest content and opens edit modal; Edit button in FileViewer retains the split-pane inline editor.
+
+---
+
 ## 2026-04-02 — Delete file option with inline confirmation
 
 **New: `app/api/file/delete/route.ts`** — DELETE endpoint; blocked on Vercel.

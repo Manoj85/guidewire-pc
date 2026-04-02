@@ -7,7 +7,6 @@ import FileViewer from '@/components/FileViewer'
 import SettingsModal, { defaultSettings, type AllSettings } from '@/components/SettingsModal'
 import AudioTranscriber from '@/components/AudioTranscriber'
 import NewFileModal from '@/components/NewFileModal'
-import RenameModal from '@/components/RenameModal'
 import type { FileEntry, FileTree, SearchResult, Topic } from '@/lib/files'
 
 export type { FileEntry, FileTree, SearchResult }
@@ -37,8 +36,7 @@ function AppContent() {
   const [transcribeOpen, setTranscribeOpen] = useState(false)
   const [newFileOpen, setNewFileOpen]       = useState(false)
   const [newFileFolder, setNewFileFolder]   = useState('sources')
-  const [renameOpen, setRenameOpen]         = useState(false)
-  const [renameTarget, setRenameTarget]     = useState('')
+  const [editFile, setEditFile]             = useState<{ path: string; content: string } | undefined>()
   const [allSettings, setAllSettings]     = useState<AllSettings>({})
   const [sidebarOpen, setSidebarOpen]     = useState(false)
 
@@ -48,7 +46,6 @@ function AppContent() {
       .then(r => r.json())
       .then((data: Topic[]) => {
         setTopics(data)
-        // Restore last topic from localStorage
         const saved = localStorage.getItem(TOPIC_KEY)
         if (saved && data.find(t => t.id === saved)) {
           setSelectedTopic(saved)
@@ -85,6 +82,12 @@ function AppContent() {
         setCanEdit(data.canEdit ?? false)
       })
   }, [selectedTopic])
+
+  const refreshTree = useCallback(() =>
+    fetch(`/api/files?topic=${selectedTopic}`)
+      .then(r => r.json())
+      .then(data => { setFileTree(data.tree ?? {}); setCanEdit(data.canEdit ?? false) }),
+  [selectedTopic])
 
   const loadFile = useCallback(async (filePath: string) => {
     setLoading(true)
@@ -153,6 +156,11 @@ function AppContent() {
     setSaving(false)
   }
 
+  const openEditModal = (filePath: string, fileContent: string) => {
+    setEditFile({ path: filePath, content: fileContent })
+    setNewFileOpen(true)
+  }
+
   const currentTopic   = topics.find(t => t.id === selectedTopic) ?? null
   const topicSettings  = currentTopic
     ? (allSettings[selectedTopic] ?? defaultSettings(currentTopic))
@@ -188,16 +196,20 @@ function AppContent() {
         searchResults={searchResults}
         onChangelogOpen={loadChangelog}
         onTranscribeOpen={() => setTranscribeOpen(true)}
-        onNewFile={folder => { setNewFileFolder(folder); setNewFileOpen(true) }}
-        onRenameFile={path => { setRenameTarget(path); setRenameOpen(true) }}
+        onNewFile={folder => { setNewFileFolder(folder); setEditFile(undefined); setNewFileOpen(true) }}
+        onEditFile={async path => {
+          // Load latest content then open edit modal
+          const r = await fetch(`/api/file?topic=${selectedTopic}&path=${encodeURIComponent(path)}`)
+          const data = await r.json()
+          openEditModal(path, data.content ?? '')
+        }}
         onDeleteFile={async path => {
           await fetch('/api/file/delete', {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ topic: selectedTopic, path }),
           })
-          const data = await fetch(`/api/files?topic=${selectedTopic}`).then(r => r.json())
-          setFileTree(data.tree ?? {})
+          await refreshTree()
           if (selectedFile === path) { setSelectedFile(null); setContent('') }
         }}
       />
@@ -230,32 +242,18 @@ function AppContent() {
         open={transcribeOpen}
         onClose={() => setTranscribeOpen(false)}
         selectedTopic={selectedTopic}
-        onFileSaved={path => { setTranscribeOpen(false); loadFile(path) }}
+        onFileSaved={path => { setTranscribeOpen(false); refreshTree(); loadFile(path) }}
       />
       <NewFileModal
         open={newFileOpen}
-        onClose={() => setNewFileOpen(false)}
+        onClose={() => { setNewFileOpen(false); setEditFile(undefined) }}
         topic={currentTopic}
         selectedTopic={selectedTopic}
         defaultFolder={newFileFolder}
-        onFileSaved={path => {
-          fetch(`/api/files?topic=${selectedTopic}`)
-            .then(r => r.json())
-            .then(data => { setFileTree(data.tree ?? {}); setCanEdit(data.canEdit ?? false) })
+        editFile={editFile}
+        onFileSaved={async path => {
+          await refreshTree()
           loadFile(path)
-        }}
-      />
-      <RenameModal
-        open={renameOpen}
-        onClose={() => setRenameOpen(false)}
-        currentPath={renameTarget}
-        selectedTopic={selectedTopic}
-        onRenamed={newPath => {
-          setRenameOpen(false)
-          fetch(`/api/files?topic=${selectedTopic}`)
-            .then(r => r.json())
-            .then(data => { setFileTree(data.tree ?? {}); setCanEdit(data.canEdit ?? false) })
-          if (selectedFile === renameTarget) loadFile(newPath)
         }}
       />
     </div>
