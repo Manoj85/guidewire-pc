@@ -5,6 +5,16 @@ File references in `backticks` are clickable links in the app.
 
 ---
 
+## 2026-04-02 — Delete file option with inline confirmation
+
+**New: `app/api/file/delete/route.ts`** — DELETE endpoint; blocked on Vercel.
+
+**Updated: `lib/files.ts`** — Added `deleteFile()` helper using `fs.unlinkSync`.
+
+**Updated: `components/Sidebar.tsx`** — Trash icon on file row hover (alongside rename pencil); clicking shows inline "Delete?" Yes/No confirm before calling the API. Clears the viewer if the deleted file was open.
+
+---
+
 ## 2026-04-02 — New file creator + rename + Claude chat cleanup
 
 **New: `app/api/claude/route.ts`** — POST endpoint using Claude Haiku; strips chat formatting and produces structured markdown with a Summary section.

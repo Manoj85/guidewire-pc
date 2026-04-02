@@ -130,6 +130,10 @@ export function writeFile(topicId: string, filePath: string, content: string): v
   fs.writeFileSync(full, content, 'utf-8')
 }
 
+export function deleteFile(topicId: string, filePath: string): void {
+  fs.unlinkSync(safePath(topicId, filePath))
+}
+
 export function renameFile(topicId: string, oldPath: string, newName: string): string {
   const oldFull = safePath(topicId, oldPath)
   const dir = path.dirname(oldPath)

@@ -190,6 +190,16 @@ function AppContent() {
         onTranscribeOpen={() => setTranscribeOpen(true)}
         onNewFile={folder => { setNewFileFolder(folder); setNewFileOpen(true) }}
         onRenameFile={path => { setRenameTarget(path); setRenameOpen(true) }}
+        onDeleteFile={async path => {
+          await fetch('/api/file/delete', {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ topic: selectedTopic, path }),
+          })
+          const data = await fetch(`/api/files?topic=${selectedTopic}`).then(r => r.json())
+          setFileTree(data.tree ?? {})
+          if (selectedFile === path) { setSelectedFile(null); setContent('') }
+        }}
       />
       <FileViewer
         filePath={selectedFile}
